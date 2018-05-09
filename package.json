@@ -1,12 +1,18 @@
 {
-  "name": "gatsby-starter-default",
-  "description": "Gatsby default starter",
+  "name": "opportunity-bank-uganda",
+  "description": "Opportunity Bank Uganda",
   "version": "1.0.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Andrei Todorov <andrei@mybucks.com>",
   "dependencies": {
+    "bourbon": "^5.0.0",
+    "bourbon-neat": "^1.9.0",
+    "eslint": "^4.19.1",
     "gatsby": "^1.9.247",
     "gatsby-link": "^1.6.40",
     "gatsby-plugin-react-helmet": "^2.0.10",
+    "gatsby-plugin-sass": "^1.0.26",
+    "gatsby-plugin-typography": "^1.7.18",
+    "normalize.css": "^8.0.0",
     "react-helmet": "^5.2.0"
   },
   "keywords": [
@@ -20,6 +26,11 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
+    "eslint-config-standard": "^11.0.0",
+    "eslint-plugin-import": "^2.11.0",
+    "eslint-plugin-node": "^6.0.1",
+    "eslint-plugin-promise": "^3.7.0",
+    "eslint-plugin-standard": "^3.1.0",
     "prettier": "^1.12.0"
   }
 }

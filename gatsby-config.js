@@ -1,6 +1,23 @@
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby Default Starter',
+    title: 'Opportunity Bank'
   },
-  plugins: ['gatsby-plugin-react-helmet'],
+  plugins: [
+    'gatsby-plugin-react-helmet',
+    {
+      resolve: 'gatsby-plugin-sass',
+      options: {
+        includePaths: [
+          ...require('bourbon').includePaths,
+          ...require('bourbon-neat').includePaths
+        ]
+      }
+    },
+    {
+      resolve: 'gatsby-plugin-typography',
+      options: {
+        pathToConfigModule: 'src/utils/typography.js'
+      }
+    }
+  ]
 }
