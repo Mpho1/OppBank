@@ -1,6 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: 'Opportunity Bank'
+    title: 'Opportunity Bank',
+    desciption: 'Opportunity Bank',
+    keywords: 'banking, opportunity, uganda'
   },
   plugins: [
     'gatsby-plugin-react-helmet',
