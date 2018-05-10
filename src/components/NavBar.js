@@ -37,12 +37,15 @@ class NavBar extends React.Component {
   }
 
   render () {
+    const headerClass = this.state.menuOpen ? style.open: ''
     return (
-      <div className={style.HeaderLinksWrapper}>
-        <HeaderPageLink to="/#products" title="Products" active={true} />
-        <HeaderPageLink to="/#news" title="News" />
-        <HeaderPageLink to="/#careers" title="Careers" />
-        <HeaderPageLink to="/#contact-us" title="Contact us" />
+      <div>
+        <div className={`${style.HeaderLinksWrapper} ${headerClass}`}>
+          <HeaderPageLink to="/#products" title="Products" active={true} />
+          <HeaderPageLink to="/#news" title="News" />
+          <HeaderPageLink to="/#careers" title="Careers" />
+          <HeaderPageLink to="/#contact-us" title="Contact us" />
+        </div>
         <Burger onClick={this.onClick} isOpen={this.state.menuOpen}/>
       </div>
     )
