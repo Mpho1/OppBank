@@ -1,7 +1,7 @@
 import React from 'react'
 import Link from 'gatsby-link'
 
-import Logo from '../components/logo'
+import Logo from './Logo'
 import NavBar from './NavBar'
 
 import style from './header.module.scss'
