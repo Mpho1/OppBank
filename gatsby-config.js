@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: 'Opportunity Bank',
-    desciption: 'Opportunity Bank',
+    description: 'Opportunity Bank',
     keywords: 'banking, opportunity, uganda'
   },
   plugins: [
