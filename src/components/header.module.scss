@@ -7,7 +7,9 @@
     max-width: 100%;
     padding: 1.45rem 1.0875rem;
     background: rgba(0,0,0,0.7);
-    position: relative;
+    position: fixed;
+    z-index: 10;
+    width: 100%;
 }
 
 .HeaderLogoWrapper {

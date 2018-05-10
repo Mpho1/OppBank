@@ -18,25 +18,23 @@ const HeaderPageLink = ({to, title, active}) => (
 
 
 const Header = ({ siteTitle }) => (
-  <div className={style.bg}>
-    <div className={style.HeaderWrapper}>
-      <div className={style.HeaderLogoWrapper}>
-        <GatsbyLink
-          to="/"
-          style={{
-            color: 'white',
-            textDecoration: 'none'
-          }}
-        >
-          <Logo />
-        </GatsbyLink>
-      </div>
-      <div className={style.HeaderLinksWrapper}>
-          <HeaderPageLink to="/#products" title="Products" active={true} />
-          <HeaderPageLink to="/#news" title="News" />
-          <HeaderPageLink to="/#careers" title="Careers" />
-          <HeaderPageLink to="/#contact-us" title="Contact us" />
-      </div>
+  <div className={style.HeaderWrapper}>
+    <div className={style.HeaderLogoWrapper}>
+      <GatsbyLink
+        to="/"
+        style={{
+          color: 'white',
+          textDecoration: 'none'
+        }}
+      >
+        <Logo />
+      </GatsbyLink>
+    </div>
+    <div className={style.HeaderLinksWrapper}>
+        <HeaderPageLink to="/#products" title="Products" active={true} />
+        <HeaderPageLink to="/#news" title="News" />
+        <HeaderPageLink to="/#careers" title="Careers" />
+        <HeaderPageLink to="/#contact-us" title="Contact us" />
     </div>
   </div>
 )
