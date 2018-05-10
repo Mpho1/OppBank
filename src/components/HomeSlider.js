@@ -14,8 +14,6 @@ const Slide = ({ heading, blurb, className }) => (
   </div>
 )
 
-console.log(styles)
-
 class HomeSlider extends React.Component {
   render () {
     const containerClass = `swiper-container ${styles.homeSlider}`

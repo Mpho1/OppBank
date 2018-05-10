@@ -8,7 +8,6 @@ import HomeSlider from '../components/HomeSlider'
 const IndexPage = () => (
   <div>
     <HomeSlider />
-    <p>aasdasdasdas</p>
   </div>
 )
 
