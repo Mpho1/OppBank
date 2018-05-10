@@ -1,2 +1,105 @@
 @import "bourbon";
 @import "neat";
+
+
+.HeaderWrapper {
+    margin: 0 auto;
+    max-width: 100%;
+    padding: 1.45rem 1.0875rem;
+    background: rgba(0,0,0,0.7);
+    position: fixed;
+    z-index: 10;
+    width: 100%;
+}
+
+.HeaderLogoWrapper {
+    display: inline-block;
+    width: 75%;
+}
+
+.HeaderLinksWrapper {
+    position: absolute;
+    right: 1.45rem;
+    bottom: 0;
+}
+
+.HeaderLink {
+    float: left;
+    padding: 1.2em .0em;
+    margin: 0em .6em;
+   
+    a {
+        font-weight: bolder;
+        font-size: 0.9em;
+        text-decoration: none;
+        text-transform: uppercase;
+        color: #fff;
+    }
+}
+
+.burger {
+    display: inline-block;
+    cursor: pointer;
+    display: none;
+    margin: 5px;
+    position: absolute;
+    right: 16px;
+    top: 26px;
+}
+
+.burgerBar {
+    width: 35px;
+    height: 5px;
+    background-color: #fff;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+.burger.open {
+    & .burgerBar:nth-child(1) {
+        transform: rotate(-45deg) translate(-9px, 6px) ;
+    }
+
+    & .burgerBar:nth-child(2) {
+        opacity: 0;
+    }
+
+    & .burgerBar:nth-child(3) {
+        transform: rotate(45deg) translate(-8px, -8px) ;
+    }
+}
+
+@media (max-width: 768px) {
+    .HeaderLinksWrapper {
+        display: block;
+        position: relative;
+    }
+    .HeaderLink {
+        display: none;
+    }
+    .burger {
+        display: block;
+    }
+}
+
+@media (max-width: 768px) {
+    .open {
+        &.HeaderLinksWrapper {
+            padding: 0px 20px;
+            display: block;
+            width: 100%;
+            float: none;
+        }
+        .HeaderLink {
+            display: block;
+            width: 100%;
+            a {
+                display: block;
+            }
+        }
+    }
+}
+
+.HeaderLinkActive {
+    border-bottom: 4px solid #75DEC5;
+}

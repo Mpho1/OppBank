@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="124px" height="93px" viewBox="0 0 124 93" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+    <title>business</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Landing" transform="translate(-898.000000, -1349.000000)">
+            <g id="Group" transform="translate(-180.000000, -178.000000)">
+                <g id="Group-8" transform="translate(945.000000, 1527.000000)">
+                    <g id="business" transform="translate(133.000000, 0.000000)">
+                        <rect id="Rectangle-4" fill="#FFFFFF" x="5" y="17" width="114" height="71"></rect>
+                        <polygon id="Fill-1" fill="#C7D2DC" points="22 77 101 77 101 31 22 31"></polygon>
+                        <polygon id="Fill-2" fill="#FFFFFF" points="55 91 70 91 70 16 55 16"></polygon>
+                        <path d="M52,56 L20.1532628,56 C8.09879312,56 0,47.5146581 0,34.8868659 L0,22 L5.5537755,22 L5.5537755,34.8868659 C5.5537755,42.6672549 9.38865748,50.9794265 20.1532628,50.9794265 L52,50.9794265 L52,56 Z" id="Fill-3" fill="#696969"></path>
+                        <path d="M103.893938,57 L73,57 L73,51.8503497 L103.893938,51.8503497 C114.631946,51.8503497 118.459232,43.2573427 118.459232,35.2153846 L118.459232,22 L124,22 L124,35.2153846 C124,48.2447552 115.920175,57 103.893938,57" id="Fill-5" fill="#696969"></path>
+                        <path d="M5.54189944,87.9235563 L118.458101,87.9235563 L118.458101,19.0750646 L5.54189944,19.0750646 L5.54189944,87.9235563 Z M0,93 L124,93 L124,14 L0,14 L0,93 Z" id="Fill-7" fill="#696969"></path>
+                        <polygon id="Fill-9" fill="#696969" points="91 15 85.4790156 15 85.4790156 4.9869039 37.5209844 4.9869039 37.5209844 15 32 15 32 0 91 0"></polygon>
+                        <polygon id="Fill-10" fill="#696969" points="65 42 71 42 71 17 65 17"></polygon>
+                        <polygon id="Fill-11" fill="#696969" points="54 42 60 42 60 17 54 17"></polygon>
+                        <polygon id="Fill-12" fill="#696969" points="65 90 71 90 71 66 65 66"></polygon>
+                        <polygon id="Fill-13" fill="#696969" points="54 90 60 90 60 66 54 66"></polygon>
+                        <path d="M55.4521749,63.8451289 L67.546462,63.8451289 L67.546462,45.1520711 L55.4521749,45.1520711 L55.4521749,63.8451289 Z M68.0644186,69 L54.9383075,69 C52.2149461,69 50,66.9055711 50,64.3323356 L50,44.6648643 C50,42.0930289 52.2149461,40 54.9383075,40 L68.0644186,40 C70.7850539,40 73,42.0930289 73,44.6648643 L73,64.3323356 C73,66.9055711 70.7850539,69 68.0644186,69 Z" id="Fill-14" fill="#696969"></path>
+                        <polygon id="Fill-15" fill="#696969" points="59 65 65 65 65 58 59 58"></polygon>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
