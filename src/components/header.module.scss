@@ -93,6 +93,9 @@
         .HeaderLink {
             display: block;
             width: 100%;
+            a {
+                display: block;
+            }
         }
     }
 }
