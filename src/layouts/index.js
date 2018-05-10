@@ -2,11 +2,11 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 
+import 'swiper/dist/css/swiper.css'
+import './index.module.scss'
+
 import Header from '../components/header'
 import Footer from '../components/footer'
-
-import 'normalize.css'
-import './index.module.scss'
 
 const Layout = ({ children, data }) => (
   <div>
@@ -17,6 +17,9 @@ const Layout = ({ children, data }) => (
         { name: 'keywords', content: data.site.siteMetadata.keywords }
       ]}
     />
+    <meta content="text/html;charset=utf-8" httpEquiv="Content-Type" />
+    <meta content="utf-8" httpEquiv="encoding" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <Header siteTitle={data.site.siteMetadata.title} />
     <div>
       {children()}
