@@ -1,0 +1,37 @@
+@import "bourbon";
+@import "neat";
+
+.TransparentBox {
+  background-color: #16385E;
+  margin: 30px;
+  opacity: 0.4;
+  width: 46em;
+  filter: alpha(opacity=60); /* For IE8 and earlier */
+}
+
+.VerticalLine {
+  height: 220px;
+  width: 1px;
+  background: #ffffff;
+  margin-right: 18px;
+}
+
+.MenuList {
+  color: #ffffff;
+  display: inline-flex;
+  padding: 30px 20px 15px 0px;
+}
+
+.MenuListHeading {
+   text-transform: uppercase;
+   font-family: ProximaNova-Bold;
+   font-size: 13px;
+   padding: 0px 6px 17px 0px;
+}
+
+.MenuListItems {
+  font-family: ProximaNova-Regular;
+  font-size: 10px;
+  list-style-type: none;
+  padding: 0px 40px 0px 0px;
+}
