@@ -14,6 +14,7 @@
 
 .HeaderLogoWrapper {
     display: inline-block;
+    width: 75%;
 }
 
 .HeaderLinksWrapper {
@@ -24,12 +25,58 @@
 
 .HeaderLink {
     float: left;
-    padding: 1em .4em;
+    padding: 1.2em .0em;
+    margin: 0em .6em;
    
     a {
+        font-weight: bolder;
+        font-size: 0.9em;
         text-decoration: none;
         text-transform: uppercase;
         color: #fff;
+    }
+}
+
+.burger {
+    display: inline-block;
+    cursor: pointer;
+    display: none;
+    margin: 5px;
+}
+
+.burgerBar {
+    width: 35px;
+    height: 5px;
+    background-color: #fff;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+.burger.open {
+    & .burgerBar:nth-child(1) {
+        transform: rotate(-45deg) translate(-9px, 6px) ;
+    }
+
+    & .burgerBar:nth-child(2) {
+        opacity: 0;
+    }
+
+    & .burgerBar:nth-child(3) {
+        transform: rotate(45deg) translate(-8px, -8px) ;
+    }
+}
+
+@media (max-width: 768px) {
+    .HeaderLinksWrapper {
+        display: block;
+        position: relative;
+        float: right;
+    }
+    .HeaderLink {
+        display: none;
+    }
+    .burger {
+        display: block;
     }
 }
 

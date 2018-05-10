@@ -1,9 +1,10 @@
 import React from 'react'
 import img from "../img/opportunity_logo.svg"
 
-const Logo = ({width}) => (
+const Logo = () => (
     <img src={img} style={{
-        width: width ? width : '250px',
+        width: '100%',
+        maxWidth: '300px',
         marginBottom: 0
     }} />
 )
