@@ -1,2 +1,36 @@
 @import "bourbon";
 @import "neat";
+
+
+.HeaderWrapper {
+    margin: 0 auto;
+    max-width: 100%;
+    padding: 1.45rem 1.0875rem;
+    background: rgba(0,0,0,0.7);
+    position: relative;
+}
+
+.HeaderLogoWrapper {
+    display: inline-block;
+}
+
+.HeaderLinksWrapper {
+    position: absolute;
+    right: 1.45rem;
+    bottom: 0;
+}
+
+.HeaderLink {
+    float: left;
+    padding: 1em .4em;
+   
+    a {
+        text-decoration: none;
+        text-transform: uppercase;
+        color: #fff;
+    }
+}
+
+.HeaderLinkActive {
+    border-bottom: 4px solid #75DEC5;
+}

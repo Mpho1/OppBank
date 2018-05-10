@@ -1,28 +1,42 @@
 import React from 'react'
-import Link from 'gatsby-link'
+import GatsbyLink from 'gatsby-link'
+
+import Logo from '../components/logo'
 
 import style from './header.module.scss'
 
+
+const HeaderPageLink = ({to, title, active}) => (
+  <div className={ `${style.HeaderLink} ${active ? style.HeaderLinkActive : ''}` }>
+      <GatsbyLink to={
+          to ? to : '/#'
+      }>
+          {title}
+      </GatsbyLink>
+  </div>
+)
+
+
 const Header = ({ siteTitle }) => (
   <div className={style.bg}>
-    <div
-      style={{
-        margin: '0 auto',
-        maxWidth: 960,
-        padding: '1.45rem 1.0875rem'
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
+    <div className={style.HeaderWrapper}>
+      <div className={style.HeaderLogoWrapper}>
+        <GatsbyLink
           to="/"
           style={{
             color: 'white',
             textDecoration: 'none'
           }}
         >
-          {siteTitle}
-        </Link>
-      </h1>
+          <Logo />
+        </GatsbyLink>
+      </div>
+      <div className={style.HeaderLinksWrapper}>
+          <HeaderPageLink to="/#products" title="Products" active={true} />
+          <HeaderPageLink to="/#news" title="News" />
+          <HeaderPageLink to="/#careers" title="Careers" />
+          <HeaderPageLink to="/#contact-us" title="Contact us" />
+      </div>
     </div>
   </div>
 )
