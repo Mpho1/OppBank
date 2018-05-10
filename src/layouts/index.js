@@ -6,6 +6,7 @@ import Header from '../components/header'
 import Footer from '../components/footer'
 
 import 'normalize.css'
+import 'swiper/dist/css/swiper.css'
 import './index.module.scss'
 
 const Layout = ({ children, data }) => (
@@ -17,7 +18,6 @@ const Layout = ({ children, data }) => (
         { name: 'keywords', content: data.site.siteMetadata.keywords }
       ]}
     />
-    <Header siteTitle={data.site.siteMetadata.title} />
     <div>
       {children()}
     </div>
