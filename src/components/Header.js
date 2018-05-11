@@ -4,7 +4,7 @@ import Link from 'gatsby-link'
 import Logo from './Logo'
 import NavBar from './NavBar'
 
-import style from './header.module.scss'
+import style from './Header.module.scss'
 
 const Header = ({ siteTitle }) => (
   <div className={style.HeaderWrapper}>
