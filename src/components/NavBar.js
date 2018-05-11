@@ -1,13 +1,16 @@
 import React from 'react'
 import Link from 'gatsby-link'
 
+import Menu from './Menu'
+
 import style from './header.module.scss'
 
-const HeaderPageLink = ({to, title, active}) => (
+const HeaderPageLink = ({to, title, active, menu}) => (
   <div className={ `${style.HeaderLink} ${active ? style.HeaderLinkActive : ''}` }>
     <Link to={to ? to : '/#'}>
       {title}
     </Link>
+    {menu}
   </div>
 )
 
@@ -41,7 +44,7 @@ class NavBar extends React.Component {
     return (
       <div>
         <div className={`${style.HeaderLinksWrapper} ${headerClass}`}>
-          <HeaderPageLink to="/#products" title="Products" active={true} />
+          <HeaderPageLink to="/#products" title="Products" active={true} menu={<Menu className={style.menu} />} />
           <HeaderPageLink to="/#news" title="News" />
           <HeaderPageLink to="/#careers" title="Careers" />
           <HeaderPageLink to="/#contact-us" title="Contact us" />

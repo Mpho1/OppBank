@@ -26,10 +26,24 @@
 
 .HeaderLink {
     float: left;
-    padding: 1.2em .0em;
     margin: 0em .6em;
+    position: relative;
+
+    .menu {
+        display: none;
+        opacity: 0;
+    }
+
+    &:hover {
+        .menu {
+            display: block;
+            opacity: 1;
+        }
+    }
    
     a {
+        display: block;
+        padding: 1.2em .0em;
         font-weight: bolder;
         font-size: 0.9em;
         text-decoration: none;
@@ -71,6 +85,9 @@
 }
 
 @media (max-width: 768px) {
+    .HeaderWrapper {
+        position: relative;
+    }
     .HeaderLinksWrapper {
         display: block;
         position: relative;
@@ -81,9 +98,6 @@
     .burger {
         display: block;
     }
-}
-
-@media (max-width: 768px) {
     .open {
         &.HeaderLinksWrapper {
             padding: 0px 20px;
@@ -94,6 +108,7 @@
         .HeaderLink {
             display: block;
             width: 100%;
+            float: none;
             a {
                 display: block;
             }
