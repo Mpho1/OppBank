@@ -3,7 +3,7 @@ import Link from 'gatsby-link'
 
 import Menu from './Menu'
 
-import style from './header.module.scss'
+import style from './Header.module.scss'
 
 const HeaderPageLink = ({to, title, active, menu}) => (
   <div className={ `${style.HeaderLink} ${active ? style.HeaderLinkActive : ''}` }>
