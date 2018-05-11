@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="22px" viewBox="0 0 24 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+    <title>headoffice_green</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="navigation/footer" transform="translate(-103.000000, -90.000000)">
+            <g id="Group-6" transform="translate(103.000000, 91.000000)">
+                <g id="headoffice_green" transform="translate(1.000000, 0.000000)">
+                    <polygon id="Fill-1" fill="#75DEC5" points="5.4398129 16.9762645 1.37529677 16.9451032 1.35497419 19.6547806 5.41949032 19.6859419"></polygon>
+                    <polygon id="Fill-2" fill="#75DEC5" points="9.50432903 17.0073581 9.48332903 19.7170355 13.5478452 19.7481968 13.5688452 17.0385194"></polygon>
+                    <polygon id="Fill-3" fill="#75DEC5" points="15.0269226 3.50063226 0.123696774 3.38682581 0.144696774 0.677148387 15.0472452 0.790954839"></polygon>
+                    <g id="Group-8" transform="translate(0.000000, 0.164681)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                        <polygon id="Stroke-4" stroke="#F1F5F8" points="15.0269226 3.33595161 0.123696774 3.22214516 0.144696774 0.512467742 15.0472452 0.626274194"></polygon>
+                        <path d="M-6.77419355e-05,19.4802097 L21.6766742,19.6448226" id="Stroke-6" stroke="#FFFFFF"></path>
+                    </g>
+                    <polygon id="Fill-9" fill="#75DEC5" points="9.50927419 16.3299387 5.44475806 16.2987774 5.41901613 19.6858742 9.48353226 19.7170355"></polygon>
+                    <path d="M4.5011129,6.80765806 L5.85595161,6.81781935" id="Stroke-10" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M9.24304839,6.84342581 L10.5978871,6.85426452" id="Stroke-11" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M4.47035806,10.8721742 L5.82519677,10.8823355" id="Stroke-12" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M9.21195484,10.9079419 L10.5667935,10.9187806" id="Stroke-13" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <g id="Group-24" transform="translate(1.354839, 2.874358)">
+                        <path d="M20.3787387,9.48434516 C20.3672226,10.9807645 19.1451581,12.1838613 17.6487387,12.1730226 C16.1523194,12.1615065 14.9478677,10.9387645 14.9593839,9.44234516 C14.9709,7.94592581 16.1929645,6.74215161 17.6900613,6.75366774 C19.1864806,6.76518387 20.3902548,7.98724839 20.3787387,9.48434516" id="Fill-14" fill="#75DEC5"></path>
+                        <path d="M20.3787387,9.48434516 C20.3672226,10.9807645 19.1451581,12.1838613 17.6487387,12.1730226 C16.1523194,12.1615065 14.9478677,10.9387645 14.9593839,9.44234516 C14.9709,7.94592581 16.1929645,6.74215161 17.6900613,6.75366774 C19.1864806,6.76518387 20.3902548,7.98724839 20.3787387,9.48434516 Z" id="Stroke-16" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        <path d="M17.6486032,12.1728194 L17.6120226,16.9147548" id="Stroke-18" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        <polyline id="Stroke-20" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" points="0.1134 1.87787419 0.12423871 0.523035484 12.3171097 0.615841935 12.1931419 16.8739065 0.000270967742 16.7804226 0.0876580645 5.26497097"></polyline>
+                        <polygon id="Stroke-22" stroke="#F1F5F8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" points="8.12869355 16.8426774 4.06417742 16.8115161 4.10075806 12.0695806 8.16527419 12.1007419"></polygon>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
