@@ -15,7 +15,7 @@ class Menu extends React.Component {
               <li>Ordinary Savings Account</li>
               <li>Business Savings Account</li>
               <li>Fixed Deposit Account</li>
-              <li>Institutional Fixed account</li>
+              <li>Institutional Fixed Account</li>
               <li>Group Savings Account</li>
               <li>Target Savings Account</li>
             </div>
@@ -59,8 +59,3 @@ class Menu extends React.Component {
 }
 
 export default Menu
-
-//
-// <Link
-//   to="/">
-// </Link>
