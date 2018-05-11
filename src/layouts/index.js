@@ -4,7 +4,6 @@ import Helmet from 'react-helmet'
 
 import Header from '../components/header'
 import Footer from '../components/footer'
-import Button from '../components/button'
 
 import 'normalize.css'
 import './index.module.scss'
@@ -22,7 +21,6 @@ const Layout = ({ children, data }) => (
     <div>
       {children()}
     </div>
-    <Button />
     <Footer />
   </div>
 )
