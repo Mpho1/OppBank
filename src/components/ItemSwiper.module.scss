@@ -1,0 +1,40 @@
+.wrapper {
+  position: relative;
+
+  :global(.swiper-slide-duplicate-prev) {
+    opacity: 0.5;
+  }
+
+  :global(.swiper-slide-duplicate-next) {
+    opacity: 0.5;
+  }
+  
+}
+
+.prevButton, .nextButton {
+  position: absolute;
+  top: 50%;
+  margin-top: -55px;
+  width: 110px;
+  height: 110px;
+  background: none;
+  border: none;
+  padding: 0;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 20;
+  cursor: pointer;
+}
+
+.prevButton {
+  background-image: url('../img/arrow_left.svg');
+  left: 20px;
+}
+
+.nextButton {
+  background-image: url('../img/arrow_right.svg');
+  right: 20px;
+}
+
+
+
