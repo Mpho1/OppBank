@@ -84,6 +84,9 @@
 }
 
 @media (max-width: 768px) {
+    .HeaderWrapper {
+        position: relative;
+    }
     .HeaderLinksWrapper {
         display: block;
         position: relative;
@@ -93,9 +96,6 @@
     }
     .burger {
         display: block;
-    }
-    .HeaderWrapper {
-        position: fixed;
     }
     .open {
         &.HeaderLinksWrapper {
