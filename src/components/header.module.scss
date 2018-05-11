@@ -1,12 +1,13 @@
 @import "bourbon";
 @import "neat";
+@import "../constants/colors.module.scss";
 
 
 .HeaderWrapper {
     margin: 0 auto;
     max-width: 100%;
     padding: 1.45rem 1.0875rem;
-    background: rgba(0,0,0,0.7);
+    background: $transparentBlack;
     position: fixed;
     z-index: 10;
     width: 100%;
@@ -33,7 +34,7 @@
         font-size: 0.9em;
         text-decoration: none;
         text-transform: uppercase;
-        color: #fff;
+        color: $white;
     }
 }
 
@@ -50,7 +51,7 @@
 .burgerBar {
     width: 35px;
     height: 5px;
-    background-color: #fff;
+    background-color: $white;
     margin: 6px 0;
     transition: 0.4s;
 }
@@ -101,5 +102,5 @@
 }
 
 .HeaderLinkActive {
-    border-bottom: 4px solid #75DEC5;
+    border-bottom: 4px solid $teal;
 }
