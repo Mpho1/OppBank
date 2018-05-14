@@ -10,6 +10,11 @@ const typography = new Typography({
   bodyFontFamily: [
     'ProximaNova'
   ]
+  ,overrideStyles:({})=>({
+    'section > h4': {
+      fontFamily: 'ProximaNova'
+    }
+  })
 })
 
 export default typography
