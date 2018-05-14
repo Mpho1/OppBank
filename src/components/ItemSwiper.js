@@ -4,7 +4,6 @@ import Swiper from 'react-id-swiper'
 import styles from './ItemSwiper.module.scss'
 
 class ItemSwiper extends React.Component {
-
   constructor (props) {
     super(props)
     this.goNext = this.goNext.bind(this)
@@ -21,7 +20,6 @@ class ItemSwiper extends React.Component {
   }
 
   render () {
-
     const params = {
       slidesPerView: 'auto',
       centeredSlides: true,
