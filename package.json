@@ -23,7 +23,14 @@
     "build": "gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --write 'src/**/*.js'",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "precommit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint",
+      "git add"
+    ]
   },
   "devDependencies": {
     "eslint-config-standard": "^11.0.0",
@@ -33,6 +40,7 @@
     "eslint-plugin-react": "^7.7.0",
     "eslint-plugin-standard": "^3.1.0",
     "husky": "^0.14.3",
+    "lint-staged": "^7.1.0",
     "prettier": "^1.12.0"
   }
 }
