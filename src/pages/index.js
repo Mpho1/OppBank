@@ -1,6 +1,3 @@
-import React from 'react'
-import Link from 'gatsby-link'
-
 import styles from './index.module.scss'
 
 import HomeSlider from '../components/HomeSlider'
@@ -25,7 +22,10 @@ const IndexPage = () => (
   <div>
     <HomeSlider />
 
-    <ContentsSection title="Why bank with opportunity" subtitle="We at Opportunity Bank strive to help improve the business and lives of our clients. Through continious growth will we be successful.">
+    <ContentsSection
+      title="Why bank with opportunity"
+      subtitle="We at Opportunity Bank strive to help improve the business and lives of our clients. Through continious growth will we be successful."
+    >
       <ItemSwiper>
         <div className={styles.clientItem}>
           <ClientItem
@@ -35,14 +35,14 @@ const IndexPage = () => (
           />
         </div>
         <div className={styles.clientItem}>
-          <ClientItem 
+          <ClientItem
             image={require('../img/business.svg')}
             title='Start up Business'
             text='Get a business loan at competitive interest rates'
           />
         </div>
         <div className={styles.clientItem}>
-          <ClientItem 
+          <ClientItem
             image={require('../img/bank_accounts.svg')}
             title='Bank accounts'
             text='Choose from a selection of accounts and stay in control of your assets'
@@ -51,13 +51,16 @@ const IndexPage = () => (
       </ItemSwiper>
     </ContentsSection>
 
-    <ContentsSection 
+    <ContentsSection
       bgImage={require('../img/city.png')}
       title="Our products"
       subtitle="We believe that there are many ways to assist our customers to allow financial ease.">
     </ContentsSection>
 
-    <ContentsSection title="Opportunity News" subtitle="Giving you access to all the latest news within our company.">
+    <ContentsSection
+      title="Opportunity News"
+      subtitle="Giving you access to all the latest news within our company."
+    >
     </ContentsSection>
   </div>
 )
