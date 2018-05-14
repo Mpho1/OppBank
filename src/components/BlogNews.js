@@ -7,9 +7,9 @@ const BlogNews = () => (
   <div>
     <div className={style.blog}>
       <img src={require('../img/slide1.png')} className={style.blogImage}/>
-      <h5 className={style.blogText}>
+      <p className={style.blogText}>
         I started working at a glue factory but now, I am still working at a glue factory lol.
-      </h5>
+      </p>
       <p className={style.blogDate}>16 May 2016 &nbsp;
         <span className={style.blogName}>Charles Malton</span>
       </p>
