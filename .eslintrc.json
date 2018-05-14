@@ -4,6 +4,6 @@
         "react"
     ],
     "rules": {
-        "react/jsx-uses-vars": "on"
+        "react/jsx-uses-vars": 2
     }
 }
