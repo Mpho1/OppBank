@@ -1,3 +1,4 @@
+import React from 'react'
 import img from '../img/opportunity_logo.svg'
 
 const Logo = () => (
