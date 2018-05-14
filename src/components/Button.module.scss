@@ -1,4 +1,4 @@
-Button {
+.Button {
     border-radius: 4px;
     background-color: #2CABE2;
     border: none;
@@ -9,6 +9,5 @@ Button {
     display: inline-block;
     font-size: 16px;
     margin: 4px 2px;
-    cursor: pointer;
-    
+    cursor: pointer; 
 }
