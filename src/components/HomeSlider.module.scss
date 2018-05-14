@@ -1,14 +1,17 @@
+@import '../constants/colors.module.scss';
+
 .homeSlider {
     width: 100%;
     height: 100vh;
 
     :global(.swiper-pagination-bullet-active) {
-        background: #75DEC5;
+        background: $teal;
     }
 }
 
 .slide {
     background-position: center top;
+    background-size: cover;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -16,7 +19,7 @@
     text-align: center;
 
     h1, p {
-        color: #fff
+        color: $white;
     }
 
     h1 {
@@ -39,4 +42,10 @@
 
 .slide2 {
     background-image: url(../img/slide1.png);
+}
+
+@media (max-width: 768px) {
+    .homeSlider {
+        height: calc(100vh - 112px);
+    }
 }

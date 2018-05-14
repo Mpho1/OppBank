@@ -1,0 +1,29 @@
+@import '../constants/colors.module.scss';
+
+.clientItem {
+  width: 340px;
+  height: 300px;
+  text-align: center;
+  padding: 20px 0px;
+
+  h4 {
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    color: $paleBlue;
+    margin-bottom: 10px;
+  }
+
+  p {
+    color: $grey;
+    padding: 0px 28px; 
+    font-size: 0.92rem;
+  }
+
+  .imageContainer {
+    height: 190px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+  }
+}

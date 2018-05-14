@@ -1,0 +1,100 @@
+@import "../constants/colors.module.scss";
+
+.footerContainer {
+  background-color: $darkGrey;
+  color: $white;
+  padding: 50px;
+}
+
+.footerLayout {
+  display: flex;
+}
+
+.footerContact {
+  flex: 0.26;
+
+  h4 {
+    margin-bottom: 8px;
+
+    img {
+      width: 22px;
+      margin: 0px 20px 0px 0px;
+    }
+  }
+
+  div:last-of-type {
+    h4 {
+      margin-left: 43px;
+    }
+  }
+
+  p {
+    margin-left: 43px;
+    font-size: 0.8rem;
+  }
+}
+
+.footerLinks {
+  flex: 0.44;
+  display: flex;
+
+  h6 {
+    margin-bottom: 38px;
+  }
+
+  ul {
+    margin: 0;
+  }
+
+  li {
+    list-style-type: none;
+    font-size: 0.7rem;
+  }
+}
+
+.footerLinkCol {
+  flex: 1
+}
+
+.footerLogo {
+  flex: 0.3;
+}
+
+.copyRight {
+  margin-top: 10px;
+  font-size: 0.8rem;
+}
+
+.socialIcon {
+  padding: 0px 4px;
+  margin: 0;
+}
+
+@media (max-width: 992px) and (min-width: 768px) {
+  .footerContact {
+    display: flex;
+
+    h4 {
+      margin-left: 0;
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .footerLayout {
+    display: block;
+  }
+}
+
+@media (max-width: 768px) {
+  .footerLinks {
+    display: block;
+  }
+
+  .footerLinks {
+    h6 {
+      margin-top: 30px;
+      margin-bottom: 20px;
+    }
+  }
+}
