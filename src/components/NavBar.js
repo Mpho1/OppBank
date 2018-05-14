@@ -7,7 +7,7 @@ import style from './Header.module.scss'
 
 const HeaderPageLink = ({to, title, active, menu}) => (
   <div className={ `${style.HeaderLink} ${active ? style.HeaderLinkActive : ''}` }>
-    <Link to={to ? to : '/#'}>
+    <Link to={to || '/#'}>
       {title}
     </Link>
     {menu}
@@ -15,7 +15,7 @@ const HeaderPageLink = ({to, title, active, menu}) => (
 )
 
 const Burger = ({onClick, isOpen}) => {
-  const burgerClass = isOpen ? style.open: ''
+  const burgerClass = isOpen ? style.open : ''
   return (
     <div className={`${style.burger} ${burgerClass}`} onClick={onClick}>
       <div className={style.burgerBar}></div>
@@ -28,19 +28,20 @@ const Burger = ({onClick, isOpen}) => {
 class NavBar extends React.Component {
   constructor () {
     super()
+    this.onClick = this.onClick.bind(this)
     this.state = {
       menuOpen: false
     }
   }
 
-  onClick = () => {
+  onClick () {
     this.setState({
       menuOpen: !this.state.menuOpen
     })
   }
 
   render () {
-    const headerClass = this.state.menuOpen ? style.open: ''
+    const headerClass = this.state.menuOpen ? style.open : ''
     return (
       <div>
         <div className={`${style.HeaderLinksWrapper} ${headerClass}`}>
