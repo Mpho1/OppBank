@@ -1,11 +1,27 @@
 import React from 'react'
 import Link from 'gatsby-link'
 
+import style from './BlogNews.module.scss'
+
 const BlogNews = () => (
   <div>
-    {/* <h1>Hi from the second page</h1>
-    <p>Welcome to page 2</p>
-    <Link to="/">Go back to the homepage</Link> */}
+    <div className={style.blog}>
+      <img src={require('../img/slide1.png')} className={style.blogImage}/>
+      <h5 className={style.blogText}>
+        I started working at a glue factory but now, I am still working at a glue factory lol.
+      </h5>
+      <p className={style.blogDate}>16 May 2016 &nbsp;
+        <span className={style.blogName}>Charles Malton</span>
+      </p>
+      <div className={style.blogSocial}>
+        <img src={require('../img/facebook.svg')} className="blogSocialIcon"/>
+        <img src={require('../img/twitter.svg')} className="blogSocialIcon"/>
+        <img src={require('../img/whatsapp.svg')} className="blogSocialIcon"/>
+      </div>
+      <p className={style.blogInformation}>
+        I started working at a glue factory but now, I am still working at a glue factory lol. I started working at a glue factory but now, I am still working at a glue factory lol. I started working at a glue factory but now, I am still working at a glue factory lol......
+      </p>
+    </div>
   </div>
 )
 
