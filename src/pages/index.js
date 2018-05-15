@@ -5,6 +5,7 @@ import styles from './index.module.scss'
 
 import HomeSlider from '../components/HomeSlider'
 import ItemSwiper from '../components/ItemSwiper'
+import BlogNews from '../components/BlogNews'
 
 const ClientItem = ({image, title, text}) => (
   <div>
@@ -32,18 +33,23 @@ const IndexPage = () => (
         />
       </div>
       <div className={styles.clientItem}>
-        <ClientItem 
+        <ClientItem
           image={require('../img/business.svg')}
           title='Start up Business'
           text='Get a business loan at competitive interest rates'
         />
       </div>
       <div className={styles.clientItem}>
-        <ClientItem 
+        <ClientItem
           image={require('../img/bank_accounts.svg')}
           title='Bank accounts'
           text='Choose from a selection of accounts and stay in control of your assets'
         />
+      </div>
+    </ItemSwiper>
+    <ItemSwiper>
+      <div>
+        <BlogNews/>
       </div>
     </ItemSwiper>
   </div>
