@@ -1,12 +1,11 @@
 import React from 'react'
-
 import Logo from './Logo'
 
 import styles from './Footer.module.scss'
 
-function getDateYear() {
-  const date = new Date();
-  return date.getFullYear();
+function getDateYear () {
+  const date = new Date()
+  return date.getFullYear()
 }
 
 const Footer = () => (

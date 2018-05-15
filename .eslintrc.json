@@ -1,9 +1,12 @@
 {
     "extends": "standard",
     "plugins": [
-        "react"
+        "react",
+        "graphql"
     ],
     "rules": {
-        "react/jsx-uses-vars": "on"
+        "react/jsx-uses-react": "error",
+        "react/jsx-uses-vars": "error",
+        "graphql/template-strings": "error"
     }
 }
