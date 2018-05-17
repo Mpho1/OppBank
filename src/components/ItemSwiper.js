@@ -25,8 +25,48 @@ class ItemSwiper extends React.Component {
       centeredSlides: true,
       spaceBetween: 30,
       loop: true,
-      parallax: {
-        opacity: 0.5
+      parallax: true,
+      breakpoints: {
+        1444: {
+          slidesPerView: 'auto',
+          spaceBetween: 1
+        },
+        1366: {
+          slidesPerView: 5,
+          spaceBetween: 10
+        },
+        1024: {
+          slidesPerView: 'auto',
+          spaceBetween: -50
+        },
+        768: {
+          slidesPerView: 'auto',
+          spaceBetween: -79
+        },
+        414: {
+          slidesPerView: 1,
+          spaceBetween: -69
+        },
+        411: {
+          slidesPerView: 1,
+          spaceBetween: -67
+        },
+        400: {
+          slidesPerView: 1,
+          spaceBetween: -56
+        },
+        375: {
+          slidesPerView: 1,
+          spaceBetween: -31
+        },
+        360: {
+          slidesPerView: 1,
+          spaceBetween: -16
+        },
+        320: {
+          slidesPerView: 1,
+          spaceBetween: -60
+        }
       }
     }
 

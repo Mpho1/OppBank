@@ -12,9 +12,8 @@
   border: 0px solid $white;
   background-color: $white;
   width: 26ch;
-  // margin: 3ch 1ch 3ch 1ch;
   margin: 23px 10px;
-  box-shadow: 0px 0px 7px 0px #ccc;
+  box-shadow: 0px 0px 16px 0px #ccc;
 }
 
 .blogImage {
@@ -65,6 +64,17 @@
   color: $grey;
 }
 
+@media (max-width: 320px) {
+    .blogSwiper {
+      display: inline-flex;
+    }
+
+    .blog {
+      margin-left: 60px;
+      width: 200px;
+    }
+}
+
 @media (max-width: 768px) {
     .blogSwiper {
       display: inline-flex;
@@ -72,5 +82,25 @@
 
     .blog {
       margin-left: 50px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .blogSwiper {
+      display: inline-flex;
+    }
+
+    .blog {
+      margin-left: 30px;
+    }
+}
+
+@media (min-width: 1366px) {
+    .blogSwiper {
+      display: inline-flex;
+    }
+
+    .blog {
+      margin-left: 62px;
     }
 }
