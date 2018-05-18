@@ -6,7 +6,6 @@
     ],
     "rules": {
         "react/jsx-uses-react": "error",
-        "react/jsx-uses-vars": "error",
-        "graphql/template-strings": "error"
+        "react/jsx-uses-vars": "error"
     }
 }

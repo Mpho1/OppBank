@@ -65,8 +65,17 @@ const IndexPage = () => (
     >
     </ContentsSection>
     <ItemSwiper>
-      <div>
-        <BlogNews/>
+      <div className={styles.blogItem}>
+        <BlogNews />
+      </div>
+      <div className={styles.blogItem}>
+        <BlogNews />
+      </div>
+      <div className={styles.blogItem}>
+        <BlogNews />
+      </div>
+      <div className={styles.blogItem}>
+        <BlogNews />
       </div>
     </ItemSwiper>
   </div>
