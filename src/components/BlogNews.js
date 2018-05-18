@@ -2,14 +2,14 @@ import React from 'react'
 
 import style from './BlogNews.module.scss'
 
-const BlogNews = () => (
+const BlogNews = ({ image, text, date, name, information }) => (
   <div className={style.blog}>
-    <img src={require('../img/slide1.png')} className={style.blogImage}/>
+    <img src={image} className={style.blogImage}/>
     <p className={style.blogText}>
-      I started working at a glue factory but now, I am still working at a glue factory lol.
+      {text}
     </p>
-    <p className={style.blogDate}>16 May 2016 &nbsp;
-      <span className={style.blogName}>Charles Malton</span>
+    <p className={style.blogDate}>{date} &nbsp;
+      <span className={style.blogName}>{name}</span>
     </p>
     <div className={style.blogSocial}>
       <img src={require('../img/facebook.svg')} className="blogSocialIcon"/>
@@ -17,7 +17,7 @@ const BlogNews = () => (
       <img src={require('../img/whatsapp.svg')} className="blogSocialIcon"/>
     </div>
     <p className={style.blogInformation}>
-      I started working at a glue factory but now, I am still working at a glue factory lol. I started working at a glue factory but now, I am still working at a glue factory lol. I started working at a glue factory but now, I am still working at a glue factory lol......
+      {information}
     </p>
   </div>
 )
