@@ -64,6 +64,7 @@ const IndexPage = () => (
       subtitle="Giving you access to all the latest news within our company."
     >
     </ContentsSection>
+    
     <ItemSwiper>
       <div className={styles.blogItem}>
         <BlogNews />
