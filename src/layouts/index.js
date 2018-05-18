@@ -6,7 +6,6 @@ import './index.module.scss'
 
 import Header from '../components/Header'
 import Footer from '../components/Footer'
-import Button from '../components/button'
 
 const Layout = ({ children, data }) => (
   <div>
@@ -24,7 +23,6 @@ const Layout = ({ children, data }) => (
     <div>
       {children()}
     </div>
-    <Button text="VIEW" />
     <Footer />
   </div>
 )

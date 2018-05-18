@@ -4,6 +4,7 @@ import styles from './index.module.scss'
 import HomeSlider from '../components/HomeSlider'
 import ItemSwiper from '../components/ItemSwiper'
 import ContentsSection from '../components/ContentsSection'
+import ProductsCard from '../components/ProductsCard'
 
 const ClientItem = ({image, title, text}) => (
   <div>
@@ -52,16 +53,11 @@ const IndexPage = () => (
       </ItemSwiper>
     </ContentsSection>
 
-    <ContentsSection
-      bgImage={require('../img/city.png')}
-      title="Our products"
-      subtitle="We believe that there are many ways to assist our customers to allow financial ease.">
-    </ContentsSection>
+    <ProductsCard/>
 
     <ContentsSection
       title="Opportunity News"
-      subtitle="Giving you access to all the latest news within our company."
-    >
+      subtitle="Giving you access to all the latest news within our company.">
     </ContentsSection>
   </div>
 )

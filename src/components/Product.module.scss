@@ -1,0 +1,183 @@
+@import '../constants/colors.module.scss';
+
+.productContainer {
+    width: 70em;
+    height: 22em;
+    margin: 3px 0px 3px 300px;
+    display: flex;
+  
+    .productInfo {
+      border: 1px solid $grey;
+      margin-left: 5px;
+      margin-right: 5px;
+      background: $white;
+      text-align: center;
+      
+    }
+  
+    .productImage {
+      height: 200px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-end;
+      margin-top: 10px;
+    }
+    h4 {
+      font-size: 18px;
+      text-transform: uppercase;
+      color: $paleBlue;
+      margin-bottom: 10px;
+    }
+  
+    p {
+      color: $lightGrey !important;
+      padding: 0px 28px; 
+      font-size: 13px !important;
+      
+    }
+  
+    .HorizontalLine {
+      height: 1px;
+      width: 13em;
+      background: $lightGrey;
+      margin: 0px 2px 14px 30px;
+  
+      .productInfo {
+        padding: 10px 0px 3px 0px;
+      }
+    }
+  }
+  @media (max-width: 768px) {
+    .productContainer {
+      
+      display: contents;
+      margin: 10px 0px 10px 0px;
+      width: 100%;
+    }
+    .HorizontalLine {
+      width: 100%;
+      height: 1px;
+      margin: 0px 2px 14px 22px;
+    }
+  }
+  
+//     @media (max-width: 768px) {
+//       .productContainer {
+//           display: contents;
+//           margin: 10px 0px 10px 0px;
+    
+//       .HorizontalLine {
+//             height: 1px;
+//             width: 17em;
+//             margin: 0px 2px 14px 22px;
+            
+//       }
+//     }
+//   }
+//   @media (min-width: 360px) and (max-width: 640px) {
+//     .productContainer {
+//         display: contents;
+//         margin: 10px 0px 10px 0px;
+  
+//     .HorizontalLine {
+//           width: 22em;
+          
+//     }
+//   }
+//   }
+//   @media (min-width: 411px) and (max-width: 731px) {
+//     .productContainer {
+//         display: contents;
+//         margin: 10px 0px 10px 0px;
+  
+//     .HorizontalLine {
+//           width: 4em;
+//           margin: 0px 2px 14px 22px;
+//     }
+//   }
+//   }
+//   @media (min-width: 411px) and (max-width: 823px) {
+//     .productContainer {
+//         display: contents;
+//         margin: 10px 0px 10px 0px;
+  
+//     .HorizontalLine {
+//           height: 1px;
+//           width: 17em;
+//           margin: 0px 2px 14px 22px;
+//     }
+//   }
+//   }
+//   @media (min-width: 320px) and (max-width: 568px) {
+//     .productContainer {
+//         display: contents;
+//         margin: 10px 0px 10px 0px;
+  
+//     .HorizontalLine {
+//           height: 1px;
+//           width: 12em;
+//           margin: 0px 2px 14px 22px;
+//     }
+//   }
+//   }
+//   @media (min-width: 375px) and (max-width: 667px) {
+//     .productContainer {
+//         display: contents;
+//         margin: 10px 0px 10px 0px;
+  
+//     .HorizontalLine {
+//           height: 1px;
+//           width: 20em;
+//           margin: 0px 2px 14px 22px;
+//     }
+//   }
+//   }
+//   @media (min-width: 414px) and (max-width: 736px) {
+//     .productContainer {
+//         display: contents;
+//         margin: 10px 0px 10px 0px;
+  
+//     .HorizontalLine {
+//           height: 1px;
+//           width: 17em;
+//           margin: 0px 2px 14px 22px;
+//     }
+//   }
+//   }
+//   @media (min-width: 375px) and (max-width: 812px) {
+//     .productContainer {
+//         display: contents;
+//         margin: 10px 0px 10px 0px;
+  
+//     .HorizontalLine {
+//           height: 1px;
+//           width: 39em;
+//           margin: 0px 2px 14px 22px;
+//     }
+//   }
+//   }
+//   @media (min-width: 768px) and (max-width: 1024px){ 
+//     .productContainer {
+//         display: contents;
+//         margin: 10px 0px 10px 0px;
+  
+//     .HorizontalLine {
+//           height: 1px;
+//           width: 5em;
+//           margin: 0px 2px 14px 20px;
+//     }
+//   }
+//   }
+//   @media (min-width: 1024px) and (max-width: 1366px){ 
+//     .productContainer {
+//         display: contents;
+//         margin: 10px 0px 10px 0px;
+  
+//     .HorizontalLine {
+//           height: 1px;
+//           width: 5em;
+//           margin: 0px 2px 14px 20px;
+//     }
+//   }
+//   }
