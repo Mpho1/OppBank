@@ -1,17 +1,19 @@
+@import "bourbon";
+@import "neat";
 @import '../constants/colors.module.scss';
 
-.productContainer {
-    width: 70em;
-    height: 22em;
-    margin: 3px 0px 3px 300px;
-    display: flex;
-  
+    .productContainer {
+      @include outer-container;
+
     .productInfo {
+      @include span-columns(3);
       border: 1px solid $grey;
-      margin-left: 5px;
-      margin-right: 5px;
       background: $white;
       text-align: center;
+      padding:10px 30px;
+      @include media(new-breakpoint(max-width 1366px)) {
+      @include span-columns(12);
+     }
     }
   
     .productImage {
@@ -38,26 +40,7 @@
   
     .HorizontalLine {
       height: 1px;
-      width: 13em;
+      width: 100%;
       background: $lightGrey;
-      margin: 0px 2px 14px 30px;
-  
-    .productInfo {
-      padding: 10px 0px 3px 0px;
     }
   }
-}
-
-@media (max-width: 768px) {
-  .productContainer {
-    display: contents;
-    margin: 10px 0px 10px 0px;
-    width: 100%;
-  }
-
-  .HorizontalLine {
-    width: 100%;
-    height: 1px;
-    margin: 0px 2px 14px 22px;
-  }
-}
