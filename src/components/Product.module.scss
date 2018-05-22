@@ -2,45 +2,45 @@
 @import "neat";
 @import '../constants/colors.module.scss';
 
-    .productContainer {
-      @include outer-container;
+.productContainer {
+  @include outer-container;
 
-    .productInfo {
-      @include span-columns(3);
-      border: 1px solid $grey;
-      background: $white;
-      text-align: center;
-      padding:10px 30px;
-      @include media(new-breakpoint(max-width 1366px)) {
-      @include span-columns(12);
-     }
-    }
-  
-    .productImage {
-      height: 200px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: flex-end;
-      margin-top: 10px;
-    }
-
-    h4 {
-      font-size: 18px;
-      text-transform: uppercase;
-      color: $paleBlue;
-      margin-bottom: 10px;
-    }
-  
-    p {
-      color: $lightGrey !important;
-      padding: 0px 28px; 
-      font-size: 13px !important;
-    }
-  
-    .HorizontalLine {
-      height: 1px;
-      width: 100%;
-      background: $lightGrey;
-    }
+  .productInfo {
+    @include span-columns(3);
+    border: 1px solid $grey;
+    background: $white;
+    text-align: center;
+    padding:10px 30px; 
+    @include media(max-width 1366px) {
+    @include span-columns(12);
   }
+}
+  
+  .productImage {
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 10px;
+  }
+
+  h4 {
+    font-size: 18px;
+    text-transform: uppercase;
+    color: $paleBlue;
+    margin-bottom: 10px;
+  }
+  
+  p {
+    color: $lightGrey !important;
+    padding: 0px 28px; 
+    font-size: 13px !important;
+  }
+  
+  .HorizontalLine {
+    height: 1px;
+    width: 100%;
+    background: $lightGrey;
+  }
+}
