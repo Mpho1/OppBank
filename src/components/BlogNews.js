@@ -12,9 +12,9 @@ const BlogNews = ({ image, text, date, name, information }) => (
       <span className={style.blogName}>{name}</span>
     </p>
     <div className={style.blogSocial}>
-      <img src={require('../img/facebook.svg')} className={style.blogSocialIcon}/>
-      <img src={require('../img/twitter.svg')} className={style.blogSocialIcon}/>
-      <img src={require('../img/whatsapp.svg')} className={style.blogSocialIcon}/>
+      <img src={require('../img/facebook.svg')}/>
+      <img src={require('../img/twitter.svg')}/>
+      <img src={require('../img/whatsapp.svg')}/>
     </div>
     <p className={style.blogInformation}>
       {information}
