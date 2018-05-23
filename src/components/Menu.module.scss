@@ -1,5 +1,6 @@
 @import "bourbon";
 @import "neat";
+@import '../constants/colors.module.scss';
 
 .TransparentBox {
   position: fixed;
@@ -15,13 +16,13 @@
 .VerticalLine {
   height: 15.2em;
   width: 1px;
-  background: #ffffff;
+  background: $white;
   margin-right: 21px;
   left: 10px;
 }
 
 .MenuList {
-  color: #ffffff;
+  color: $white;
   display: inline-flex;
   padding: 24px 25px 0px 0px;
 
