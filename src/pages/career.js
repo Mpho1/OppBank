@@ -11,11 +11,18 @@ const CareerPage = () => (
         bgImage={require('../img/search_header.png')}
         title="Providing Opportunity">
         <div className={styles.textField}>
-          <TextField
-            mapPlaceholder="Area"
-            searchPlaceholder="Clinics, Hospitals, Doctors etc"
-          />
+          <div className="styles.textFieldMap">
+            <TextField
+              placeholder="Area"
+            />
+          </div>
+          <div>
+            <TextField
+              placeholder="Clinics, Hospitals, Doctors etc"
+            />
+          </div>
         </div>
+
       </ContentsSection>
     </div>
   </div>
