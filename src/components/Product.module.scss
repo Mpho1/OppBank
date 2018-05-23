@@ -11,11 +11,8 @@
     background: $white;
     text-align: center;
     padding:10px 30px; 
-    @include media(max-width 1366px) {
-    @include span-columns(12);
   }
-}
-  
+
   .productImage {
     height: 200px;
     display: flex;
@@ -43,4 +40,14 @@
     width: 100%;
     background: $lightGrey;
   }
+}
+
+@media (max-width: 1366px) {
+  margin: 5px auto;
+  @include span-columns(4);
+  display: block;
+}
+
+@media (max-width: 720px) {
+  @include span-columns(12)
 }
