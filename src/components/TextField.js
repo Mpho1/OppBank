@@ -1,12 +1,9 @@
 import React from 'react'
 
-import style from './TextField.module.scss'
-
-const TextField = ({ searchPlaceholder, mapPlaceholder }) => (
+const TextField = ({ placeholder }) => (
   <div>
     <form>
-      <input type="text" placeholder={mapPlaceholder} className={style.mapPlaceholder}/>
-      <input type="text" placeholder={searchPlaceholder}/>
+      <input type="text" placeholder={placeholder}/>
     </form>
   </div>
 )
