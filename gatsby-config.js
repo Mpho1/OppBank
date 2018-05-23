@@ -20,6 +20,12 @@ module.exports = {
       options: {
         pathToConfigModule: 'src/utils/typography.js'
       }
+    }, {
+      resolve: `gatsby-source-contentful`,
+      options: {
+        spaceId: `v0nl6t6cllhq`,
+        accessToken: `77618f26719ba1e26aa76460aace21e21eddfb3a7c8124f0a9598119f91de705`
+      }
     }
   ]
 }
