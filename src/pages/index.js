@@ -53,7 +53,12 @@ const IndexPage = () => (
       </ItemSwiper>
     </ContentsSection>
 
-    <ProductsCard/>
+    <ContentsSection
+      bgImage={require('../img/city.png')}
+      title="Our products"
+      subtitle="We believe that there are many ways to assist our customers to allow financial ease.">
+      <ProductsCard/>
+    </ContentsSection>
 
     <ContentsSection
       title="Opportunity News"

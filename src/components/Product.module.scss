@@ -3,14 +3,18 @@
 @import '../constants/colors.module.scss';
 
 .productContainer {
-  @include outer-container;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 10px;
+  padding-left: 10%;
+  padding-right: 10%;
 
   .productInfo {
-    @include span-columns(3);
     border: 1px solid $grey;
     background: $white;
     text-align: center;
-    padding:10px 30px; 
+    padding:10px 30px;
+    margin:5px;
   }
 
   .productImage {
@@ -28,7 +32,7 @@
     color: $paleBlue;
     margin-bottom: 10px;
   }
-  
+    
   p {
     color: $lightGrey !important;
     padding: 0px 28px; 
@@ -42,12 +46,8 @@
   }
 }
 
-@media (max-width: 1366px) {
-  margin: 5px auto;
-  @include span-columns(4);
-  display: block;
-}
-
-@media (max-width: 720px) {
-  @include span-columns(12)
+@media only screen and (max-width: 1536px) and (min-width: 1150px)  {
+  .productContainer {
+    display: inline-flex;
+  }
 }
