@@ -2,7 +2,7 @@ import React from 'react'
 import styles from './career.module.scss'
 
 import ContentsSection from '../components/ContentsSection'
-import TextField from '../components/TextField'
+import SearchField from '../components/SearchField'
 
 const CareerPage = () => (
   <div>
@@ -10,19 +10,10 @@ const CareerPage = () => (
       <ContentsSection
         bgImage={require('../img/search_header.png')}
         title="Providing Opportunity">
-        <div className={styles.textField}>
-          <div className="styles.textFieldMap">
-            <TextField
-              placeholder="Area"
-            />
-          </div>
-          <div>
-            <TextField
-              placeholder="Clinics, Hospitals, Doctors etc"
-            />
-          </div>
-        </div>
-
+        <SearchField
+          areaPlaceholder="Area"
+          textPlaceholder="Clinic, Hospitals, Doctors"
+        />
       </ContentsSection>
     </div>
   </div>

@@ -1,0 +1,65 @@
+@import "bourbon";
+@import "neat";
+@import "../constants/colors.module.scss";
+
+.searchField {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 7px;
+}
+
+.areaField {
+  max-width: 17em;
+  background: url(../img/location.svg) no-repeat scroll 9px 7px;
+  background-color: $white;
+  border-radius: 5px;
+  margin-right: 11px;
+  height: 2.3em;
+  padding-left: 1.8em;
+}
+
+.jobField {
+  width: 20em;
+  background-color: $white;
+  border-radius: 5px;
+  margin-right: 8px;
+  height: 2.3em;
+  padding-left: .9em;
+}
+
+@media (max-width: 670px) {
+  .searchField {
+    justify-content: center;
+    margin-left: 7px;
+    margin-right: 3px;
+  }
+
+  .areaField {
+    width: 20em;
+    margin-bottom: 10px;
+  }
+
+  .jobField {
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 582px) {
+  .searchField {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-align-content: center;
+  }
+
+  .areaField {
+    max-width: 10em;
+    margin-bottom: .3em;
+  }
+
+  .jobField {
+    width: 10em;
+    margin-bottom: .3em;
+  }
+}

@@ -4,9 +4,7 @@ import style from './TextField.module.scss'
 
 const TextField = ({ placeholder }) => (
   <div>
-    <form>
-      <input type="text" placeholder={placeholder} className={style.inputField}/>
-    </form>
+    <input type="text" placeholder={placeholder} className={style.inputField} />
   </div>
 )
 
