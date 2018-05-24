@@ -13,7 +13,9 @@ const SearchField = ({ areaPlaceholder, textPlaceholder, text }) => (
         'text-transform': 'uppercase',
         'line-height': '.4em',
         'font-size': '12px',
-        'padding': '17px 30px'
+        'padding': '17px 30px',
+        'font-weight': 'Bold',
+        'letter-spacing': '1px'
       }} />
     </div>
   </div>
