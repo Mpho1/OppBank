@@ -25,28 +25,28 @@ const ProductsCard = () => (
       <ProductsContent
         image={require('../img/savings.svg')}
         title='Savings accounts'
-        text='Choose from a selection of accounts and stay in control of your assets'
+        text='Gain control over your finances with a free cash withdraw per month.'
       />
     </div>
     <div className={styles.productInfo}>
       <ProductsContent
         image={require('../img/loans.svg')}
         title='Loans'
-        text='Choose from a selection of accounts and stay in control of your assets'
+        text='Choose from our selection of specially tailored loans.'
       />
     </div>
     <div className={styles.productInfo}>
       <ProductsContent
         image={require('../img/mobile_banking.svg')}
         title='Mobile Banking'
-        text='Choose from a selection of accounts and stay in control of your assets'
+        text='Access your accounts and complete all of your business online.'
       />
     </div>
     <div className={styles.productInfo}>
       <ProductsContent
         image={require('../img/other_services.svg')}
         title='Other services'
-        text='Choose from a selection of accounts and stay in control of your assets'
+        text='Gain control over your finances with a free cash withdraw per month.'
       />
     </div>
   </div>
