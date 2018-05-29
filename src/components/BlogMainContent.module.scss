@@ -1,0 +1,58 @@
+@import "bourbon";
+@import "neat";
+@import '../constants/colors.module.scss';
+
+.blogContent {
+  box-shadow: 0 0 10px #ddd;
+  padding: 20px 20px 20px 20px;
+}
+
+.blogHeader {
+  color: $darkGrey;
+  font-size: 17px;
+  font-weight: 900;
+}
+
+.blogContentDate {
+  font-size: 10px;
+  color: $lightGrey;
+  text-transform: uppercase;
+}
+
+.blogContentName {
+  font-size: 10px;
+  color: $lightBlue;
+}
+
+.blogContentSocial {
+  margin-top: -1.5em;
+  width: 6em;
+
+  :nth-child(2) {
+    margin-left: 7px;
+  }
+
+  :last-child {
+    margin-left: 7px;
+  }
+}
+
+.blogBlockText {
+  background-color: $offWhite;
+  margin-top: -2.5em;
+  margin-left: 0em;
+  padding: 18px 18px 3px 20px;
+  font-size: 14px;
+  color: $darkGrey;
+}
+
+.blogTextHeader {
+  text-transform: uppercase;
+}
+
+.blogFullText {
+  padding: 20px 15px 0px 8px;
+  width: 100%;
+  font-size: 14px;
+  color: $darkGrey;
+}
