@@ -3,9 +3,11 @@ import ThirdsColumns from '../components/ThirdsColumns'
 import CategoryBlock from '../components/CategoryBlock'
 import FinancialResultsBlock from '../components/FinancialResultsBlock'
 
+import PageHeader from '../components/PageHeader'
+
 const News = () => (
   <div>
-    <br/><br/><br/><br/><br/><br/>
+    <PageHeader title="Get The Latest News" subtitle="Read all about the latest Opportunity news"/>
     <ThirdsColumns>
       <CategoryBlock>
         Test 1

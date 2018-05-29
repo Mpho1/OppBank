@@ -1,11 +1,9 @@
 import React from 'react'
-import Link from 'gatsby-link'
+import PageHeader from '../components/PageHeader'
 
 const SecondPage = () => (
   <div>
-    <h1>Hi from the second page</h1>
-    <p>Welcome to find us</p>
-    <Link to="/">Go back to the homepage</Link>
+    <PageHeader title="Find Us" subtitle="Got more questions or would you rather feel more comfortable just visiting one of our branches?"/>
   </div>
 )
 

@@ -9,9 +9,7 @@ const CareerPage = () => (
       <DoubleSearchField
         areaPlaceholder="Area"
         textPlaceholder="Clinic, Hospitals, Doctors"
-        onCustomSubmit={function () {
-          console.log('Brree')
-        }}
+        onCustomSubmit={function () {}}
       />
     </PageHeader>
   </div>
