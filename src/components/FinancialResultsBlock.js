@@ -7,12 +7,12 @@ const FinancialResultsBlock = ({data}) => (
     paddingBottom: '10px'
   }}>
     <h3 style={{
-      color: 'darkBlue'
+      color: '#275482'
     }}>FINANCIAL RESULTS</h3>
     {Array.isArray(data) ? data.map(function (el, ind) {
       return (
         <div style={{
-          borderBottom: '1px solid #ddd',
+          borderBottom: '1px solid #F1F5F8',
           marginRight: '15px'
         }}>
           <p style={{

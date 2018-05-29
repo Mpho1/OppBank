@@ -7,8 +7,10 @@ const DownloadLink = ({href}) => (
   }}>
     <a style={{
       textDecoration: 'none',
-      fontSize: '13px'
-    }} href={href}>DOWNLOAD</a>
+      fontSize: '13px',
+      fontWeight: 'bold',
+      color: '#2CABE2'
+    }} href={href}>DOWNLOAD</a>&nbsp;
     <img style={{
       marginBottom: '0em',
       width: '40px',

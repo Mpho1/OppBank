@@ -5,12 +5,13 @@
 .blogContent {
   box-shadow: 0 0 10px #ddd;
   padding: 20px 20px 20px 20px;
+  margin-bottom: 5em;
 }
 
 .blogHeader {
   color: $darkGrey;
   font-size: 17px;
-  font-weight: 900;
+  font-weight: bold;
 }
 
 .blogContentDate {
