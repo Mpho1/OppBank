@@ -6,12 +6,14 @@ const DownloadLink = ({href}) => (
     textAlign: 'right'
   }}>
     <a style={{
-      textDecoration: 'none'
+      textDecoration: 'none',
+      fontSize: '13px'
     }} href={href}>DOWNLOAD</a>
     <img style={{
-      marginBottom: 0,
+      marginBottom: '0em',
       width: '40px',
-      verticalAlign: 'middle'
+      verticalAlign: 'middle',
+      paddingRight: '10px'
     }} src={icon}/>
   </div>
 )
