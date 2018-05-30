@@ -5,8 +5,8 @@ import style from './BlogMainContent.module.scss'
 const BlogMainContent = ({ header, date, name, blockTextHeader, blockText, firstContent, secondContent, thirdContent }) => (
   <div className={style.blogContent}>
     <div className={style.blogHeader}>
-      <p>{header}
-        <br/>
+      <h4 className={style.blogHeading}>{header}</h4>
+      <p>
         <span className={style.blogContentDate}>{date}</span> &nbsp;
         <span className={style.blogContentName}>{name}</span>
       </p>

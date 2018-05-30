@@ -11,7 +11,11 @@
 .blogHeader {
   color: $darkGrey;
   font-size: 17px;
-  font-weight: bold;
+}
+
+.blogHeading {
+  margin-bottom: 0em;
+  font-size: 1.2em;
 }
 
 .blogContentDate {
@@ -49,6 +53,7 @@
 
 .blogTextHeader {
   text-transform: uppercase;
+  font-style: bold;
 }
 
 .blogFullText {
