@@ -10,7 +10,7 @@ import PageHeader from '../components/PageHeader'
 const News = () => (
   <div>
     <PageHeader title="Get The Latest News" subtitle="Read all about the latest Opportunity news"/>
-    <ThirdsColumns>
+    <ThirdsColumns breakOrder="213">
       <CategoryBlock>
         <SideNews/>
       </CategoryBlock>

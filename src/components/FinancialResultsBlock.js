@@ -4,7 +4,9 @@ import DownloadLink from './DownloadLink'
 
 const FinancialResultsBlock = ({data}) => (
   <div className={style.panel} style={{
-    paddingBottom: '10px'
+    paddingBottom: '10px',
+    paddingRight: '2px',
+    paddingLeft: '24px'
   }}>
     <h3 style={{
       color: '#275482'
@@ -18,8 +20,9 @@ const FinancialResultsBlock = ({data}) => (
           <p style={{
             marginBottom: 0,
             fontWeight: 'bold',
-            fontSize: '14px',
-            marginTop: '15px'
+            fontSize: '13px',
+            marginTop: '15px',
+            color: '#696969'
           }}>{el.title}</p>
           <DownloadLink href={el.href}/>
         </div>

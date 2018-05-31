@@ -5,7 +5,7 @@ import style from './BlogMainContent.module.scss'
 const BlogMainContent = ({ header, date, name, blockTextHeader, blockText, firstContent, secondContent, thirdContent }) => (
   <div className={style.blogContent}>
     <div className={style.blogHeader}>
-      <h4 className={style.blogHeading}>{header}</h4>
+      <h3 className={style.blogHeading}>{header}</h3>
       <p>
         <span className={style.blogContentDate}>{date}</span> &nbsp;
         <span className={style.blogContentName}>{name}</span>
@@ -28,7 +28,6 @@ const BlogMainContent = ({ header, date, name, blockTextHeader, blockText, first
         <p>{thirdContent}</p>
       </div>
     </div>
-
   </div>
 )
 

@@ -67,23 +67,36 @@
 }
 
 @media (max-width: 587px) {
-  .ThirdsColumns {
-    display: inline;
-    font-size: 8px;
+  .ThirdsColumns213 {
+    display: flex;
+    font-size: 3px;
+    flex-direction: column;
+
+    > div {
+      display: block;
+      flex-grow: 1;
+      width: 95% !important;
+    }
 
     > :nth-child(1) {
-        width: 70%;
+        order: 2;
+        width: 95%;
+        justify-content: center;
+        margin-left: -10%;
+        margin-bottom: 4em;
     }
 
     > :nth-child(2) {
-        width: 95%;
-        margin-left: .6em;
-        margin-right: .2em;
+        order: 1;
+        margin-left: 4em;
+        margin-right: .1em;
+        margin-top: 6em;
     }
 
     > :nth-child(3) {
-        width: 95%;
-        margin-left: .6em;
+        order: 3;
+        margin-left: 4em;
+        margin-bottom: 6em;
     }
   }
 }
