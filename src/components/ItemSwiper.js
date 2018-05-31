@@ -24,10 +24,7 @@ class ItemSwiper extends React.Component {
       slidesPerView: 'auto',
       centeredSlides: true,
       spaceBetween: 30,
-      loop: true,
-      parallax: {
-        opacity: 0.5
-      }
+      loop: true
     }
 
     return (

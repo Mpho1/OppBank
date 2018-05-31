@@ -4,7 +4,10 @@ import styles from './index.module.scss'
 import HomeSlider from '../components/HomeSlider'
 import ItemSwiper from '../components/ItemSwiper'
 import ContentsSection from '../components/ContentsSection'
+
 import ProductsCard from '../components/ProductsCard'
+
+import BlogNews from '../components/BlogNews'
 
 const ClientItem = ({image, title, text}) => (
   <div>
@@ -64,6 +67,45 @@ const IndexPage = () => (
       title="Opportunity News"
       subtitle="Giving you access to all the latest news within our company.">
     </ContentsSection>
+
+    <ItemSwiper>
+      <div className={styles.blogItem}>
+        <BlogNews
+          image={require('../img/slide1.png')}
+          text='I started working at a glue factory but now, I am still working at a glue factory lol.'
+          date='16 May 2016'
+          name='Charles Malton'
+          information='I started working at a glue factory but now, I am still working at a glue factory lol. I started working at a glue factory but now, I am still working at a glue factory lol.'
+        />
+      </div>
+      <div className={styles.blogItem}>
+        <BlogNews
+          image={require('../img/slide1.png')}
+          text='I started working at a glue factory but now, I am still working at a glue factory lol.'
+          date='16 May 2016'
+          name='Charles Malton'
+          information='I started working at a glue factory but now, I am still working at a glue factory lol. I started working at a glue factory but now, I am still working at a glue factory lol.'
+        />
+      </div>
+      <div className={styles.blogItem}>
+        <BlogNews
+          image={require('../img/slide1.png')}
+          text='I started working at a glue factory but now, I am still working at a glue factory lol.'
+          date='16 May 2016'
+          name='Charles Malton'
+          information='I started working at a glue factory but now, I am still working at a glue factory lol. I started working at a glue factory but now, I am still working at a glue factory lol.'
+        />
+      </div>
+      <div className={styles.blogItem}>
+        <BlogNews
+          image={require('../img/slide1.png')}
+          text='I started working at a glue factory but now, I am still working at a glue factory lol.'
+          date='16 May 2016'
+          name='Charles Malton'
+          information='I started working at a glue factory but now, I am still working at a glue factory lol. I started working at a glue factory but now, I am still working at a glue factory lol.'
+        />
+      </div>
+    </ItemSwiper>
   </div>
 )
 
