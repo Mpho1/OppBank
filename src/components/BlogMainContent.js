@@ -24,8 +24,6 @@ const BlogMainContent = ({ header, date, name, blockTextHeader, blockText, first
       </div>
       <div className={style.blogFullText}>
         <p>{firstContent}</p>
-        <p>{secondContent}</p>
-        <p>{thirdContent}</p>
       </div>
     </div>
   </div>
