@@ -2,7 +2,7 @@ import React from 'react'
 
 import style from './BlogMainContent.module.scss'
 
-const BlogMainContent = ({ header, date, name, blockTextHeader, blockText, firstContent, secondContent, thirdContent }) => (
+const BlogMainContent = ({ header, date, name, blockTextHeader, blockText, bodyContent }) => (
   <div className={style.blogContent}>
     <div className={style.blogHeader}>
       <h3 className={style.blogHeading}>{header}</h3>
@@ -23,7 +23,7 @@ const BlogMainContent = ({ header, date, name, blockTextHeader, blockText, first
           </span>{blockText}</p>
       </div>
       <div className={style.blogFullText}>
-        <p>{firstContent}</p>
+        <p>{bodyContent}</p>
       </div>
     </div>
   </div>
