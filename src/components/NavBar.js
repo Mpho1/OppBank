@@ -46,9 +46,9 @@ class NavBar extends React.Component {
       <div>
         <div className={`${style.HeaderLinksWrapper} ${headerClass}`}>
           <HeaderPageLink to="/#products" title="Products" active={true} menu={<Menu className={style.menu} />} />
-          <HeaderPageLink to="/#news" title="News" />
-          <HeaderPageLink to="/#careers" title="Careers" />
-          <HeaderPageLink to="/#contact-us" title="Contact us" />
+          <HeaderPageLink to="/news" title="News" />
+          <HeaderPageLink to="/careers" title="Careers" />
+          <HeaderPageLink to="/find-us" title="Contact us" />
         </div>
         <Burger onClick={this.onClick} isOpen={this.state.menuOpen}/>
       </div>

@@ -1,0 +1,11 @@
+@import "bourbon";
+@import "neat";
+@import "../constants/colors.module.scss";
+
+.inputField {
+  width: 20em;
+  padding: 8px 13px;
+  border: 1px solid $white;
+  border-radius: 5px;
+  background-color: $white;
+}

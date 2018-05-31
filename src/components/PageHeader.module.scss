@@ -1,0 +1,14 @@
+@import '../constants/colors.module.scss';
+
+.pageHeader {
+  h2 {
+    padding-top: 3em;
+    font-size: 5vmin;
+    margin-bottom: 5px;
+  }
+
+  p {
+    margin-bottom: 55px;
+    font-size: 2vmin;
+  }
+}
