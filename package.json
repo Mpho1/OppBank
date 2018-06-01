@@ -7,7 +7,6 @@
     "bourbon": "^5.0.0",
     "bourbon-neat": "^1.9.0",
     "eslint": "^4.19.1",
-    "flexboxgrid": "^6.3.1",
     "gatsby": "^1.9.247",
     "gatsby-link": "^1.6.40",
     "gatsby-plugin-react-helmet": "^2.0.10",
