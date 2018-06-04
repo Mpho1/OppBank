@@ -1,6 +1,6 @@
 import React from 'react'
 import ContentsSection from './ContentsSection'
-import styles from './pageHeader.module.scss'
+import styles from './PageHeader.module.scss'
 
 const PageHeader = ({title, subtitle, children}) => (
   <ContentsSection
