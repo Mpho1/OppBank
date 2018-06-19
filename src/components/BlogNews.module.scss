@@ -16,9 +16,10 @@
 }
 
 .blogImage {
-  width: 30ch;
-  height: auto;
-  margin-bottom: 0px;
+  max-height: 170px;
+  margin-bottom: 0;
+  margin: auto;
+  display: block;
 }
 
 .blogText {
