@@ -2,9 +2,9 @@ import React from 'react'
 
 import style from './TextField.module.scss'
 
-const TextField = ({ placeholder }) => (
+const TextField = ({ placeholder, customStyle }) => (
   <div>
-    <input type="text" placeholder={placeholder} className={style.inputField} />
+    <input type="text" placeholder={placeholder} className={style.inputField} style={customStyle} />
   </div>
 )
 

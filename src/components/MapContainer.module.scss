@@ -1,0 +1,52 @@
+@import '../constants/colors.module.scss';
+
+.mapSearch {
+  font-size: 13px;
+  margin-left: 14.2em;
+  border: 1px solid $lightGrey;
+  height: 2.8em;
+  color: $lightBlue;
+  width: 23em;
+  padding: 1em 1.1em;
+  font-weight: lighter;
+  text-overflow: ellipses;
+  vertical-align: top;
+  border-radius: 5px;
+  margin-top: -37em;
+}
+
+.findButton {
+  text-transform: uppercase;
+  line-height: .3em;
+  font-size: 12px;
+  padding: 17px 26px;
+  font-weight: Bold;
+  letter-spacing: 1px;
+  margin-left: 42em;
+  margin-top: -42.23em;
+  vertical-align: top;
+  border-radius: 4px;
+  background-color: $lightBlue;
+  border: none;
+  color: $white;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@media(max-width: 850px) {
+  .mapSearch {
+    margin-left: 4em;
+    width: 18em;
+  }
+
+  .googleMap {
+    width: 30em;
+  }
+
+  .findButton {
+    margin-left: 0.8em;
+    padding: 16px 15px;
+    margin-top: -40em;
+  }
+}
