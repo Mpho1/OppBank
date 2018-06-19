@@ -1,11 +1,12 @@
 import React from 'react'
 import Place from './Place'
 
+import style from './MapContainer.module.scss'
+import mapContainerStyles from './mapContainerStyles.json'
+
 import _ from 'lodash'
 import { compose, withProps, withStateHandlers, withState, lifecycle } from 'recompose'
 import { withScriptjs, withGoogleMap, GoogleMap, Marker, DirectionsRenderer } from 'react-google-maps'
-import mapContainerStyles from './mapContainerStyles.json'
-import style from './MapContainer.module.scss'
 import StandaloneSearchBox from 'react-google-maps/lib/components/places/StandaloneSearchBox'
 import { geolocated } from 'react-geolocated'
 
@@ -30,19 +31,28 @@ const MapContainer = compose(
   lifecycle({
     componentWillMount () {
       const refs = { }
-      // this.props.isGeolocationAvailable
-      // this.props.isGeolocationEnabled
-      console.log(this, 'tytytytytyyty111')
-      console.log(this.props, 'tytytytytyyty222')
-      console.log(this.props.coords, 'tytytytytyyty333')
+
       this.setState({
         bounds: null,
         places: [],
+        userLocation: {},
         center: {
           lat: 0.335845,
           lng: 32.587500
         },
-        markers: [],
+        markers: [{
+          lat: 0.335845,
+          lng: 32.587500
+        },
+        {
+          lat: 0.3107461,
+          lng: 32.58409280000001
+        },
+        {
+          lat: 0.3474566,
+          lng: 32.61247370000001
+        }
+        ],
         onMapMounted: ref => {
           refs.map = ref
         },
@@ -60,7 +70,12 @@ const MapContainer = compose(
         },
         onPlacesChanged: () => {
           const places = refs.searchBox.getPlaces()
+
           if (!places) {
+            return
+          }
+
+          if (!this.props.isGeolocationAvailable) {
             return
           }
 
@@ -85,12 +100,13 @@ const MapContainer = compose(
           })
 
           const DirectionsService = new google.maps.DirectionsService()
-
-          DirectionsService.route({
-            origin: new google.maps.LatLng(0.335845, 32.587500),
-            destination: new google.maps.LatLng(0.3107461, 32.58409280000001),
+          const locationsData = {
+            origin: new google.maps.LatLng(this.props.coords.latitude, this.props.coords.longitude),
+            destination: new google.maps.LatLng(places[0].geometry.location.lat(), places[0].geometry.location.lng()),
             travelMode: google.maps.TravelMode.DRIVING
-          }, (result, status) => {
+          }
+
+          DirectionsService.route(locationsData, (result, status) => {
             if (status === google.maps.DirectionsStatus.OK) {
               this.setState({
                 directions: result
@@ -134,14 +150,12 @@ const MapContainer = compose(
       center={props.center}
       onBoundsChanged={props.onBoundsChanged}
       defaultOptions={{ styles: mapContainerStyles }}
-      className={style.googleMap}
     >
-      <Marker
-        position={{
-          lat: 0.335845,
-          lng: 32.587500
-        }}
-      />
+      {props.markers.map((marker, index) => {
+        return (<Marker key={index} position={marker}
+        />)
+      })
+      }
       {props.directions && <DirectionsRenderer directions={props.directions} />}
     </GoogleMap>
   </div>
