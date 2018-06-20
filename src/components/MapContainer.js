@@ -12,6 +12,34 @@ import { geolocated } from 'react-geolocated'
 
 /* global google */
 
+const setMapCenter = (_this) => {
+  if (window.innerWidth <= 420) {
+    _this.setState({
+      loadingElement: <div style={{ height: `100%` }} />,
+      containerElement: <div style={{ height: `300px`, width: `378px`, marginLeft: `0.2em`, marginBottom: `2em` }} />,
+      mapElement: <div style={{ height: `100%` }} />
+    })
+  } else if (window.innerWidth <= 500) {
+    _this.setState({
+      loadingElement: <div style={{ height: `100%` }} />,
+      containerElement: <div style={{ height: `400px`, width: `540px`, marginLeft: `2.0em`, marginBottom: `2em` }} />,
+      mapElement: <div style={{ height: `100%` }} />
+    })
+  } else if (window.innerWidth <= 623) {
+    _this.setState({
+      loadingElement: <div style={{ height: `100%` }} />,
+      containerElement: <div style={{ height: `400px`, width: `540px`, marginLeft: `2.0em`, marginBottom: `2em` }} />,
+      mapElement: <div style={{ height: `100%` }} />
+    })
+  } else if (window.innerWidth <= 850) {
+    _this.setState({
+      loadingElement: <div style={{ height: `100%` }} />,
+      containerElement: <div style={{ height: `300px`, width: `540px`, marginLeft: `3.99em`, marginBottom: `2em` }} />,
+      mapElement: <div style={{ height: `100%` }} />
+    })
+  }
+}
+
 const MapContainer = compose(
   withProps({
     googleMapURL: 'https://maps.googleapis.com/maps/api/js?key=AIzaSyBoJx89DCH5N9fsmS8Gk-W6-tB4Ib85w6I&libraries=geometry,drawing,places',
@@ -29,13 +57,19 @@ const MapContainer = compose(
     })
   }),
   lifecycle({
+    componentDidMount () {
+      window.addEventListener('resize', setMapCenter.bind(null, this))
+      setMapCenter(this)
+    },
+    componentWillUnmount () {
+      window.removeEventListener('resize', setMapCenter.bind(null, this))
+    },
     componentWillMount () {
       const refs = { }
-
       this.setState({
         bounds: null,
         places: [],
-        userLocation: {},
+        defaultZoom: 13,
         center: {
           lat: 0.335845,
           lng: 32.587500
@@ -51,8 +85,7 @@ const MapContainer = compose(
         {
           lat: 0.3474566,
           lng: 32.61247370000001
-        }
-        ],
+        }],
         onMapMounted: ref => {
           refs.map = ref
         },
@@ -75,7 +108,7 @@ const MapContainer = compose(
             return
           }
 
-          if (!this.props.isGeolocationAvailable) {
+          if (!this.props.isGeolocationAvailable || !this.props.coords) {
             return
           }
 
@@ -92,7 +125,6 @@ const MapContainer = compose(
             position: place.geometry.location
           }))
           const nextCenter = _.get(nextMarkers, '0.position', this.state.center)
-
           this.setState({
             center: nextCenter,
             markers: nextMarkers,
@@ -146,7 +178,7 @@ const MapContainer = compose(
     )}
     <GoogleMap
       ref={props.onMapMounted}
-      defaultZoom={13}
+      defaultZoom={props.defaultZoom}
       center={props.center}
       onBoundsChanged={props.onBoundsChanged}
       defaultOptions={{ styles: mapContainerStyles }}

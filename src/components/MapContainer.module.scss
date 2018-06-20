@@ -36,17 +36,62 @@
 
 @media(max-width: 850px) {
   .mapSearch {
-    margin-left: 4em;
+    margin-left: 12em;
     width: 18em;
+    margin-top: -29.4em;
   }
 
-  .googleMap {
-    width: 30em;
+  .findButton {
+    margin-left: 0.8em;
+    padding: 16px 15px;
+    margin-top: -31.8em;
+  }
+}
+
+@media(max-width: 623px) {
+  .mapSearch {
+    margin-left: 12em;
+    width: 18em;
+    margin-top: -37em;
   }
 
   .findButton {
     margin-left: 0.8em;
     padding: 16px 15px;
     margin-top: -40em;
+  }
+}
+
+@media(max-width: 500px) {
+  .mapSearch {
+    margin-left: 11em;
+    width: 15em;
+    margin-top: -37em;
+  }
+
+  .findButton {
+    margin-left: 0.8em;
+    padding: 14px 14px;
+    margin-top: -48.3em;
+    letter-spacing: 1;
+    line-height: 1;
+    font-size: 10px;
+  }
+}
+
+@media(max-width: 420px) {
+  .mapSearch {
+    margin-left: 9.7em;
+    width: 13em;
+    margin-top: -29.5em;
+  }
+
+  .findButton {
+    margin-left: 0.7em;
+    padding: 14px 5px;
+    margin-top: -48.1em;
+    letter-spacing: 1;
+    line-height: 1;
+    font-size: 8px;
   }
 }
