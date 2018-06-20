@@ -76,6 +76,7 @@ const IndexPage = ({data}) => (
                 date={news.createdAt}
                 name={`${news.author.name} ${news.author.lastName}`}
                 information={news.blockParagraph.blockParagraph}
+                link={`/news/${news.slug}`}
               />
             </div>
           )
@@ -98,7 +99,7 @@ export const query = graphql`
            blockParagraph{
              blockParagraph
            }
-           createdAt
+           createdAt (formatString: "DD MMMM YYYY")
            author {
              name
              lastName
@@ -108,6 +109,7 @@ export const query = graphql`
                url
              }
            }
+           slug
          }
       }
     }

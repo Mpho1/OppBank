@@ -2,7 +2,7 @@ import React from 'react'
 
 import style from './BlogMainContent.module.scss'
 
-const BlogMainContent = ({ header, date, name, blockTextHeader, blockText, bodyContent }) => (
+const BlogMainContent = ({ header, date, name, blockTextHeader, blockText, bodyContent, img }) => (
   <div className={style.blogContent}>
     <div className={style.blogHeader}>
       <h3 className={style.blogHeading}>{header}</h3>
@@ -15,11 +15,11 @@ const BlogMainContent = ({ header, date, name, blockTextHeader, blockText, bodyC
         <img src={require('../img/twitter.svg')}/>
         <img src={require('../img/whatsapp.svg')}/>
       </div>
-      <img src={require('../img/news_card_lg.png')}/>
+      <img className={style.blogImg} src={img}/>
       <div className={style.blogBlockText}>
         <p>
           <span className={style.blogTextHeader}>
-            {blockTextHeader} &nbsp;
+            {blockTextHeader}: &nbsp;
           </span>{blockText}</p>
       </div>
       <div className={style.blogFullText}>
