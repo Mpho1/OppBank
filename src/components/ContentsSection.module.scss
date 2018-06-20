@@ -2,27 +2,27 @@
 
 .wrapper {
     padding-top: 50px;
-    padding-bottom: 50px;
+    padding-bottom: 10px;
 
-    h2, p {
+    > h2, > p {
         text-align: center;
         padding: 0 15px;
     }
 
-    h2 {
+    > h2 {
         font-size: 7vmin;
         color: $paleBlue;
         text-transform: uppercase;
     }
 
-    p {
+    > p {
         color: $darkGrey;
         font-size: 1.1rem;
         font-weight: normal;
     }
 
     &.sectionImageBackground {
-        h2, p {
+        > h2, > p {
             color: $white;
         }
     }

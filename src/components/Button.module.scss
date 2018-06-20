@@ -1,6 +1,8 @@
+@import "../constants/colors.module.scss";
+
 .Button {
-    border-radius: 7px;
-    background-color: #2CABE2;
+    border-radius: 4px;
+    background-color: $lightBlue;
     border: none;
     color: white;
     padding: 11px 55px;

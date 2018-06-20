@@ -4,7 +4,10 @@ import styles from './index.module.scss'
 import HomeSlider from '../components/HomeSlider'
 import ItemSwiper from '../components/ItemSwiper'
 import ContentsSection from '../components/ContentsSection'
+
 import ProductsCard from '../components/ProductsCard'
+
+import BlogNews from '../components/BlogNews'
 
 const ClientItem = ({image, title, text}) => (
   <div>
@@ -20,7 +23,7 @@ const ClientItem = ({image, title, text}) => (
   </div>
 )
 
-const IndexPage = () => (
+const IndexPage = ({data}) => (
   <div>
     <HomeSlider />
 
@@ -63,8 +66,50 @@ const IndexPage = () => (
     <ContentsSection
       title="Opportunity News"
       subtitle="Giving you access to all the latest news within our company.">
+      <ItemSwiper>
+        {data.allContentfulNews.edges.map(({node: news}) => {
+          return (
+            <div className={styles.blogItem}>
+              <BlogNews
+                image={news.image.file.url}
+                text={news.title}
+                date={news.createdAt}
+                name={`${news.author.name} ${news.author.lastName}`}
+                information={news.blockParagraph.blockParagraph}
+              />
+            </div>
+          )
+        })}
+      </ItemSwiper>
     </ContentsSection>
   </div>
 )
 
 export default IndexPage
+
+export const query = graphql`
+  query NewsQuery {
+      allContentfulNews {
+       edges {
+         node {
+           title
+           id
+           blockHeader
+           blockParagraph{
+             blockParagraph
+           }
+           createdAt
+           author {
+             name
+             lastName
+           }
+           image {
+             file {
+               url
+             }
+           }
+         }
+      }
+    }
+  }
+`
