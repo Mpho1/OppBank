@@ -2,7 +2,6 @@ import React from 'react'
 import PageHeader from '../components/PageHeader'
 
 import ThirdsColumns from '../components/ThirdsColumns'
-
 import Cards from '../components/Cards'
 
 const SecondPage = () => (
