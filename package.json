@@ -17,8 +17,10 @@
     "prop-types": "^15.6.1",
     "react-geolocated": "^2.4.0",
     "react-google-maps": "^9.4.5",
+    "moment": "^2.22.2",
     "react-helmet": "^5.2.0",
-    "react-id-swiper": "^1.6.3"
+    "react-id-swiper": "^1.6.3",
+    "react-moment": "^0.7.6"
   },
   "keywords": [
     "gatsby"

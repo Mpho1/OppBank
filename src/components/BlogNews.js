@@ -1,6 +1,7 @@
 import React from 'react'
 
 import style from './BlogNews.module.scss'
+import Moment from 'react-moment'
 
 const BlogNews = ({ image, text, date, name, information }) => (
   <div className={style.blog}>
@@ -8,7 +9,7 @@ const BlogNews = ({ image, text, date, name, information }) => (
     <p className={style.blogText}>
       {text}
     </p>
-    <p className={style.blogDate}>{date} &nbsp;
+    <p className={style.blogDate}><Moment format="DD MMMM YYYY">{date}</Moment> &nbsp;
       <span className={style.blogName}>{name}</span>
     </p>
     <div className={style.blogSocial}>
