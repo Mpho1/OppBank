@@ -12,7 +12,7 @@ import { geolocated } from 'react-geolocated'
 
 /* global google */
 
-const setMapCenter = (_this) => {
+const setMapScreenSize = (_this) => {
   if (window.innerWidth <= 420) {
     _this.setState({
       loadingElement: <div style={{ height: `100%` }} />,
@@ -48,7 +48,7 @@ const MapContainer = compose(
     mapElement: <div style={{ height: `100%` }} />,
     center: { lat: 0.335845, lng: 32.587500 }
   }),
-  withState('zoom', 'onZoomChange', 8),
+  withState('zoom', 'onZoomChange', 10),
   withStateHandlers(() => ({
     isOpen: false
   }), {
@@ -58,18 +58,18 @@ const MapContainer = compose(
   }),
   lifecycle({
     componentDidMount () {
-      window.addEventListener('resize', setMapCenter.bind(null, this))
-      setMapCenter(this)
+      window.addEventListener('resize', setMapScreenSize.bind(null, this))
+      setMapScreenSize(this)
     },
     componentWillUnmount () {
-      window.removeEventListener('resize', setMapCenter.bind(null, this))
+      window.removeEventListener('resize', setMapScreenSize.bind(null, this))
     },
     componentWillMount () {
       const refs = { }
       this.setState({
         bounds: null,
         places: [],
-        defaultZoom: 13,
+        defaultZoom: 11,
         center: {
           lat: 0.335845,
           lng: 32.587500
@@ -81,6 +81,22 @@ const MapContainer = compose(
         {
           lat: 0.3107461,
           lng: 32.58409280000001
+        },
+        {
+          lat: 0.423333,
+          lng: 33.206667
+        },
+        {
+          lat: 1.080556,
+          lng: 34.175000
+        },
+        {
+          lat: 2.781667,
+          lng: 32.299167
+        },
+        {
+          lat: 2.2472,
+          lng: 32.9000
         },
         {
           lat: 0.3474566,
@@ -174,7 +190,16 @@ const MapContainer = compose(
 
     <Place places = {props.places} />
     {props.markers.map((marker, index) =>
-      <Marker key={index} position={marker.position} />
+      <Marker
+        key={index}
+        position={marker.position}
+        icon={{
+          path: 'M10.5,0.75 C5.185625,0.75 0.875,5.060625 0.875,10.375 C0.875,17.59375 10.5,28.25 10.5,28.25 C10.5,28.25 20.125,17.59375 20.125,10.375 C20.125,5.060625 15.814375,0.75 10.5,0.75 L10.5,0.75 Z M10.5,13.8125 C8.6025,13.8125 7.0625,12.2725 7.0625,10.375 C7.0625,8.4775 8.6025,6.9375 10.5,6.9375 C12.3975,6.9375 13.9375,8.4775 13.9375,10.375 C13.9375,12.2725 12.3975,13.8125 10.5,13.8125 L10.5,13.8125 Z',
+          fillColor: '#75DEC5',
+          strokeColor: '#FFFFFF',
+          fillOpacity: 0,
+          scale: 0.8
+        }}/>
     )}
     <GoogleMap
       ref={props.onMapMounted}
@@ -184,11 +209,34 @@ const MapContainer = compose(
       defaultOptions={{ styles: mapContainerStyles }}
     >
       {props.markers.map((marker, index) => {
-        return (<Marker key={index} position={marker}
-        />)
+        return (<Marker key={index}
+          icon={{
+            path: 'M10.5,0.75 C5.185625,0.75 0.875,5.060625 0.875,10.375 C0.875,17.59375 10.5,28.25 10.5,28.25 C10.5,28.25 20.125,17.59375 20.125,10.375 C20.125,5.060625 15.814375,0.75 10.5,0.75 L10.5,0.75 Z M10.5,13.8125 C8.6025,13.8125 7.0625,12.2725 7.0625,10.375 C7.0625,8.4775 8.6025,6.9375 10.5,6.9375 C12.3975,6.9375 13.9375,8.4775 13.9375,10.375 C13.9375,12.2725 12.3975,13.8125 10.5,13.8125 L10.5,13.8125 Z',
+            fillColor: '#75DEC5',
+            strokeColor: '#FFFFFF',
+            fillOpacity: 1,
+            scale: 0.8
+          }}
+          position={marker}/>)
       })
       }
-      {props.directions && <DirectionsRenderer directions={props.directions} />}
+      {props.directions && <DirectionsRenderer directions={props.directions}
+        options={{
+          polylineOptions: {
+            strokeColor: '#2CABE2',
+            strokeOpacity: 0.5,
+            strokeWeight: 3
+          },
+          markerOptions: {
+            icon: {
+              path: 'M10.5,0.75 C5.185625,0.75 0.875,5.060625 0.875,10.375 C0.875,17.59375 10.5,28.25 10.5,28.25 C10.5,28.25 20.125,17.59375 20.125,10.375 C20.125,5.060625 15.814375,0.75 10.5,0.75 L10.5,0.75 Z M10.5,13.8125 C8.6025,13.8125 7.0625,12.2725 7.0625,10.375 C7.0625,8.4775 8.6025,6.9375 10.5,6.9375 C12.3975,6.9375 13.9375,8.4775 13.9375,10.375 C13.9375,12.2725 12.3975,13.8125 10.5,13.8125 L10.5,13.8125 Z',
+              fillColor: '#75DEC5',
+              strokeColor: '#FFFFFF',
+              fillOpacity: 1,
+              scale: 0.8
+            }
+          }
+        }}/>}
     </GoogleMap>
   </div>
 )
