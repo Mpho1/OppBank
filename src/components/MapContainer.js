@@ -163,6 +163,42 @@ const MapContainer = compose(
               console.error(`error fetching directions ${result}`)
             }
           })
+
+          const distanceOrigin = new google.maps.LatLng(this.props.coords.latitude, this.props.coords.longitude)
+          const distanceDestination = new google.maps.LatLng(places[0].geometry.location.lat(), places[0].geometry.location.lng())
+
+          const service = new google.maps.DistanceMatrixService()
+          service.getDistanceMatrix(
+            {
+              origins: [distanceOrigin],
+              destinations: [distanceDestination],
+              travelMode: 'DRIVING',
+              unitSystem: google.maps.UnitSystem.METRIC,
+              avoidHighways: false,
+              avoidTolls: false
+            }, callback.bind(this))
+
+          function callback (response, status) {
+            if (status === 'OK') {
+              const origins = response.originAddresses
+              let element = null
+              let distance = null
+
+              for (let i = 0; i < origins.length; i++) {
+                const results = response.rows[i].elements
+                for (let j = 0; j < results.length; j++) {
+                  element = results[j]
+                  distance = element.distance.text
+                  this.setState(() => {
+                    return {
+                      distanceBtwUserDestination: distance
+                    }
+                  })
+                  return
+                }
+              }
+            }
+          }
           // refs.map.fitBounds(bounds);
           return this
         }
@@ -188,7 +224,7 @@ const MapContainer = compose(
       className={style.findButton}>Find Branch
     </button>
 
-    <Place places = {props.places} />
+    <Place places = {props.places} distance = {props.distanceBtwUserDestination}/>
     {props.markers.map((marker, index) =>
       <Marker
         key={index}

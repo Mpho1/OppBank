@@ -1,5 +1,4 @@
 import React from 'react'
-
 import style from './Place.module.scss'
 
 class Place extends React.Component {
@@ -17,7 +16,9 @@ class Place extends React.Component {
           <li
             key={placeId}
             className={openingHours.weekday_text.length > 0 ? style.mapInfo : style.mapInfoNone}>
-            <p className={style.name}>{name}</p>
+            <p className={style.name}>{name}
+              <span className={style.distance}><img src={require('../img/distance.svg')} className={style.imgDistance}/>&nbsp; {this.props.distance}</span>
+            </p>
             <p>
               <img src={require('../img/location.svg')} className={style.imgAddress}/>
               {formattedAddress}
