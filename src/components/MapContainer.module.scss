@@ -1,0 +1,118 @@
+@import '../constants/colors.module.scss';
+
+a[href^="http://maps.google.com/maps"],
+a[href^="https://maps.google.com/maps"],
+a[href^="https://www.google.com/maps"] {
+  display: none !important;
+}
+
+.gm-bundled-control .gmnoprint {
+    display: block;
+}
+.gmnoprint:not(.gm-bundled-control) {
+    display: none;
+}
+
+.gm-style-cc {
+  display: none !important;
+}
+
+.gm-style a[href^="https://maps.google.com/maps"] {
+  display: none !important;
+}
+
+.mapSearch {
+  font-size: 13px;
+  margin-left: 14.2em;
+  border: 1px solid $lightGrey;
+  height: 2.8em;
+  color: $lightBlue;
+  width: 23em;
+  padding: 1em 1.1em;
+  font-weight: lighter;
+  text-overflow: ellipsis;
+  vertical-align: top;
+  border-radius: 5px;
+  margin-top: -37em;
+}
+
+.findButton {
+  text-transform: uppercase;
+  line-height: .3em;
+  font-size: 12px;
+  padding: 17px 26px;
+  font-weight: Bold;
+  letter-spacing: 1px;
+  margin-left: 42em;
+  margin-top: -42.23em;
+  vertical-align: top;
+  border-radius: 4px;
+  background-color: $lightBlue;
+  border: none;
+  color: $white;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@media(max-width: 850px) {
+  .mapSearch {
+    margin-left: 12em;
+    width: 18em;
+    margin-top: -29.4em;
+  }
+
+  .findButton {
+    margin-left: 0.8em;
+    padding: 16px 15px;
+    margin-top: -31.8em;
+  }
+}
+
+@media(max-width: 623px) {
+  .mapSearch {
+    margin-left: 12em;
+    width: 18em;
+    margin-top: -37em;
+  }
+
+  .findButton {
+    margin-left: 0.8em;
+    padding: 16px 15px;
+    margin-top: -40em;
+  }
+}
+
+@media(max-width: 500px) {
+  .mapSearch {
+    margin-left: 11em;
+    width: 15em;
+    margin-top: -37em;
+  }
+
+  .findButton {
+    margin-left: 0.8em;
+    padding: 14px 14px;
+    margin-top: -48.3em;
+    letter-spacing: 1;
+    line-height: 1;
+    font-size: 10px;
+  }
+}
+
+@media(max-width: 420px) {
+  .mapSearch {
+    margin-left: 9.7em;
+    width: 13em;
+    margin-top: -29.5em;
+  }
+
+  .findButton {
+    margin-left: 0.7em;
+    padding: 14px 5px;
+    margin-top: -48.1em;
+    letter-spacing: 1;
+    line-height: 1;
+    font-size: 8px;
+  }
+}
