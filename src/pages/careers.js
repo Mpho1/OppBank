@@ -4,9 +4,9 @@ import PageHeader from '../components/PageHeader'
 import DoubleSearchField from '../components/DoubleSearchField'
 import ThirdsColumns from '../components/ThirdsColumns'
 import CategoryBlock from '../components/CategoryBlock'
-import FinancialResultsBlock from '../components/FinancialResultsBlock'
+import CareerApply from '../components/CareerApply'
 import CareerList from '../components/CareerList'
-// import SideNews from './news'
+import { SideNews } from './news'
 
 const CareerPage = () => (
   <div>
@@ -20,6 +20,7 @@ const CareerPage = () => (
     </PageHeader>
     <ThirdsColumns>
       <CategoryBlock>
+        <SideNews/>
       </CategoryBlock>
       <CareerList
         jobTitle="Doctors representative"
@@ -30,14 +31,11 @@ const CareerPage = () => (
         salary="Negotiable"
       />
       <div>
-        <FinancialResultsBlock
-          data={[
-            {title: 'Opportunity Bank summary of the financial statements - December 2017', href: 'http://first.link.com'},
-            {title: 'Opportunity Bank summary of the financial statements - December 2017', href: 'http://second.link.com'},
-            {title: 'Opportunity Bank summary of the financial statements - December 2017', href: 'http://third.link.com'},
-            {title: 'Opportunity Bank summary of the financial statements - December 2017', href: 'http://forth.link.com'}
-          ]}
-        />
+        <CareerApply
+          name="name"
+          contactNumber="Contact Number"
+          email="Email"
+          attachment="No Attachment"/>
       </div>
     </ThirdsColumns>
   </div>
