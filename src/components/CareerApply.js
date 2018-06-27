@@ -29,33 +29,42 @@ class CareerApply extends React.Component {
     }
   }
 
+  onClick (event) {
+    this.props.hideUnhideApplyForm(true)
+  }
+
   handleSubmit (event) {
     event.preventDefault()
   }
 
   render () {
     return (
-      <form className={style.applyForm} onSubmit={this.handleSubmit}>
-        <h4 className={style.formText}>Contact me</h4>
-        <div className={style.fields}>
-          <p>
-            <input type="text" name="name" placeholder={this.props.name} className={style.inputField} onChange={this.handleChange.bind(this)}/>
-          </p>
-          <p>
-            <input type="text" name="contactNumber" placeholder={this.props.contactNumber} className={style.inputField} onChange={this.handleChange.bind(this)}/>
-          </p>
-          <p>
-            <input type="text" name="email" placeholder={this.props.email} className={style.inputField} onChange={this.handleChange.bind(this)}/>
-          </p>
-          <div>
-            <input type="text" className={style.fileField} placeholder={this.state.fileName.length === 0 ? this.props.attachment : this.state.fileName}/>
-            <button type="button" className={style.uploadButton}>Upload CV</button>
-            <input type="file" className={style.invisibleField} onChange={this.onChange.bind(this)}/>
+      <div className={ `${(this.props.hide ? style.blockHidden : style.blockShow)} ${style.block}` }>
+        <form className={style.applyForm} onSubmit={this.handleSubmit}>
+          <button
+            className={style.closeButton} onClick={() => { this.props.hideUnhideApplyForm(true) }}>x
+          </button>
+          <h4 className={style.formText}>Contact me</h4>
+          <div className={style.fields}>
+            <p>
+              <input type="text" name="name" placeholder={this.props.name} className={style.inputField} onChange={this.handleChange.bind(this)}/>
+            </p>
+            <p>
+              <input type="text" name="contactNumber" placeholder={this.props.contactNumber} className={style.inputField} onChange={this.handleChange.bind(this)}/>
+            </p>
+            <p>
+              <input type="text" name="email" placeholder={this.props.email} className={style.inputField} onChange={this.handleChange.bind(this)}/>
+            </p>
+            <div>
+              <input type="text" className={style.fileField} placeholder={this.state.fileName.length === 0 ? this.props.attachment : this.state.fileName}/>
+              <button type="button" className={style.uploadButton}>Upload CV</button>
+              <input type="file" className={style.invisibleField} onChange={this.onChange.bind(this)}/>
+            </div>
+            <hr/>
+            <input type="submit" value="Submit" className={style.submitButton}/>
           </div>
-          <hr/>
-          <input type="submit" value="Submit" className={style.submitButton}/>
-        </div>
-      </form>
+        </form>
+      </div>
     )
   }
 }

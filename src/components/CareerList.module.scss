@@ -150,5 +150,59 @@
 }
 
 @media (max-width: 796px) {
+  .careerListing {
 
+    .jobDate {
+      .clockDate {
+        padding-left: 0.4em !important;
+      }
+    }
+
+    .jobLocation {
+      .imgLocation {
+        margin-left: 1.6em !important;
+      }
+
+      .jobCity {
+        padding-left: 0.2em !important;
+      }
+    }
+  }
+}
+
+@media (max-width: 744px) {
+  .careerListing {
+    .readMore {
+      font-size: 9px;
+      margin-bottom: 1em;
+    }
+  }
+}
+
+@media (max-width: 636px) {
+  .careerListCard {
+    width: 135%;
+    margin-left: -19em;
+  }
+}
+
+@media (max-width: 587px) {
+  .careerListCard {
+    width: 145%;
+    margin-left: -6.7em;
+  }
+}
+
+@media (max-width: 497px) {
+  .careerListCard {
+    width: 232%;
+    margin-left: -5.7em;
+  }
+}
+
+@media (max-width: 438px) {
+  .careerListCard {
+    width: 232%;
+    margin-left: -4.7em;
+  }
 }
