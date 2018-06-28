@@ -3,6 +3,7 @@ import PageHeader from '../components/PageHeader'
 
 import ThirdsColumns from '../components/ThirdsColumns'
 import Cards from '../components/Cards'
+import styles from '../components/card.module.scss'
 
 const SecondPage = () => (
   <div>
@@ -12,6 +13,9 @@ const SecondPage = () => (
     <ThirdsColumns breakOrder="213">
       <Cards/>
     </ThirdsColumns>
+    <div>
+      <button className={styles.Button}>Contact</button>
+    </div>
   </div>
 )
 
