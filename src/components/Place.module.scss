@@ -1,0 +1,62 @@
+@import '../constants/colors.module.scss';
+
+.mapInfo {
+  border: 1px solid $white;
+  border-radius: 4px;
+  font-size: 11px;
+  width: 20em;
+  height: 25em;
+  background-color: $white;
+  list-style-type: none;
+  margin-top: -40.3em;
+  vertical-align: top;
+  color: $grey;
+  position: absolute;
+  margin-left: -1.5em;
+  padding: 20px;
+}
+
+.mapInfoNone {
+  display: none;
+}
+
+.name {
+  font-weight: bold;
+  font-size: 14px;
+  padding-bottom: 4px;
+}
+
+.imgAddress {
+  width: 13px;
+  height: auto;
+  padding-right: 4px;
+}
+
+.imgDistance {
+  width: 30px;
+  height: auto;
+  padding-left: 20px;
+}
+
+.distance {
+  color: $lightGrey;
+  font-size: 9px;
+  font-weight: lighter;
+}
+
+.imgTelephone {
+  width: 13px;
+  height: auto;
+  padding-right: 4px;
+}
+
+.imgClock {
+  width: 13px;
+  height: auto;
+  margin-right: -1em;
+}
+
+.weekdays {
+  line-height: 2px;
+  padding-left: 1.5em;
+}
