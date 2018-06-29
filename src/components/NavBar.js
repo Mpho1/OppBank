@@ -45,7 +45,7 @@ class NavBar extends React.Component {
     return (
       <div>
         <div className={`${style.HeaderLinksWrapper} ${headerClass}`}>
-          <HeaderPageLink to="/#products" title="Products" active={true} menu={<Menu className={style.menu} />} />
+          <HeaderPageLink to="/products" title="Products" active={true} menu={<Menu className={style.menu} />} />
           <HeaderPageLink to="/news" title="News" />
           <HeaderPageLink to="/careers" title="Careers" />
           <HeaderPageLink to="/find-us" title="Contact us" />

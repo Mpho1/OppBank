@@ -13,6 +13,20 @@
   background-color: $white;
   margin: 23px 10px;
   box-shadow: 0px 0px 16px 0px #ccc;
+  transition: box-shadow 1s;
+  cursor: pointer;
+
+  > a {
+    text-decoration: none;
+  }
+
+  > a:visited {
+    color: inherit;
+  }
+}
+
+.blog:hover {
+  box-shadow: 0 0 16px 3px #5682b2;
 }
 
 .blogImage {

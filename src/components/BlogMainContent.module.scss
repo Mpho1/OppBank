@@ -8,6 +8,11 @@
   margin-bottom: 5em;
 }
 
+.blogImg {
+  display: block;
+  margin: auto;
+}
+
 .blogHeader {
   color: $darkGrey;
   font-size: 17px;
@@ -45,7 +50,6 @@
 
 .blogBlockText {
   background-color: $offWhite;
-  margin-top: -2.5em;
   margin-left: 0em;
   padding: 18px 18px 3px 20px;
   font-size: 14px;
