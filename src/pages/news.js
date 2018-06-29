@@ -1,11 +1,10 @@
 import React from 'react'
+import PageHeader from '../components/PageHeader'
 import ThirdsColumns from '../components/ThirdsColumns'
 import CategoryBlock from '../components/CategoryBlock'
 import FinancialResultsBlock from '../components/FinancialResultsBlock'
 import BlogMainContent from '../components/BlogMainContent'
 import SideNews from '../components/SideNews'
-
-import PageHeader from '../components/PageHeader'
 
 const News = () => (
   <div>
