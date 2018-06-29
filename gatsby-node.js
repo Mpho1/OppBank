@@ -56,5 +56,65 @@ exports.createPages = ({graphql, boundActionCreators}) => {
         }
       })
     )
+
+    const productTemplate = path.resolve('src/templates/product.js')
+    resolve(
+      graphql(`
+              {
+                  allContentfulProduct(limit: 100) {
+                      edges {
+                        node {
+                          slug
+                        }
+                      }
+                  }
+              }
+        `).then((result) => {
+        if (result.errors) {
+          reject(result.errors)
+        }
+        if (result.data) {
+          result.data.allContentfulProduct.edges.forEach(({node}) => {
+            createPage({
+              path: `/products/${node.slug}`,
+              component: productTemplate,
+              context: {
+                slug: node.slug
+              }
+            })
+          })
+        }
+      })
+    )
+
+    const careerTemplate = path.resolve('src/templates/career.js')
+    resolve(
+      graphql(`
+              {
+                  allContentfulCareer(limit: 100) {
+                      edges {
+                        node {
+                          slug
+                        }
+                      }
+                  }
+              }
+        `).then((result) => {
+        if (result.errors) {
+          reject(result.errors)
+        }
+        if (result.data) {
+          result.data.allContentfulCareer.edges.forEach(({node}) => {
+            createPage({
+              path: `/careers/${node.slug}`,
+              component: careerTemplate,
+              context: {
+                slug: node.slug
+              }
+            })
+          })
+        }
+      })
+    )
   })
 }
