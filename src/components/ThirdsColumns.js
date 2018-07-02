@@ -24,7 +24,7 @@ class ThirdsColumns extends React.Component {
       <section className={this.className}>
         {
           Array.isArray(this.props.children) ? this.props.children.map(function (child, index) {
-            return <div>{child}</div>
+            return <div key={index}>{child}</div>
           }) : this.props.children
         }
       </section>
