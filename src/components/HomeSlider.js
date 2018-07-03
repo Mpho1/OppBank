@@ -39,6 +39,16 @@ class HomeSlider extends React.Component {
           heading={"Let's help you grow"}
           blurb={'We strive to help our clients grow their business'}
         />
+        <Slide
+          className={styles.slide3}
+          heading={"Let's help you grow"}
+          blurb={'We strive to help our clients grow their business'}
+        />
+        <Slide
+          className={styles.slide4}
+          heading={"Let's help you grow"}
+          blurb={'We strive to help our clients grow their business'}
+        />
       </Swiper>
     )
   }

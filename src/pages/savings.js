@@ -1,11 +1,12 @@
 import React from 'react'
-import SavingsAccount from '../components/SavingsAccount'
+import graphql from 'graphql'
 
+import SavingsAccount from '../components/SavingsAccount'
 import PageHeader from '../components/PageHeader'
 import ItemSwiper from '../components/ItemSwiper'
 import ContentsSection from '../components/ContentsSection'
 
-const Savings = () => (
+const Savings = ({data}) => (
   <div>
     <PageHeader
       title="SAVINGS ACCOUNT"
@@ -13,48 +14,18 @@ const Savings = () => (
     </PageHeader>
     <ContentsSection>
       <ItemSwiper>
-        <div style={style}>
-          <SavingsAccount
-            image={require('../img/target.svg')}
-            header="Fixed Terms4"
-            type="Deposit Account"
-            text="Gain control over your finances with a free cash withdrawal per month"/>
-        </div>
-        <div style={style}>
-          <SavingsAccount
-            image={require('../img/target.svg')}
-            header="Fixed Terms3"
-            type="Deposit Account"
-            text="Gain control over your finances with a free cash withdrawal per month"/>
-        </div>
-        <div style={style}>
-          <SavingsAccount
-            image={require('../img/target.svg')}
-            header="Fixed Terms5"
-            type="Deposit Account"
-            text="Gain control over your finances with a free cash withdrawal per month"/>
-        </div>
-        <div style={style}>
-          <SavingsAccount
-            image={require('../img/target.svg')}
-            header="Fixed Terms6"
-            type="Deposit Account"
-            text="Gain control over your finances with a free cash withdrawal per month"/>
-        </div>
-        <div style={style}>
-          <SavingsAccount
-            image={require('../img/target.svg')}
-            header="Fixed Terms7"
-            type="Deposit Account"
-            text="Gain control over your finances with a free cash withdrawal per month"/>
-        </div>
-        <div style={style}>
-          <SavingsAccount
-            image={require('../img/target.svg')}
-            header="Fixed Terms8"
-            type="Deposit Account"
-            text="Gain control over your finances with a free cash withdrawal per month"/>
-        </div>
+        {data.allContentfulProduct.edges.map(({node}) => {
+          return (
+            <div style={style}>
+              <SavingsAccount
+                image={node.image.file.url}
+                header={node.title}
+                type={node.type}
+                text={node.description.description}
+              />
+            </div>
+          )
+        })}
       </ItemSwiper>
     </ContentsSection>
   </div>
@@ -66,3 +37,31 @@ const style = {
 }
 
 export default Savings
+
+export const savingsQuery = graphql`
+  query savingsContentQuery {
+    allContentfulProduct {
+      edges {
+        node {
+          title
+          type
+          description {
+            description
+          }
+          features {
+            features
+          }
+          requirements {
+            requirements
+          }
+          image {
+            file {
+              url
+            }
+          }
+          slug
+        }
+      }
+    }
+  }
+`
