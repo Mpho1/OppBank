@@ -43,14 +43,14 @@
     height: 35px;
   }
 
-  .HorizontalLine {
+  .horizontalLine {
     height: 1px;
     width: 80%;
     background: $offWhite;
     margin: 0em 2em 0.6em 1.2em;
   }
 }
-//
+
 // @media only screen and (max-width: 1536px) and (min-width: 1150px)  {
 //   .productContainer {
 //     display: inline-flex;

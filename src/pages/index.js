@@ -70,7 +70,7 @@ const IndexPage = ({data}) => (
       <ItemSwiper>
         {data.allContentfulNews.edges.map(({node: news}) => {
           return (
-            <div className={styles.blogItem}>
+            <div style={style}>
               <BlogNews
                 image={news.image.file.url}
                 text={news.title}
@@ -86,6 +86,10 @@ const IndexPage = ({data}) => (
     </ContentsSection>
   </div>
 )
+
+const style = {
+  width: `340px`
+}
 
 export default IndexPage
 

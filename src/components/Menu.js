@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from 'gatsby-link'
 
 import style from './Menu.module.scss'
 
@@ -8,7 +9,9 @@ class Menu extends React.Component {
       <div className={`${style.TransparentBox} ${this.props.className}`}>
         <div className={style.MenuList}>
           <div className={style.MenuListItems}>
-            <h5 className={style.MenuListHeading}>Savings Accounts</h5>
+            <Link to={'/savings'}>
+              <h5 className={style.MenuListHeading}>Savings Accounts</h5>
+            </Link>
             <ul>
               <li>Ordinary Savings Account</li>
               <li>Business Savings Account</li>

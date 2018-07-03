@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from './Product.module.scss'
+import styles from './ProductsCard.module.scss'
 import bootstrapGrid from '../styles/bootstrap-grid.module.scss'
 
 import Button from './Button'
@@ -14,7 +14,7 @@ const ProductsContent = ({image, title, text}) => (
     <p>
       {text}
     </p>
-    <div className={styles.HorizontalLine}></div>
+    <div className={styles.horizontalLine}></div>
     <Button text="VIEW"
       customStyle={{
         marginBottom: `1em`
