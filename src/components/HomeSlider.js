@@ -31,23 +31,23 @@ class HomeSlider extends React.Component {
       >
         <Slide
           className={styles.slide1}
-          heading={"Let's help you grow"}
-          blurb={'We strive to help our clients grow their business'}
+          heading={'Empower yourself'}
+          blurb={'Learn more about our savings products'}
         />
         <Slide
           className={styles.slide2}
-          heading={"Let's help you grow"}
-          blurb={'We strive to help our clients grow their business'}
+          heading={'Empower your future'}
+          blurb={'Learn more about our chuld education loans'}
         />
         <Slide
           className={styles.slide3}
-          heading={"Let's help you grow"}
-          blurb={'We strive to help our clients grow their business'}
+          heading={'Empower your community'}
+          blurb={'Learn more about group savings'}
         />
         <Slide
           className={styles.slide4}
-          heading={"Let's help you grow"}
-          blurb={'We strive to help our clients grow their business'}
+          heading={'Empower your business'}
+          blurb={'Learn about business loans expansion and growth'}
         />
       </Swiper>
     )
