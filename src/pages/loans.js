@@ -6,15 +6,15 @@ import PageHeader from '../components/PageHeader'
 import ItemSwiper from '../components/ItemSwiper'
 import ContentsSection from '../components/ContentsSection'
 
-const Savings = ({data}) => (
+const Loans = ({data}) => (
   <div>
     <PageHeader
-      title="SAVINGS ACCOUNT"
+      title="Loans"
       subtitle="Let that brush dance around there and play. God gave you this gift of imagination. Use it, Every single thing in the world has its own personality">
     </PageHeader>
     <ContentsSection>
       <ItemSwiper>
-        {data.allContentfulProduct.edges.map(({node}) => {
+        {data.allContentfulLoanProducts.edges.map(({node}) => {
           return (
             <div style={style}>
               <ProductLayout
@@ -37,11 +37,11 @@ const style = {
   marginTop: '-3em'
 }
 
-export default Savings
+export default Loans
 
-export const savingsQuery = graphql`
-  query savingsContentQuery {
-    allContentfulProduct {
+export const loansQuery = graphql`
+  query loansContentQuery {
+    allContentfulLoanProducts {
       edges {
         node {
           title

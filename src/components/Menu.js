@@ -23,7 +23,9 @@ class Menu extends React.Component {
           </div>
           <div className={style.VerticalLine}></div>
           <div className={style.MenuListItems}>
-            <h5 className={style.MenuListHeading}>Loans</h5>
+            <Link to={'/loans'}>
+              <h5 className={style.MenuListHeading}>Loans</h5>
+            </Link>
             <ul>
               <li>Solidarity Loans</li>
               <li>Business Loans</li>
