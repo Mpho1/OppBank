@@ -5,7 +5,9 @@
 .CardContainer {
   display: grid;
   grid-gap: 5px;
-  padding: 10px 10px 10px 45em;
+  padding: 0px 0px 0px 50em;
+  position: absolute;
+  bottom: 11em;
 
   .CardInfo {
     box-shadow: 0px 0px 9px 0px #ccc;
@@ -33,13 +35,15 @@
 }
 
 .Button {
-  display: none;
-  background: #3498db;
-  border-radius: 5px;
-  font-family: Arial;
-  color: white;
-  font-size: 20px;
-  padding: 11px 55px;
+    border-radius: 4px;
+    background-color: $lightBlue;
+    border: none;
+    color: white;
+    padding: 11px 55px;
+    text-align: center;
+    display: none;
+    font-size: 20px;
+    margin: 2px 10px;
 }
 
 @media (max-width: 650px) {

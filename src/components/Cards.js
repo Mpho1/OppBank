@@ -26,12 +26,6 @@ const Cards = () => (
         title='Find us'
       />
     </div>
-    {/* <div className={styles.CardInfo}>
-      <CardContent
-        image={require('../img/feedback.svg')}
-        title='Feedback'
-      />
-    </div> */}
   </div>
 )
 

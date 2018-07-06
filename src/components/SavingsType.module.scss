@@ -1,0 +1,138 @@
+@import "../constants/colors.module.scss";
+
+.SavingsTypeCard {
+  border: 1px solid $white;
+  display: flex;
+  width: 45em;
+  padding-left:10em; 
+
+  .SavingsTypeImg {
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    top: 0px;
+  }
+  .SavingsTypeList {
+    padding-left: 20px;
+    }
+
+  hr {
+    display: block;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: auto;
+    margin-right:auto;
+    border-style: solid;
+    border-width: 0em;
+    background: #F1F5F8;
+  }
+    .BtnFeatures {
+      margin-right: 10px;
+      background-color: $paleBlue;
+      color: white;
+      font-size: 10px;
+      text-transform: uppercase;
+      font-weight: bold;
+      padding: 10px 35px;
+      border-radius: 25px 25px 25px 5px;
+      letter-spacing: 1px;
+    
+    }
+    .BtnRequirements {
+      border-radius: 5px;
+      margin-right: 10px;
+      color: $paleBlue;
+      background-color: $lightGrey; 
+      font-size: 10px;
+      text-transform: uppercase;
+      font-weight: bold;
+      padding: 10px 20px;
+      border-radius: 25px 25px 25px 5px;
+      letter-spacing: 1px;
+    }
+    .BtnEnquire {
+      border-radius: 5px;
+      background-color: $lightBlue;
+      border-color: $lightBlue;
+      color: $white;
+      font-size: 10px;
+      text-transform: uppercase;
+      font-weight: bold;
+      padding: 10px 28px;
+      letter-spacing: 1px;
+      margin-left: 100px;
+    }
+
+    .title {
+      font-size: 30px;
+      text-transform: uppercase;
+      color: $paleBlue;
+      margin-bottom: 10px;
+    }
+
+    .type {
+      color: Grey;
+      font-size: 20px;
+    }
+
+    .description {
+      color: $lightGrey ;
+      font-size: 13px;
+    }
+
+    .featuresList {
+      color: $lightGrey;
+      font-size: 13px;
+    }
+
+    .features {
+      font-size: 18px;
+      text-transform: uppercase;
+      color: $paleBlue;
+      margin-bottom: 10px;
+    } 
+  }
+
+
+@media (max-width: 924px) {
+  .SavingsTypeCard {
+     h4 {
+       margin-bottom: 1em;
+     }
+    .SavingsTypeImg {
+      width: 9em;
+      height: auto;
+     }
+
+    }
+  }
+
+@media (max-width: 636px) {
+  .SavingsTypeCard {
+    width: 135%;
+    margin-left: -19em;
+  }
+}
+
+@media (max-width: 587px) {
+  .SavingsTypeCard {
+    width: 145%;
+    margin-left: -6.7em;
+  }
+}
+
+@media (max-width: 497px) {
+  .SavingsTypeCard {
+    width: 232%;
+    margin-left: -5.7em;
+  }
+}
+
+@media (max-width: 438px) {
+  .SavingsTypeCard {
+    width: 232%;
+    margin-left: -4.7em;
+  }
+}

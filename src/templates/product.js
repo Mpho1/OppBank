@@ -1,6 +1,7 @@
 import React from 'react'
 import ThirdsColumns from '../components/ThirdsColumns'
-import CategoryBlock from '../components/CategoryBlock'
+// import CategoryBlock from '../components/CategoryBlock'
+import SavingsType from '../components/SavingsType'
 
 import graphql from 'graphql'
 
@@ -10,20 +11,20 @@ const News = ({data}) => (
   <div>
     <PageHeader title="Get The Latest News" subtitle="Read all about the latest Opportunity news"/>
     <ThirdsColumns breakOrder="213">
-      <CategoryBlock>
+      {/* <CategoryBlock>
         <div>Side Block here</div>
-      </CategoryBlock>
-
-      <div>
+      </CategoryBlock> */}
+      <SavingsType/>
+      {/* <div>
         <h1>{data.contentfulProduct.title}</h1>
         <h1>{data.contentfulProduct.description.description}</h1>
         <h1>{data.contentfulProduct.features.features}</h1>
         Product Info Here!
-      </div>
+      </div> */}
 
-      <div>
+      {/* <div>
         Other side block here!
-      </div>
+      </div> */}
     </ThirdsColumns>
   </div>
 )
