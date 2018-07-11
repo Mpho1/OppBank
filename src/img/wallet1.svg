@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="23px" height="22px" viewBox="0 0 23 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>4E0F354E-7951-4B86-A5F3-8B3730E82C28</title>
+    <desc>Created with sketchtool.</desc>
+    <defs>
+        <path d="M12.1230476,10.6453846 C11.6932245,10.9638462 11.5465578,11.6692308 11.7943946,12.2215385 C12.0428299,12.7730769 12.5917823,12.9623077 13.0204082,12.6438462 C13.4502313,12.3253846 13.5974966,11.6192308 13.3490612,11.0676923 C13.1832381,10.6976923 12.8815238,10.49 12.5708299,10.49 C12.4187755,10.49 12.2637279,10.54 12.1230476,10.6453846 Z" id="path-1"></path>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Careers-Expanded" transform="translate(-1241.000000, -639.000000)">
+            <g id="wallet" transform="translate(1242.000000, 640.000000)">
+                <rect id="Rectangle-4" fill="#75DEC5" x="2.73291925" y="5.88235294" width="11.8426501" height="10.5882353"></rect>
+                <path d="M11.4111365,16.3155907 C10.082935,15.8267669 9.10973085,14.2377411 9.10973085,12.3529412 C9.10973085,10.4681412 10.082935,8.87911547 11.4111365,8.3902917 L11.4111365,8.23529412 L20.0414079,8.23529412 L20.0414079,16.4705882 L11.4111365,16.4705882 L11.4111365,16.3155907 Z" id="Combined-Shape" fill="#FFFFFF"></path>
+                <g id="Group-2">
+                    <path d="M16.7620245,19.615 L16.7620245,15.7688462" id="Stroke-4" stroke="#696969" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M16.7620245,7.30730769 L16.7620245,3.46115385" id="Stroke-5" stroke="#696969" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M20.653181,18.0765385 C20.5693714,18.8780769 20.0790857,19.5080769 19.455902,19.615 L1.49671837,19.615 C0.960337415,19.615 0.299439456,18.9234615 0.299439456,18.2226923 L0.299439456,5.38423077" id="Stroke-6" stroke="#696969" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M0.299439456,7.30730769 L0.299439456,5.14576923 C0.299439456,4.20038462 0.697534694,3.46115385 1.49671837,3.46115385 L19.455902,3.46115385 C19.9916844,3.46115385 20.653181,4.44576923 20.653181,5.14576923 L20.653181,15.2657692" id="Stroke-8" stroke="#696969" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M0.299439456,5.96115385 L0.299439456,2.06884615 C0.299439456,1.36884615 0.697534694,0.384230769 1.49671837,0.384230769 L16.7620245,0.384230769" id="Stroke-10" stroke="#696969" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M20.0545415,7.69192308 L12.2722286,7.69192308 C8.38107211,7.69192308 8.38107211,15.3842308 12.2722286,15.3842308 L20.653181,15.3842308" id="Stroke-12" stroke="#696969" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <mask id="mask-2" fill="white">
+                        <use xlink:href="#path-1"></use>
+                    </mask>
+                    <g id="Clip-16"></g>
+                    <polygon id="Fill-15" fill="#696969" mask="url(#mask-2)" points="9.30064218 10.5186923 13.4480163 7.44176923 15.8425741 12.771 11.6952 15.8479231"></polygon>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

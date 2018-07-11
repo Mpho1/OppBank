@@ -71,36 +71,92 @@ const MapContainer = compose(
         places: [],
         defaultZoom: 11,
         center: {
-          lat: 0.335845,
-          lng: 32.587500
+          lat: 0.3416113, // 29 Kanjokya St, Kampala, Uganda Head Office
+          lng: 32.59085099999993
         },
         markers: [{
-          lat: 0.335845,
+          lat: 0.3416113, // 29 Kanjokya St, Kampala, Uganda Head Office
+          lng: 32.59085099999993
+        },
+        {
+          lat: 0.335845, // Plot 204, Block 494, Goshen House, Kawempe
           lng: 32.587500
         },
         {
-          lat: 0.3107461,
-          lng: 32.58409280000001
+          lat: 0.363889, // Nansana East, 1 Zone, Nabweru, Nansana Trading Centre, Wakiso
+          lng: 32.528611
         },
         {
-          lat: 0.423333,
-          lng: 33.206667
+          lat: 0.450833, // Gayaza Zone A Gayaza  Trading Centre, Gayaza
+          lng: 32.611667
         },
         {
-          lat: 1.080556,
-          lng: 34.175000
+          lat: 0.5050, // Kalagi Trading Centre, Kalagi, Mukono
+          lng: 32.7500
         },
         {
-          lat: 2.781667,
-          lng: 32.299167
+          lat: 0.298325, // Plot 1106 Block 18 Masaka Road- Nateete
+          lng: 32.534989
         },
         {
-          lat: 2.2472,
-          lng: 32.9000
+          lat: 0.433343, // Plot 23/25, Edward Avenue, Masaka
+          lng: 31.094438
         },
         {
-          lat: 0.3474566,
-          lng: 32.61247370000001
+          lat: -0.6051493000000001, // Plot 64, High Street, Mbarara
+          lng: 30.66231360000006
+        },
+        {
+          lat: 0.6011365, // Plot 3, Nyantungo Road, Kyenjojo
+          lng: 30.64126250000004
+        },
+        {
+          lat: 0.5539012999999999, // Plot 103, Lubanga Road, Mubende
+          lng: 31.38846710000007
+        },
+        {
+          lat: 1.430488, // Plot 15, Main Street, Hoima
+          lng: 31.352770299999975
+        },
+        {
+          lat: 0.5439144, // Plot 43, Block 530, Agip Zone, Jinja Road Highway,  Mukono
+          lng: 32.79480509999996
+        },
+        {
+          lat: 0.431245, // Plot 9, Scindia Road, Jinja
+          lng: 33.212058
+        },
+        {
+          lat: 0.6152156999999999, // Plot 88, Main Street, Iganga
+          lng: 33.47902899999997
+        },
+        {
+          lat: 0.5889137999999999, // Plot 83, Iganga Road, Mayuge
+          lng: 33.72538959999997
+        },
+        {
+          lat: 1.071769, // Plot 1-3, Manafwa Road, BCU Building, Mbale
+          lng: 34.176459
+        },
+        {
+          lat: 1.715, // Plot 46, Gweri Road, Soroti
+          lng: 33.61111110000002
+        },
+        {
+          lat: 0.3036503, // Plot 79  Mityana  Road 1st floor
+          lng: 32.52306329999999
+        },
+        {
+          lat: 2.2401568, // Plot number 39-41 Lira Avenue
+          lng: 32.89532699999995
+        },
+        {
+          lat: 2.245864499999999, // Block 1, plot 203 Oyam District ( Corner kamdini)
+          lng: 32.33200880000004
+        },
+        {
+          lat: 0.06444, // Plot 1, Enteebe road ( Lloyde Building)
+          lng: 32.44694
         }],
         onMapMounted: ref => {
           refs.map = ref

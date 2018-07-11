@@ -1,46 +1,104 @@
 import React from 'react'
 import ThirdsColumns from '../components/ThirdsColumns'
 import CategoryBlock from '../components/CategoryBlock'
+import SideNews from '../components/SideNews'
+import CareerApply from '../components/CareerApply'
 import graphql from 'graphql'
+import FullJobDetails from '../components/FullJobDetails'
 
 import PageHeader from '../components/PageHeader'
 
-const Job = ({data}) => (
-  <div>
-    <PageHeader title="Get The Job" subtitle="The job the job the job"/>
-    <ThirdsColumns breakOrder="213">
-      <CategoryBlock>
-        <div>Side Block here</div>
-      </CategoryBlock>
+class Job extends React.Component {
+  componentWillMount () {
+    this.setState(() => {
+      return {
+        hideApplyForm: true
+      }
+    })
+  }
 
-      <div>
-        <h1>{data.contentfulJob.title}</h1>
-        <h1>{data.contentfulJob.description.description}</h1>
-        <h1>{data.contentfulJob.workType}</h1>
-        <h1>{data.contentfulJob.salary}</h1>
-        <h1>{data.contentfulJob.location}</h1>
-        Product Info Here!
-      </div>
+  hideUnhideApplyForm (hide) {
+    this.setState(() => {
+      return {
+        hideApplyForm: hide
+      }
+    })
+  }
 
+  render () {
+    return (
       <div>
-        Other side block here!
+        <PageHeader title="Get The Job" subtitle="You are halfway through"/>
+        <ThirdsColumns breakOrder="213">
+          <CategoryBlock>
+            <SideNews/>
+          </CategoryBlock>
+          <div>
+            <FullJobDetails
+              jobTitle={this.props.data.contentfulCareer.title}
+              hideUnhideApplyForm={this.hideUnhideApplyForm.bind(this)}
+              date={this.props.data.contentfulCareer.postedAt}
+              city={this.props.data.contentfulCareer.location}
+              calendar={this.props.data.contentfulCareer.workType}
+              description={this.props.data.contentfulCareer.description.description}
+              workType={this.props.data.contentfulCareer.workType}
+              salary={this.props.data.contentfulCareer.salary}
+              qualifications={this.props.data.contentfulCareer.qualificationAndExperience.qualificationAndExperience}
+              skills={this.props.data.contentfulCareer.skillsAndAbility.skillsAndAbility}
+              competencies={this.props.data.contentfulCareer.competencies.competencies}
+            />
+          </div>
+
+          <div>
+            <CareerApply
+              name="name"
+              contactNumber="Contact Number"
+              email="Email"
+              attachment="No Attachment"
+              hideUnhideApplyForm={this.hideUnhideApplyForm.bind(this)}
+              hide={this.state.hideApplyForm}
+            />
+          </div>
+        </ThirdsColumns>
       </div>
-    </ThirdsColumns>
-  </div>
-)
+    )
+  }
+}
 
 export default Job
 
 export const pageQuery = graphql`
-    query SingleCareerQuery($slug: String!){
-        contentfulCareer (slug: {eq: $slug}) {
-            workType
-            salary
-            title
-            location
-            description {
-                description
-            }
+  query SingleCareerQuery($slug: String!){
+    contentfulCareer (slug: {eq: $slug}) {
+      workType
+      salary
+      title
+      location
+      postedAt (formatString: "MMMM DD, YYYY")
+      description {
+          description
+      }
+      qualificationAndExperience {
+        id
+        qualificationAndExperience
+        childMarkdownRemark {
+          html
         }
+      }
+      competencies {
+        id
+        competencies
+        childMarkdownRemark {
+          html
+        }
+      }
+      skillsAndAbility {
+        id
+        skillsAndAbility
+        childMarkdownRemark {
+          html
+        }
+      }
     }
+  }
 `

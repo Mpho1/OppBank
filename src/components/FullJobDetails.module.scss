@@ -1,0 +1,181 @@
+@import "../constants/colors.module.scss";
+
+.fullJobDetailsCard {
+  border: 1px solid $white;
+  border-radius: 3px;
+  color: $blue;
+  box-shadow: 0 0 10px #ddd;
+  padding: 20px 20px 20px 20px;
+  // display: flex;
+  margin-bottom: 0.5em;
+  margin-right: 7em;
+  width: 39.5em;
+}
+
+.header {
+  display: -webkit-inline-box;
+}
+
+.fullJobDetailsImg {
+  width: 5em;
+  height: auto;
+  margin-right: 1em;
+}
+
+h4 {
+  text-transform: uppercase;
+  margin-top: 0.5em;
+  padding-left: 1em;
+}
+
+.introduction {
+  padding-top: 2em;
+  color: $darkGrey;
+  margin-bottom: 0.5em;
+  margin-top: -2em;
+}
+
+.text {
+  color: $grey;
+  padding-top: -2em;
+  font-size: 12px;
+}
+
+.experience {
+  color: $grey;
+  font-size: 12px;
+  line-height: 22px;
+  margin-left: .1em;
+  list-style-type: none;
+}
+
+.horizontalLine {
+  margin-left: 0em;
+  width: 36.5em;
+  margin-bottom: 1em
+}
+
+
+hr {
+  display: block;
+  margin-top: 3em;
+  margin-bottom: 0.5em;
+  margin-left: -1em;
+  margin-right: auto;
+  border-style: solid;
+  border-width: 0em;
+  background: #F1F5F8;
+  width: 36em;
+}
+
+.apply {
+  border-radius: 5px;
+  background-color: $lightBlue;
+  margin-left: 54em;
+  border-color: $lightBlue;
+  color: $white;
+  font-size: 10px;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 10px 28px;
+  letter-spacing: 1px;
+}
+
+.applyBelow {
+  border-radius: 5px;
+  background-color: $lightBlue;
+  margin-left: 56.3em;
+  border-color: $lightBlue;
+  color: $white;
+  font-size: 10px;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 10px 28px;
+  letter-spacing: 1px;
+}
+
+.fullJobListing {
+  padding-left: 20px;
+  text-transform: uppercase;
+
+  .jobDate {
+    display: flex;
+    margin-top: -4.8em;
+    margin-left: 6em;
+
+    .imgClock {
+      width: 0.67em;
+      margin-top: -0.2em;
+    }
+
+    .clockDate {
+      font-size: 11px;
+      padding-left: 0.7em;
+      color: $lightGrey;
+      text-transform: none;
+    }
+  }
+
+  .jobLocation {
+    display: flex;
+    margin-top: -4.13em;
+    margin-bottom: -0.8em;
+    margin-left: 6.7em;
+
+    .imgLocation {
+      width: 0.67em;
+      margin-left: 5.3em;
+      margin-top: 25px;
+    }
+
+    .jobCity {
+      margin-top: 2.7em;
+      padding-left: 0.7em;
+      font-size: 11px;
+      color: $lightGrey;
+      text-transform: none;
+    }
+  }
+
+  .jobHours {
+    display: flex;
+    margin-top: -4.1em;
+    margin-bottom: -0.8em;
+    margin-left: 14.6em;
+
+    .imgCalendar {
+      width: 0.77em;
+      margin-left: 5.5em;
+      margin-top: 25px;
+    }
+
+    .jobType {
+      margin-top: 2.7em;
+      padding-left: 0.7em;
+      font-size: 11px;
+      color: $lightGrey;
+      text-transform: none;
+    }
+  }
+
+  .jobSalary {
+    display: flex;
+    margin-top: -4.2em;
+    margin-bottom: -0.8em;
+    margin-left: 20em;
+
+    .imgSalary {
+      width: 0.77em;
+      margin-left: 5.5em;
+      margin-top: 25px;
+    }
+
+    .salaryType {
+      margin-top: 2.7em;
+      padding-left: 0.7em;
+      font-size: 11px;
+      color: $lightGrey;
+      text-transform: none;
+    }
+  }
+}
