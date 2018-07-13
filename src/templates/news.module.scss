@@ -1,1 +1,24 @@
 @import '../constants/colors.module.scss';
+
+.newsTitle {
+  color: $grey;
+  text-transform: uppercase;
+  padding-left: 8px;
+}
+
+.newsList {
+  font-size: 12px;
+  line-height: 4px;
+  color: $blue;
+  line-height: 13px;
+  list-style-type: none;
+  margin-left: 1px;
+  padding-left: 8px;
+  padding-right: 10px;
+}
+
+@media (max-width: 636px) {
+  .newsSection {
+    display: none;
+  }
+}
