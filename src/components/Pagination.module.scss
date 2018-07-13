@@ -1,0 +1,58 @@
+@import "../constants/colors.module.scss";
+
+.firstButton {
+  background-color: $paleBlue;
+  border: 1px solid $paleBlue;
+  border-radius: 5px;
+  padding: .3em 1.5em;
+  color: $white;
+  font-size: 15px;
+  margin-right: .5em;
+}
+
+.previousButton {
+  background-color: $paleBlue;
+  border: 1px solid $paleBlue;
+  border-radius: 5px;
+  padding: .3em 1.5em;
+  color: $white;
+  font-size: 15px;
+  margin-right: .5em;
+}
+
+.nextButton {
+  background-color: $paleBlue;
+  border: 1px solid $paleBlue;
+  border-radius: 5px;
+  padding: .3em 1.5em;
+  color: $white;
+  font-size: 15px;
+  margin-right: .5em;
+}
+.lastButton {
+  background-color: $paleBlue;
+  border: 1px solid $paleBlue;
+  border-radius: 5px;
+  padding: .3em 1.5em;
+  color: $white;
+  font-size: 15px;
+  margin-right: .5em;
+}
+
+.pageNumbers {
+  display: flex;
+  list-style-type: none;
+  cursor: pointer;
+  color: $paleBlue;
+  letter-spacing: 1em;
+
+  li {
+    border: 2px solid $paleBlue;
+    border-radius: 3px;
+    padding-right: 0em;
+    padding-top: .1em;
+    padding-bottom: .1em;
+    padding-left: .9em;
+    margin-right: .3em;
+  }
+}
