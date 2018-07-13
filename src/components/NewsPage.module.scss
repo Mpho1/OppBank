@@ -26,6 +26,11 @@
   padding: 1.5em 1em 1em 1em;
   cursor: pointer;
 
+  a {
+    text-decoration: none;
+    color: $blue;
+  }
+
   .newsTitle {
     color: $grey;
     text-transform: uppercase;
@@ -38,8 +43,6 @@
     font-weight: bold;
     line-height: 13px;
     margin-left: 1px;
-    // padding-left: 8px;
-    // padding-right: 10px;
     overflow: hidden;
     text-overflow: ellipsis;
     max-width: 180px;

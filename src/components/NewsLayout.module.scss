@@ -7,6 +7,11 @@
   padding: 0em 2em 0em 2em;
 }
 
+a {
+  color: $white;
+  text-decoration: none;
+}
+
 @media (max-width: 1320px) {
   .columnContent {
     margin-top: -7em;
