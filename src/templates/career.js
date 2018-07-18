@@ -46,6 +46,7 @@ class Job extends React.Component {
               qualifications={this.props.data.contentfulCareer.qualificationAndExperience.qualificationAndExperience}
               skills={this.props.data.contentfulCareer.skillsAndAbility.skillsAndAbility}
               competencies={this.props.data.contentfulCareer.competencies.competencies}
+              notice="Kindly note only applicants who meet the minimum requirements will be contacted. All positions will be filled in accordance with our Employment Equity plan. We also encourage people with disabilities to apply."
             />
           </div>
 
