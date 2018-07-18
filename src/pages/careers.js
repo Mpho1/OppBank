@@ -6,7 +6,6 @@ import DoubleSearchField from '../components/DoubleSearchField'
 import ThirdsColumns from '../components/ThirdsColumns'
 import CategoryBlock from '../components/CategoryBlock'
 import CareerApply from '../components/CareerApply'
-import CareerList from '../components/CareerList'
 import SideNews from '../components/SideNews'
 import NoJob from '../components/NoJob'
 import Pagination from '../components/Pagination'
@@ -15,7 +14,8 @@ class CareerPage extends React.Component {
   constructor () {
     super()
     this.state = {
-      todosPerPage: 2
+      todosPerPage: 5,
+      filteredItems: []
     }
   }
 
@@ -42,49 +42,16 @@ class CareerPage extends React.Component {
     const filteredCareers = careers.filter(({ node }) => {
       return node.title.indexOf(jobTitle) !== -1 || node.location.indexOf(location) !== -1
     })
+    this.state.filteredItems = filteredCareers
 
-    if (filteredCareers.length > 0) {
-      return filteredCareers.map(({ node }) => {
-        return (
-          <CareerList
-            key={`${node.title} ${node.postedAt}`}
-            hideUnhideApplyForm={this.hideUnhideApplyForm.bind(this)}
-            jobTitle={node.title}
-            date={node.postedAt}
-            city={node.location}
-            jobDescription={node.description.description}
-            workType={node.workType}
-            salary={node.salary}
-          />
-        )
-      })
-    } else if (filteredCareers.length === -1) {
-      return (
-        <NoJob
-          title="0 Jobs available for this search"
-          message="We will email you once a position for this has been opened"
-          text="Enter your email"
-        />
-      )
-    } else {
+    if (this.state.filteredItems.length < 0) {
       return (
         <div>
-          {this.props.data.allContentfulCareer.edges.map(({node}) => {
-            return (
-              <CareerList
-                key={`${node.title} ${node.postedAt}`}
-                hideUnhideApplyForm={this.hideUnhideApplyForm.bind(this)}
-                todosPerPage={this.state.todosPerPage}
-                jobTitle={node.title}
-                date={node.postedAt}
-                city={node.location}
-                jobDescription={node.description.description}
-                workType={node.workType}
-                salary={node.salary}
-                link={`/careers/${node.slug}`}
-              />
-            )
-          })}
+          <NoJob
+            title="0 Jobs available for this search"
+            message="We will email you once a position for this has been opened"
+            text="Enter your email"
+          />
         </div>
       )
     }
@@ -92,7 +59,15 @@ class CareerPage extends React.Component {
 
   render () {
     const paginationCareer = this.props
-    const todos = paginationCareer.data.allContentfulCareer.edges
+    let todos = paginationCareer.data.allContentfulCareer.edges
+
+    const filteredItems = todos.filter(({ node }) => {
+      return node.title.indexOf(this.state.jobTitle) !== -1 || node.location.indexOf(this.state.location) !== -1
+    })
+
+    if (filteredItems.length !== 0) {
+      todos = filteredItems
+    }
 
     return (
       <div>
@@ -110,13 +85,12 @@ class CareerPage extends React.Component {
             <SideNews/>
           </CategoryBlock>
           <div>
-            <div>
-
-            </div>
             <Pagination
               todos={todos}
               todosPerPage={this.state.todosPerPage}
-              contentDisplay={this.renderCareerList()}/>
+              contentDisplay={this.renderCareerList()}
+              hideUnhideApplyForm={this.hideUnhideApplyForm.bind(this)}
+              hide={this.state.hideApplyForm}/>
           </div>
           <div>
             <CareerApply

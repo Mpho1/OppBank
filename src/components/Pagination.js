@@ -1,4 +1,5 @@
 import React from 'react'
+import CareerList from './CareerList'
 import style from './Pagination.module.scss'
 
 class Pagination extends React.Component {
@@ -12,7 +13,6 @@ class Pagination extends React.Component {
   }
 
   handleClick (event) {
-    console.log(event.currentTarget.dataset.id, 'yyyy')
     this.setState({
       currentPage: event.currentTarget.dataset.id
     })
@@ -34,7 +34,6 @@ class Pagination extends React.Component {
     renderTodos = currentTodos.map((todo, index) => {
       return (<li key={index}>{todo}</li>)
     })
-    console.log(renderTodos[0].props.children.node, '33p0')
 
     // Logic for displaying page numbers
     const pageNumbers = []
@@ -55,21 +54,30 @@ class Pagination extends React.Component {
     })
 
     const items = []
-    for (let i = 0; i < 2; i++) {
-      items.push(renderTodos[i].props.children.node)
-    };
-    console.log(items, '99')
+    if (renderTodos.length > 0) {
+      for (let i = 0; i < renderTodos.length; i++) {
+        items.push(renderTodos[i].props.children.node)
+      };
+    }
+
+    const showItems = (
+      <div>
+        {items.map((item, index) =>
+          <CareerList
+            key={index}
+            node={item}
+            hideUnhideApplyForm={this.props.hideUnhideApplyForm}
+            hide={this.props.hideUnhideApplyForm}
+            link={`/careers/${item.slug}`}/>
+        )}
+      </div>
+    )
 
     return (
       <div>
-        {items.forEach((items, index) => {
-          return (
-            <div>
-              key={index}
-              {items}
-            </div>
-          )
-        })}
+        <ul>
+          {showItems}
+        </ul>
         <ul className={style.pageNumbers}>
           {renderPageNumbers}
         </ul>

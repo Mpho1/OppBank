@@ -8,6 +8,7 @@
   padding: 20px;
   display: flex;
   margin-bottom: 0.5em;
+  width: 37em;
 
   .careerListImg {
     width: 4em;
@@ -78,6 +79,7 @@
       overflow: hidden;
       text-overflow: ellipsis;
       max-width: 550px;
+      padding-right: 3em;
     }
 
     .work {
@@ -117,11 +119,46 @@
   }
 }
 
-@media (max-width: 924px) {
+
+@media (max-width: 1241px) {
   .careerListCard {
+    hr {
+      display: block;
+      margin-top: 0.5em;
+      margin-bottom: 0.5em;
+      margin-left: 0em;
+      width: 30em;
+    }
+
+    .careerListing {
+      .jobDescription {
+        font-size: 11px;
+        color: $lightGrey;
+        text-transform: none;
+        margin-bottom: 0.8em;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 550px;
+        padding-right: 10em;
+      }
+    }
+  }
+}
+
+@media (max-width: 923px) {
+  .careerListCard {
+    width: 53em;
+    margin-left: -5em;
+
      h4 {
        margin-bottom: 1em;
      }
+
+     hr {
+       width: 37em;
+     }
+
     .careerListImg {
       width: 9em;
       height: auto;
@@ -137,6 +174,14 @@
           margin-top: -0.5em;
           width: 1em;
         }
+      }
+
+      .jobDescription {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 330px;
+        padding-right: 3em;
       }
 
       .jobLocation {
@@ -156,22 +201,44 @@
   }
 }
 
-@media (max-width: 796px) {
-  .careerListing {
+@media (max-width: 799px) {
+  .careerListCard {
+    width: 45em;
 
-    .jobDate {
-      .clockDate {
-        padding-left: 0.4em !important;
-      }
+    hr {
+      width: 29em;
     }
 
-    .jobLocation {
-      .imgLocation {
-        margin-left: 1.6em !important;
+    .careerListImg {
+      height: auto;
+      margin-top: -11em;
+    }
+
+    .careerListing {
+      padding-left: 9px;
+
+      .jobDate {
+        .clockDate {
+          padding-left: 0.4em !important;
+        }
       }
 
-      .jobCity {
-        padding-left: 0.2em !important;
+      .jobDescription {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 260px;
+        padding-right: 3em;
+      }
+
+      .jobLocation {
+        .imgLocation {
+          margin-left: 1.6em !important;
+        }
+
+        .jobCity {
+          padding-left: 0.2em !important;
+        }
       }
     }
   }
@@ -188,15 +255,29 @@
 
 @media (max-width: 636px) {
   .careerListCard {
-    width: 135%;
-    margin-left: -19em;
+    width: 147%;
+    margin-left: -22em;
+
+    .careerListImg {
+      margin-left: -2em;
+    }
   }
 }
 
 @media (max-width: 587px) {
   .careerListCard {
-    width: 145%;
-    margin-left: -6.7em;
+    width: 162%;
+    margin-left: -8.3em;
+
+    hr {
+      display: none;
+    }
+
+    .careerListImg {
+      width: 3.5em;
+      margin-top: -7em;
+      margin-left: -1em;
+    }
   }
 }
 
