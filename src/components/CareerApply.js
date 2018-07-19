@@ -1,5 +1,6 @@
 import React from 'react'
 import style from './CareerApply.module.scss'
+import * as emailjs from 'emailjs-com'
 
 class CareerApply extends React.Component {
   constructor (props) {
@@ -16,6 +17,9 @@ class CareerApply extends React.Component {
     this.handleChange = this.handleChange.bind(this)
     this.onChange = this.onChange.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this)
+
+    // Ititalize emailjs with 'YOUR USER ID'
+    emailjs.init('user_aoVvRlX6P0crvJ6slrmga')
   }
 
   handleChange (event) {
@@ -33,9 +37,35 @@ class CareerApply extends React.Component {
     this.props.hideUnhideApplyForm(true)
   }
 
+  sendFeedback (templateId, senderEmail, receiverEmail, senderName, senderContactNumber) {
+    emailjs.send(
+      'mailgun',
+      templateId,
+      {
+        senderEmail,
+        receiverEmail,
+        senderName,
+        senderContactNumber
+      })
+      .then(res => {
+        this.setState({ formEmailSent: true })
+      })
+      // Handle errors here however you like, or use a React error boundary
+      .catch(err => console.error('Failed to send feedback. Error: ', err))
+  }
+
   handleSubmit (event) {
     event.preventDefault()
-  }
+
+    /* SENDING VIA EMAILJS */
+    this.sendFeedback(
+      'template_QGfvwNC5',
+      this.state.email,
+      'jan@mybucks.com',
+      this.state.name,
+      this.state.contactNumber
+    )
+  } // end handleSubmit()
 
   render () {
     return (
