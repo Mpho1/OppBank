@@ -12,6 +12,7 @@ $darkGrey: #696969;
 $pastelGreen: #84E2D0;
 $charcoalBlack: #7c7c7c;
 $darkCharcoal: #030303;
+$darkThunder: #323132;
 $transparentBlack: rgba(0,0,0,0.7);
 
 :export { teal: $teal; }
@@ -26,5 +27,6 @@ $transparentBlack: rgba(0,0,0,0.7);
 :export { darkGrey: $darkGrey; }
 :export { pastelGreen: $pastelGreen; }
 :export { charcoalBlack: $charcoalBlack; }
-:export { $darkCharcoal: $darkCharcoal; }
+:export { darkCharcoal: $darkCharcoal; }
+:export { darkThunder: $darkThunder; }
 :export { transparentBlack: $transparentBlack; }

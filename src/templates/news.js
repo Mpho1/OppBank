@@ -65,6 +65,7 @@ const News = ({data}) => (
     </ThirdsColumns>
   </div>
 )
+
 const myData = (data) => {
   let items = []
   for (let i = 0; i < data.allContentfulFinancialResult.edges.length; i++) {

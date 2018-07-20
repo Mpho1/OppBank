@@ -49,6 +49,41 @@
   }
 }
 
+.financialBlock {
+  border: 1px solid $darkThunder;
+  margin-left: 4.8em;
+  background-color: $darkThunder;
+  margin-bottom: 2em;
+  width: 70em;
+
+  .financialContent {
+    text-transform: uppercase;
+    display: flex;
+    padding-top: 1.4em;
+    padding-left: 3em;
+    padding-bottom: -4em;
+    font-size: 11px;
+    font-weight: bold;
+    margin-bottom: -1em !important;
+    letter-spacing: 1.2px;
+
+    .financialText {
+      color: $white;
+    }
+
+    .download {
+      color: $lightBlue;
+      margin-left: 65em;
+
+      .downloadImg {
+        width: .9em;
+        height: auto;
+        margin-left: .5em;
+      }
+    }
+  }
+}
+
 @media (max-width: 1320px) {
   .columnContent {
     margin-top: -7em;

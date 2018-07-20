@@ -1,9 +1,7 @@
 import React from 'react'
-import ItemSwiper from '../components/ItemSwiper'
 import PageHeader from '../components/PageHeader'
 import NewsPage from '../components/NewsPage'
 import NewsLayout from '../components/NewsLayout'
-import BlogNews from '../components/BlogNews'
 import graphql from 'graphql'
 
 class News extends React.Component {
@@ -27,38 +25,9 @@ class News extends React.Component {
             )
           })}
         </NewsPage>
-        <div style={swiper}>
-          <ItemSwiper>
-            {this.props.data.allContentfulNews.edges.map(({node: news}) => {
-              return (
-                <div style={style}>
-                  <BlogNews
-                    key={news.slug}
-                    image={news.image.file.url}
-                    text={news.title}
-                    date={news.createdAt}
-                    name={`${news.author.name} ${news.author.lastName}`}
-                    information={news.blockParagraph.blockParagraph}
-                    link={`/news/${news.slug}`}
-                  />
-                </div>
-              )
-            })}
-          </ItemSwiper>
-        </div>
       </div>
     )
   }
-}
-
-const style = {
-  width: `340px`,
-  marginTop: `4em`
-}
-
-const swiper = {
-  backgroundColor: `#F1F5F8`,
-  marginBottom: `3em`
 }
 
 export default News

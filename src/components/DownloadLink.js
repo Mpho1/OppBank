@@ -1,5 +1,5 @@
 import React from 'react'
-import icon from '../img/arrow_right.svg'
+import icon from '../img/blue_button.svg'
 
 const DownloadLink = ({href}) => (
   <div style={{
@@ -13,7 +13,7 @@ const DownloadLink = ({href}) => (
     }} href={href}>DOWNLOAD</a>&nbsp;
     <img style={{
       marginBottom: '0em',
-      width: '40px',
+      width: '25px',
       verticalAlign: 'middle',
       paddingRight: '10px'
     }} src={icon}/>
