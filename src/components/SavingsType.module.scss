@@ -5,27 +5,26 @@
   display: flex;
   width: 45em;
   padding-left:5em;
-  margin: 3em 2em 3em 4em;
+  margin: 4em 0em 4em 8em;
 
   .SavingsTypeImg {
     height: 20em;
+    width: 100px;
     display: flex;
-    margin-top: -7em;
+    margin-top: -7.5em;
 
   }
   .SavingsTypeList {
     padding-left: 20px;
     }
-
+.Buttons{
+  padding: 35px 0px 0px;
+}
   hr {
-    display: block;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-    margin-left: auto;
-    margin-right:auto;
+    margin: 20px 0px 20px 0px;
     border-style: solid;
     border-width: 0em;
-    background: #F1F5F8;
+    background: $offWhite;
   }
     .BtnFeatures {
       margin-right: 10px;
@@ -35,6 +34,7 @@
       font-size: 13px;
       text-transform: uppercase;
       font-weight: bold;
+      font-family: BrandonGrotesque;
       padding: 10px 35px;
       border-radius: 25px 25px 25px 5px;
       letter-spacing: 1.8px;
@@ -50,17 +50,16 @@
       border-radius: 25px 25px 25px 5px;
       font-family: BrandonGrotesque;
       font-size: 13px;
-      font-weight: 900;
-      line-height: 1.5;
+      font-weight: bold;
       letter-spacing: 1.8px;
       text-align: center;
-      color: #326894;
+      color: $paleBlue;
 
     }
     .BtnEnquire {
       border-radius: 5px;
       border: 1px solid $lightBlue;
-      background-color: #2cabe2;
+      background-color: $lightBlue;
       color: $white;
       text-transform: uppercase;
       padding: 10px 28px;
@@ -70,14 +69,14 @@
       line-height: 1.33;
       letter-spacing: 1.8px;
       text-align: center;
-      color: #ffffff;
+      color: $white;
       margin-left: 80px;
     }
 
     .title {
       text-transform: uppercase;
       letter-spacing: 0.3px;
-      color: #326894;
+      color: $paleBlue;
       margin-bottom: 0px;
     }
 
@@ -85,28 +84,29 @@
       font-size: 19px;
       line-height: normal;
       letter-spacing: 0.2px;
-      color: #7c7c7c;
+      color: $charcoalBlack;
       margin-bottom: 5px;
     }
 
     .description {
       font-size: 15px;
-      color: #b5b8b9;
+      color: $lightGrey;
 
     }
 
     .featuresList {
-      font-size: 18px;
+      font-size: 15px;
       letter-spacing: 0.1px;
-      color: #b5b8b9;
+      color: $lightGrey;
     }
 
     .features {
       font-size: 25px;
       font-weight: bold;
       letter-spacing: 0.3px;
-      color: #326894;
+      color: $paleBlue;
       margin-bottom: 0px;
+      
     }
   }
 

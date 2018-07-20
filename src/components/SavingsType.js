@@ -7,14 +7,12 @@ class SavingsType extends React.Component {
     return (
       <div>
         <div className={style.SavingsTypeCard}>
-          <div>
-            <img src={this.props.image} className={style.SavingsTypeImg}/>
-          </div>
+          <img src={this.props.image} className={style.SavingsTypeImg}/>
           <div className={style.SavingsTypeList}>
             <h2 className={style.title}>{this.props.productType}</h2>
             <h5 className={style.type}>{this.props.productTypeCategory}</h5>
             <p className={style.description}>{this.props.description}</p>
-            <div>
+            <div className={style.Buttons}>
               <button className={style.BtnFeatures}>Features</button>
               <button className={style.BtnRequirements}>Requirements</button>
               <button className={style.BtnEnquire}>Enquire</button>
