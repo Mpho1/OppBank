@@ -1,0 +1,206 @@
+@import "../constants/colors.module.scss";
+
+.contactForm {
+  border-radius: 3px;
+  padding: 30px 2px 0px 50px;
+  margin-left: 150px;
+  width: 750px;
+  height: 550px;
+  margin-top: -2em;
+  background-color: #f1f5f8;
+  box-shadow: 0px 0px 9px 0px #ccc;
+  
+  .placeholders {
+      margin: -23em 10em 0px 500px;
+
+  .inputBox {
+        width: 300px;
+        height: 40px;
+        margin: 5px 0px 1px -10em;
+        border-radius: 5px;
+        background-color: #ffffff;
+        border: solid 1px #c7d2dc;
+    }
+    .inputBoxQuery {
+        width: 300px;
+        height: 100px;
+        background-color:  #ffffff;
+        border: solid 1px #c7d2dc;
+        margin: 5px 0px 1px -10em;
+    }
+    .submitButton {
+        font-family: BrandonGrotesque;
+        font-size: 15px;
+        font-weight: 900;
+        line-height: 0.1;
+        letter-spacing: 0.1px;
+        text-align: center;
+        color: #ffffff;
+        width: 150px;
+        height: 40px;
+        margin:5px 0px 1px -12em;
+        border-radius: 5px;
+        background-color: #2cabe2;  
+      }
+  }
+  
+  .ContactUs {
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 50px;
+    letter-spacing: 0.1px;
+    color: #326894;
+  }
+  h4 {
+    margin-left: 20px;
+    font-size: 25px;
+    font-weight: bold;
+    line-height: 30px;
+    letter-spacing: 0.1px;
+    color: #326894;
+
+  }
+  .icon {
+    width: 21px;
+    height: 21px;
+    margin: 0px 10px 0px 0px;
+    
+  } 
+  .description  {
+    font-size: 15px;
+    line-height: 0;
+    letter-spacing: 0.1px;
+    color: #7c7c7c;
+    margin-left: 50px;
+  }
+
+  .Findus {
+    margin-left: 50px;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 1;
+    letter-spacing: 1.7px;
+    color: #326894;
+  }
+  .socialIcon {
+    padding: 0px 6px;
+    margin: 0px;
+    width: 45px;
+    height: 40px;
+  
+
+  }
+
+  ::placeholder {
+    color: #29aae2;
+  }
+
+}
+
+@media (max-width: 1339px) {
+  .contactForm {
+    width: 700px;
+    height: 450px;
+  }
+}
+
+@media (max-width: 1203px) {
+  .contactForm {
+    width: 650px;
+    height: 350px;
+    
+  }
+}
+
+@media (max-width: 1162px) {
+  .contactForm{
+    width: 750px;
+    height: 550px;
+    .submitButton {
+       margin-left: 52%;
+    }
+
+}
+
+@media (max-width: 991px) {
+  .contactForm {
+    width: 750px;
+    height: 550px;
+    .submitButton {
+       margin-left: 55%;
+    }
+  }
+}
+
+@media (max-width: 990px) {
+  .contactForm {
+    width: 750px;
+    height: 550px;
+    .submitButton {
+       margin-left: 49%;
+       padding: 10px 28px;
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .contactForm {
+    width: 750px;
+    height: 550px;
+    .submitButton {
+       margin-left: 43%;
+       padding: 10px 28px;
+    }
+  }
+}
+
+@media only screen and (max-width: 796px) and (min-width:400px) {
+  .contactForm {
+    width: 500px;
+    height: 550px;
+    .submitButton {
+       margin-left: 19%;
+    }
+  }
+}
+
+@media (max-width: 636px) {
+    .contactForm {
+      width: 750px;
+      height: 550px;
+    .submitButton {
+       margin-left: 26%;
+       padding: 7px 14px;
+    }
+  }
+}
+
+@media (max-width: 587px) {
+    .contactForm {
+      width: 750px;
+      height: 550px;
+  }
+}
+
+@media (max-width: 496px) {
+  .contactForm {
+    width: 750px;
+    height: 550px;
+    .submitButton {
+       margin-left: 35%;
+       padding: 7px 14px;
+    }
+  }
+}
+
+@media (max-width: 450px) {
+  .contactForm {
+    width: 750px;
+    height: 550px;
+    .submitButton {
+       margin-left: 35%;
+       padding: 7px 14px;
+    }
+  }
+}
+}

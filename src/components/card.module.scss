@@ -64,3 +64,22 @@
     padding: 10px 10px 10px 45em;
   }
 }
+@media (min-width:600px) and (max-width:1500px) {
+.CardContainer {
+  display: grid;
+  grid-gap: 5px;
+  padding: 0px 0px 10px 50em;
+  position: absolute;
+  bottom: 11em;
+  }
+}
+@media (min-width: 800px) and (max-width:2800px) {
+  .CardContainer {
+    display: grid;
+    grid-gap: 5px;
+    padding: 0px 0px 0px 50em;
+    position: absolute;
+    bottom: 11em;
+    }
+  }
+  
