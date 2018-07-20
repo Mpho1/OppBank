@@ -4,12 +4,14 @@
   border: 1px solid $white;
   display: flex;
   width: 45em;
-  padding-left:5em; 
+  padding-left:5em;
+  margin: 3em 2em 3em 4em;
 
   .SavingsTypeImg {
-    height: 200px;
+    height: 20em;
     display: flex;
-  
+    margin-top: -7em;
+
   }
   .SavingsTypeList {
     padding-left: 20px;
@@ -27,33 +29,28 @@
   }
     .BtnFeatures {
       margin-right: 10px;
-      background-color: #5682b2;
-      color: #ffffff;;
+      border: 1px solid $paleBlue;
+      background-color: $paleBlue;
+      color: $white;
       font-size: 13px;
       text-transform: uppercase;
-      font-weight: 900;
-      font-style: normal;
+      font-weight: bold;
       padding: 10px 35px;
       border-radius: 25px 25px 25px 5px;
-      font-family: BrandonGrotesque;
-      font-stretch: normal;
-      line-height: 1.5;
       letter-spacing: 1.8px;
       text-align: center;
-    
+
     }
     .BtnRequirements {
-      border-radius: 5px;
       margin-right: 13px;
-      background-color:#f1f5f8; 
+      border: 1px solid $offWhite;
+      background-color: $offWhite;
       text-transform: uppercase;
       padding: 10px 20px;
       border-radius: 25px 25px 25px 5px;
       font-family: BrandonGrotesque;
       font-size: 13px;
       font-weight: 900;
-      font-style: normal;
-      font-stretch: normal;
       line-height: 1.5;
       letter-spacing: 1.8px;
       text-align: center;
@@ -62,6 +59,7 @@
     }
     .BtnEnquire {
       border-radius: 5px;
+      border: 1px solid $lightBlue;
       background-color: #2cabe2;
       color: $white;
       text-transform: uppercase;
@@ -69,8 +67,6 @@
       font-family: BrandonGrotesque;
       font-size: 13px;
       font-weight: 900;
-      font-style: normal;
-      font-stretch: normal;
       line-height: 1.33;
       letter-spacing: 1.8px;
       text-align: center;
@@ -80,23 +76,13 @@
 
     .title {
       text-transform: uppercase;
-      font-family: BrandonGrotesque;
-      font-size: 40px;
-      font-weight: 900;
-      font-style: normal;
-      font-stretch: normal;
-      line-height: normal;
       letter-spacing: 0.3px;
       color: #326894;
       margin-bottom: 0px;
     }
 
     .type {
-      font-family: BrandonGrotesque;
-      font-size: 25px;
-      font-weight: 500;
-      font-style: normal;
-      font-stretch: normal;
+      font-size: 19px;
       line-height: normal;
       letter-spacing: 0.2px;
       color: #7c7c7c;
@@ -104,37 +90,24 @@
     }
 
     .description {
-      font-family: ProximaNova;
-      font-size: 18px;
-      font-weight: normal;
-      font-style: normal;
-      font-stretch: normal;
+      font-size: 15px;
       color: #b5b8b9;
 
     }
 
     .featuresList {
-      font-family: ProximaNova;
       font-size: 18px;
-      font-weight: normal;
-      font-style: normal;
-      font-stretch: normal;
       letter-spacing: 0.1px;
       color: #b5b8b9;
     }
 
     .features {
-      text-transform: uppercase;
-      font-family: ProximaNova;
       font-size: 25px;
       font-weight: bold;
-      font-style: normal;
-      font-stretch: normal;
-      line-height: normal;
       letter-spacing: 0.3px;
       color: #326894;
       margin-bottom: 0px;
-    } 
+    }
   }
 
 
