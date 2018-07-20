@@ -23,6 +23,7 @@ const Loans = ({data}) => (
                 header={node.title}
                 type={node.type}
                 text={node.description.description}
+                link={`/loan/${node.slug}`}
               />
             </div>
           )

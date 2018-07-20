@@ -1,5 +1,5 @@
 import React from 'react'
-
+import Link from 'gatsby-link'
 import style from './ProductLayout.module.scss'
 
 class ProductLayout extends React.Component {
@@ -12,7 +12,9 @@ class ProductLayout extends React.Component {
           <p className={style.productLayoutType}>{this.props.type}</p>
           <p className={style.productLayoutText}>{this.props.text}</p>
           <div className={style.productLayoutButton}>
-            <button className={style.readMoreButton}>Read More</button>
+            <Link to={this.props.link || '#'}>
+              <button className={style.readMoreButton}>Read More</button>
+            </Link>
             <button className={style.enquireButton}>Enquire</button>
           </div>
         </div>
