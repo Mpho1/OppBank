@@ -4,8 +4,6 @@ import CategoryBlock from '../components/CategoryBlock'
 import FinancialResultsBlock from '../components/FinancialResultsBlock'
 import BlogMainContent from '../components/BlogMainContent'
 import graphql from 'graphql'
-// import QueryString from 'query-string'
-
 import PageHeader from '../components/PageHeader'
 
 import style from './news.module.scss'
@@ -13,13 +11,13 @@ import style from './news.module.scss'
 const newsList = ['General Management', 'Media, Advertising, Marketing', 'Admin, Office Support', 'Banking, Finance, Insurance', 'Textile/Clothing', 'Legal', 'Mining', 'Human Resources', 'Accounting']
 
 const newsCategoryItems = newsList.map((newsList) =>
-  <li>{newsList}</li>
+  <li key={newsList}>{newsList}</li>
 )
 
 const finacialList = ['General Management']
 
-const newsFinancialItems = finacialList.map((finacialList) =>
-  <li>{finacialList}</li>
+const newsFinancialItems = finacialList.map((financialList) =>
+  <li key={financialList}>{financialList}</li>
 )
 
 const SideNews = () => (
@@ -29,7 +27,7 @@ const SideNews = () => (
     </div>
     <div>
       <ul className={style.newsList}>
-        <li>{newsCategoryItems}</li>
+        {newsCategoryItems}
       </ul>
     </div>
     <div>
@@ -37,7 +35,7 @@ const SideNews = () => (
     </div>
     <div>
       <ul className={style.newsList}>
-        <li>{newsFinancialItems}</li>
+        {newsFinancialItems}
       </ul>
     </div>
   </div>
@@ -60,45 +58,61 @@ const News = ({data}) => (
         bodyContent={data.contentfulNews.articleBody.articleBody}
         img={data.contentfulNews.image.file.url}
       />
-
       <div>
         <FinancialResultsBlock
-          data={[
-            {title: 'Opportunity Bank summary of the financial statements - December 2017', href: 'http://first.link.com'},
-            {title: 'Opportunity Bank summary of the financial statements - December 2017', href: 'http://second.link.com'},
-            {title: 'Opportunity Bank summary of the financial statements - December 2017', href: 'http://third.link.com'},
-            {title: 'Opportunity Bank summary of the financial statements - December 2017', href: 'http://forth.link.com'}
-          ]}
-        />
+          data={myData(data)}/>
       </div>
     </ThirdsColumns>
   </div>
 )
 
+const myData = (data) => {
+  let items = []
+  for (let i = 0; i < data.allContentfulFinancialResult.edges.length; i++) {
+    items[i] = {title: data.allContentfulFinancialResult.edges[i].node.title, href: data.allContentfulFinancialResult.edges[i].node.file.file.url}
+  }
+  return items
+}
+
 export default News
 
 export const pageQuery = graphql`
-    query SingleNewsQuery($slug: String!){
-      contentfulNews(slug: {eq: $slug}) {
-        title
-        articleBody {
-          articleBody
+  query financialNewsAndSingleNewsQuery($slug: String!){
+    contentfulNews(slug: {eq: $slug}) {
+      title
+      articleBody {
+        articleBody
+      }
+      blockHeader
+      blockParagraph {
+        blockParagraph
+      }
+      createdAt (formatString: "DD MMMM YYYY")
+      blockHeader
+      author {
+        name
+        lastName
+      }
+      image {
+        file {
+          url
         }
-        blockHeader
-        blockParagraph {
-          blockParagraph
-        }
-        createdAt (formatString: "DD MMMM YYYY")
-        blockHeader
-        author {
-          name
-          lastName
-        }
-        image {
+      }
+    },
+    allContentfulFinancialResult {
+      edges {
+        node {
+          title
           file {
-            url
+            id
+            file {
+              url
+              fileName
+              contentType
+            }
           }
         }
       }
     }
+  }
 `

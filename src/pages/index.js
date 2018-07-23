@@ -72,6 +72,7 @@ const IndexPage = ({data}) => (
           return (
             <div style={style}>
               <BlogNews
+                key={news.slug}
                 image={news.image.file.url}
                 text={news.title}
                 date={news.createdAt}

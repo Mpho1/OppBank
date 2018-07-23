@@ -1,0 +1,26 @@
+@import '../constants/colors.module.scss';
+
+.columnContent {
+  color: $white;
+  margin-top: -6em;
+  font-size: 10px;
+  padding: 0em 2em 0em 2em;
+}
+
+a {
+  color: $white;
+  text-decoration: none;
+}
+
+@media (max-width: 1320px) {
+  .columnContent {
+    margin-top: -7em;
+  }
+}
+
+@media (max-width: 850px) {
+  .columnContent {
+    margin-top: -8em;
+    padding: 1em;
+  }
+}

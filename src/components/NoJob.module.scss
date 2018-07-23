@@ -1,0 +1,67 @@
+@import "../constants/colors.module.scss";
+
+.careerListCard {
+  border: 1px solid $white;
+  border-radius: 3px;
+  color: $blue;
+  box-shadow: 0 0 10px #ddd;
+  padding: 20px 20px 20px 20px;
+  display: flex;
+  margin-bottom: 0.5em;
+  margin-right: 7em;
+
+  .careerListImg {
+    width: 4em;
+    height: auto;
+  }
+
+  hr {
+    display: block;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: solid;
+    border-width: 0em;
+    background: #F1F5F8;
+  }
+
+  .careerListing {
+    padding-left: 20px;
+    text-transform: UPPERCASE;
+
+    h4 {
+      margin-bottom: 0.5em;
+    }
+
+    .jobMessage {
+      font-size: 11px;
+      color: $lightGrey;
+      text-transform: none;
+      margin-bottom: 0.8em;
+      padding-right: 2em;
+    }
+
+    .search {
+      display: flex;
+
+      .button {
+        background-color: $lightBlue;
+        width: 30%;
+        border-radius: 5px;
+        border: 1px solid $lightBlue;
+        display: inline-block;
+        padding: 10px 27px;
+        font-weight: bold;
+        color: $white;
+        font-size: 11px;
+        cursor: pointer;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-left: 1em;
+        margin-top: 1.9em;
+        height: 3.4em;
+      }
+    }
+  }
+}

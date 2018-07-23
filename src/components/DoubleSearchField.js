@@ -1,5 +1,4 @@
 import React from 'react'
-
 import Button from './Button'
 
 import style from './DoubleSearchField.module.scss'
@@ -9,10 +8,19 @@ class DoubleSearchField extends React.Component {
 
   constructor () {
     super()
+    this.setState(() => {
+      return {
+        firstInputValue: '',
+        secondInputValue: ''
+      }
+    })
 
     if (!this.href) {
       this.href = '/submit/double-field'
     }
+
+    this.updateFirstInputValue = this.updateFirstInputValue.bind(this)
+    this.updateSecondIputValue = this.updateSecondIputValue.bind(this)
   }
 
   updateFirstInputValue (event) {
@@ -27,16 +35,16 @@ class DoubleSearchField extends React.Component {
     })
   }
 
-  __submit () {
-    // let firstInput = this.state.firstInputValue
-    // let secondInput = this.state.firstSecondValue
+  __submit (e) {
+    let firstInput = this.state.firstInputValue
+    let secondInput = this.state.secondInputValue
     // let href = this.href
 
-    // Submit default search here
-    // alert("Submitting search")
+    // Submit defaults search here
+    // alert(this.state.firstInputValue)
 
     if (typeof this.props.onCustomSubmit === 'function') {
-      this.props.onCustomSubmit()
+      this.props.onCustomSubmit(firstInput, secondInput)
     }
   }
 

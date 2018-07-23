@@ -1,0 +1,147 @@
+@import '../constants/colors.module.scss';
+
+.newsContainer {
+  margin-left: -2em;
+  margin-top: 1em;
+}
+
+.columnSpacing {
+  margin-left: -1em;
+}
+
+.columnContent {
+  color: $white;
+  margin-top: -6em;
+  font-size: 10px;
+  padding: 0em 2em 0em 2em;
+}
+
+.sideNews {
+  margin-left: 5em;
+  margin-right: 2em;
+  margin-bottom: 2em;
+  border: 0px solid $white;
+  box-shadow: 0px 0px 16px 0px #ccc;
+  transition: box-shadow .5s;
+  padding: 1.5em 1em 1em 1em;
+  cursor: pointer;
+
+  a {
+    text-decoration: none;
+    color: $blue;
+  }
+
+  .newsTitle {
+    color: $grey;
+    text-transform: uppercase;
+    padding-left: 8px;
+  }
+
+  .newsList {
+    font-size: 11.5px;
+    color: $blue;
+    font-weight: bold;
+    line-height: 13px;
+    margin-left: 1px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 180px;
+  }
+}
+
+.financialBlock {
+  border: 1px solid $darkThunder;
+  margin-left: 4.8em;
+  background-color: $darkThunder;
+  margin-bottom: 2em;
+  width: 70em;
+
+  .financialContent {
+    text-transform: uppercase;
+    display: flex;
+    padding-top: 1.4em;
+    padding-left: 3em;
+    padding-bottom: -4em;
+    font-size: 11px;
+    font-weight: bold;
+    margin-bottom: -1em !important;
+    letter-spacing: 1.2px;
+
+    .financialText {
+      color: $white;
+    }
+
+    .download {
+      color: $lightBlue;
+      margin-left: 65em;
+
+      .downloadImg {
+        width: .9em;
+        height: auto;
+        margin-left: .5em;
+      }
+    }
+  }
+}
+
+@media (max-width: 1320px) {
+  .columnContent {
+    margin-top: -7em;
+  }
+
+  .sideNews {
+    margin-left: 3em;
+  }
+}
+
+@media (max-width: 1200px) {
+  .newsContainer {
+    margin-left: 18px;
+  }
+
+  .sideNews {
+    margin-left: 1.7em;
+  }
+}
+
+@media (max-width: 980px) {
+  .newsContainer {
+    margin-left: 28px;
+  }
+
+  .sideNews {
+    margin-left: -.8em;
+    padding: 1.5em .2em 1em .2em;
+  }
+}
+
+@media (max-width: 850px) {
+  .newsContainer {
+    margin-left: 1.1em;
+  }
+
+  .columnContent {
+    margin-top: -8em;
+    padding: 1em;
+  }
+}
+
+@media (max-width: 766px) {
+  .sideNews {
+    .newsList {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 650px;
+    }
+  }
+}
+
+@media (max-width: 620px) {
+  .newsContainer {
+    margin-left: 1em;
+  }
+
+  .sideNews {
+    display: none;
+  }
+}

@@ -23,7 +23,7 @@ const BlogMainContent = ({ header, date, name, blockTextHeader, blockText, bodyC
           </span>{blockText}</p>
       </div>
       <div className={style.blogFullText}>
-        <p>{bodyContent}</p>
+        <p dangerouslySetInnerHTML = {{ __html: bodyContent.replace(/\n/g, '<br />') }}/>
       </div>
     </div>
   </div>

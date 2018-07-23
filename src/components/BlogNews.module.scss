@@ -11,7 +11,7 @@
 .blog {
   border: 0px solid $white;
   background-color: $white;
-  margin: 23px 10px;
+  margin: 23px 7px;
   box-shadow: 0px 0px 16px 0px #ccc;
   transition: box-shadow 1s;
   cursor: pointer;
@@ -30,17 +30,19 @@
 }
 
 .blogImage {
-  max-height: 170px;
+  max-height: 183px;
+  max-width: 19em;
   margin-bottom: 0;
-  margin: auto;
   display: block;
 }
 
 .blogText {
-  font-size: 16px;
+  margin-top: 1em;
+  margin-bottom: 3em;
+  font-size: 14px;
   padding: 2px 14px 3px;
   margin-bottom: 3px;
-  font-weight: bold !important;
+  color: $darkCharcoal;
 }
 
 .blogDate {
@@ -72,8 +74,11 @@
 }
 
 .blogInformation {
-  font-size: 14px;
+  font-size: 10px;
   padding: 3px 14px 9px;
   margin-bottom: 5px;
   color: $grey;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }

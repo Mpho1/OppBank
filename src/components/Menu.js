@@ -23,7 +23,9 @@ class Menu extends React.Component {
           </div>
           <div className={style.VerticalLine}></div>
           <div className={style.MenuListItems}>
-            <h5 className={style.MenuListHeading}>Loans</h5>
+            <Link to={'/loans'}>
+              <h5 className={style.MenuListHeading}>Loans</h5>
+            </Link>
             <ul>
               <li>Solidarity Loans</li>
               <li>Business Loans</li>
@@ -37,7 +39,9 @@ class Menu extends React.Component {
           </div>
           <div className={style.VerticalLine}></div>
           <div className={style.MenuListItems}>
-            <h5 className={style.MenuListHeading}>Mobile Banking</h5>
+            <Link to={'/mobile-banking'}>
+              <h5 className={style.MenuListHeading}>Mobile Banking</h5>
+            </Link>
             <ul>
               <li>Mobile Banking/Mobile Money Service</li>
               <li>Interswitch ATM Service</li>
@@ -49,7 +53,9 @@ class Menu extends React.Component {
           </div>
           <div className={style.VerticalLine}></div>
           <div className={style.MenuListItems}>
-            <h5 className={style.MenuListHeading}>Mobile Banking</h5>
+            <Link to={'/mobile-banking'}>
+              <h5 className={style.MenuListHeading}>Other Services</h5>
+            </Link>
             <ul>
               <li>Mobile Banking/Mobile Money Service</li>
               <li>Interswitch ATM Service</li>

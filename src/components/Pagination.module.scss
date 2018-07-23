@@ -1,0 +1,124 @@
+@import "../constants/colors.module.scss";
+
+.careerListCard {
+  border: 1px solid $white;
+  border-radius: 3px;
+  color: $blue;
+  box-shadow: 0 0 10px #ddd;
+  padding: 20px;
+  display: flex;
+  margin-bottom: 0.5em;
+}
+
+.careerListImg {
+  width: 4em;
+  height: auto;
+  padding: 0px 5px 20px;
+  margin-top: -5em;
+}
+
+.careerListing {
+  padding-left: 20px;
+  text-transform: UPPERCASE;
+
+  .jobDate {
+    display: flex;
+    margin-top: -1.1em;
+
+    .imgClock {
+      width: 0.67em;
+      margin-top: -0.2em;
+    }
+
+    .clockDate {
+      font-size: 11px;
+      padding-left: 0.7em;
+      color: $lightGrey;
+      text-transform: none;
+    }
+  }
+
+  .jobLocation {
+    display: flex;
+    margin-top: -4.1em;
+    margin-bottom: -0.8em;
+
+    .imgLocation {
+      width: 0.67em;
+      margin-left: 5.5em;
+      margin-top: 25px;
+    }
+
+    .jobCity {
+      margin-top: 2.7em;
+      padding-left: 0.7em;
+      font-size: 11px;
+      color: $lightGrey;
+      text-transform: none;
+    }
+  }
+
+  .jobDescription {
+    font-size: 11px;
+    color: $lightGrey;
+    text-transform: none;
+    margin-bottom: 0.8em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 550px;
+  }
+
+  .work {
+    font-weight: bold;
+    color: $grey;
+    font-size: 10px;
+    text-transform: none;
+  }
+
+  .workType {
+    font-weight: lighter;
+  }
+
+  .readMore {
+    border-radius: 5px;
+    margin-right: 10px;
+    border-color: $lightBlue;
+    color: $lightBlue;
+    font-size: 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 10px 15px;
+    letter-spacing: 1px;
+  }
+  .apply {
+    border-radius: 5px;
+    background-color: $lightBlue;
+    margin-right: 10px;
+    border-color: $lightBlue;
+    color: $white;
+    font-size: 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 10px 28px;
+    letter-spacing: 1px;
+  }
+}
+
+.pageNumbers {
+  display: flex;
+  list-style-type: none;
+  cursor: pointer;
+  color: $paleBlue;
+  letter-spacing: 1em;
+
+  li {
+    border: 2px solid $paleBlue;
+    border-radius: 3px;
+    padding-right: 0em;
+    padding-top: .1em;
+    padding-bottom: .1em;
+    padding-left: .9em;
+    margin-right: .3em;
+  }
+}

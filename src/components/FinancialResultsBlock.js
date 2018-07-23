@@ -16,7 +16,8 @@ const FinancialResultsBlock = ({data}) => (
         <div style={{
           borderBottom: '1px solid #F1F5F8',
           marginRight: '15px'
-        }}>
+        }}
+        key={ind}>
           <p style={{
             marginBottom: 0,
             fontWeight: 'bold',
