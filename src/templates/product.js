@@ -1,30 +1,17 @@
 import React from 'react'
-import ThirdsColumns from '../components/ThirdsColumns'
-import CategoryBlock from '../components/CategoryBlock'
-
+import SavingsType from '../components/SavingsType'
 import graphql from 'graphql'
-
 import PageHeader from '../components/PageHeader'
 
 const News = ({data}) => (
   <div>
     <PageHeader title="Get The Latest News" subtitle="Read all about the latest Opportunity news"/>
-    <ThirdsColumns breakOrder="213">
-      <CategoryBlock>
-        <div>Side Block here</div>
-      </CategoryBlock>
-
-      <div>
-        <h1>{data.contentfulProduct.title}</h1>
-        <h1>{data.contentfulProduct.description.description}</h1>
-        <h1>{data.contentfulProduct.features.features}</h1>
-        Product Info Here!
-      </div>
-
-      <div>
-        Other side block here!
-      </div>
-    </ThirdsColumns>
+    <SavingsType
+      image={require('../img/savings.svg')}
+      productType="Fixed Term"
+      productTypeCategory="Deposit Account"
+      description="This an accont aimed at those customers who want to save without withdrawing for specified periods and earn attractive interests."
+      featuresItems="Minimum amount is U.shs 100,000/=', 'Viable for 3, 6, 12 months, Marketing', 'Premature withdrawals will cause you to forfeit interest', 'Interest is paid at the end of each contract less withholding tax', 'Ability yo roll over savings after expiry pretiod', 'Interest 5% pa <10m; 9% pa 10m-50m UGX', 'Interest is negotiable for 100m and above for more than 12 (twelve) months"/>
   </div>
 )
 

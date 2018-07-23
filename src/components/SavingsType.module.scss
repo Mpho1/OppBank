@@ -1,0 +1,196 @@
+@import "../constants/colors.module.scss";
+
+.SavingsTypeCard {
+  border: 1px solid $white;
+  display: flex;
+  width: 45em;
+  padding-left:5em;
+  margin: 4em 0em 4em 8em;
+
+  .SavingsTypeImg {
+    height: 20em;
+    width: 100px;
+    display: flex;
+    margin-top: -7.5em;
+
+  }
+  .SavingsTypeList {
+    padding-left: 20px;
+  }
+.Buttons{
+  padding: 35px 0px 0px;
+}
+  hr {
+    margin: 20px 0px 20px 0px;
+    border-style: solid;
+    border-width: 0em;
+    background: $offWhite;
+  }
+    .BtnFeatures {
+      margin-right: 10px;
+      border: 1px solid $paleBlue;
+      background-color: $paleBlue;
+      color: $white;
+      font-size: 13px;
+      text-transform: uppercase;
+      font-weight: bold;
+      font-family: BrandonGrotesque;
+      padding: 10px 35px;
+      border-radius: 25px 25px 25px 5px;
+      letter-spacing: 1.8px;
+      text-align: center;
+
+    }
+    .BtnRequirements {
+      margin-right: 13px;
+      border: 1px solid $offWhite;
+      background-color: $offWhite;
+      text-transform: uppercase;
+      padding: 10px 20px;
+      border-radius: 25px 25px 25px 5px;
+      font-family: BrandonGrotesque;
+      font-size: 13px;
+      font-weight: bold;
+      letter-spacing: 1.8px;
+      text-align: center;
+      color: $paleBlue;
+
+    }
+    .BtnEnquire {
+      border-radius: 5px;
+      border: 1px solid $lightBlue;
+      background-color: $lightBlue;
+      color: $white;
+      text-transform: uppercase;
+      padding: 10px 28px;
+      font-family: BrandonGrotesque;
+      font-size: 13px;
+      font-weight: 900;
+      line-height: 1.33;
+      letter-spacing: 1.8px;
+      text-align: center;
+      color: $white;
+      margin-left: 80px;
+    }
+
+    .title {
+      text-transform: uppercase;
+      letter-spacing: 0.3px;
+      color: $paleBlue;
+      margin-bottom: 0px;
+    }
+
+    .type {
+      font-size: 19px;
+      line-height: normal;
+      letter-spacing: 0.2px;
+      color: $charcoalBlack;
+      margin-bottom: 5px;
+    }
+
+    .description {
+      font-size: 15px;
+      color: $lightGrey;
+
+    }
+
+    .featuresList {
+      font-size: 15px;
+      letter-spacing: 0.1px;
+      color: $lightGrey;
+    }
+
+    .features {
+      font-size: 25px;
+      font-weight: bold;
+      letter-spacing: 0.3px;
+      color: $paleBlue;
+      margin-bottom: 0px;
+      
+    }
+  }
+
+@media (max-width: 730px) {
+  .SavingsTypeCard  {
+    margin-left: -5em;
+      .SavingsTypeImg {
+        display: none;
+      }
+  }
+}
+
+@media (min-width: 730px) and (max-width: 800px) {
+  .SavingsTypeCard  {
+    margin-left: -4.5em;
+  }
+}
+@media (min-width: 800px) and (max-width: 844px) {
+  .SavingsTypeCard  {
+    margin-left: -2.5em;
+  }
+}
+@media (min-width: 845px) and (max-width: 900px) {
+  .SavingsTypeCard  {
+    margin-left: -2.5em;
+  }
+}
+@media (min-width: 900px) and (max-width: 960px) {
+  .SavingsTypeCard  {
+    margin-left: -1.5em;
+  }
+}
+@media (min-width: 960px) and (max-width: 1200px) {
+  .SavingsTypeCard  {
+    margin-left: 3.5em;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 520px) {
+  .SavingsTypeCard {
+    margin-left: -4em;
+    width: 30em;
+      .BtnEnquire {
+        display: flex;
+        margin: 15px 0px 5px 0px;
+      }
+  }
+}
+@media (min-width: 521px) and (max-width: 600px) {
+  .SavingsTypeCard {
+    margin-left: -4em;
+    width: 31em;
+      .BtnEnquire {
+        display: flex;
+        margin: 15px 0px 5px 0px;
+      }
+  }
+}
+@media (min-width: 601px) and (max-width: 660px) {
+  .SavingsTypeCard {
+    margin-left: -4em;
+    width: 35em;
+    .BtnEnquire {
+      display: flex;
+      margin: 15px 0px 5px 0px;
+    }
+  }
+}
+@media (min-width: 660px) and (max-width: 730px) {
+  .SavingsTypeCard {
+    margin-left: -4em;
+    width: 40em;
+  }
+}
+
+@media (min-width: 360px) and (max-width: 480px) {
+  .SavingsTypeCard {
+    margin-left: -4.5em;
+    width: 25em;
+      .BtnEnquire {
+        display: flex;
+        margin: 15px 0px 5px 0px;
+      }
+  }
+}
+
+
