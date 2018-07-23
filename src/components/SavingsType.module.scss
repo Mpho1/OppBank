@@ -16,7 +16,7 @@
   }
   .SavingsTypeList {
     padding-left: 20px;
-    }
+  }
 .Buttons{
   padding: 35px 0px 0px;
 }
@@ -110,44 +110,87 @@
     }
   }
 
+@media (max-width: 730px) {
+  .SavingsTypeCard  {
+    margin-left: -5em;
+      .SavingsTypeImg {
+        display: none;
+      }
+  }
+}
 
-@media (max-width: 924px) {
+@media (min-width: 730px) and (max-width: 800px) {
+  .SavingsTypeCard  {
+    margin-left: -4.5em;
+  }
+}
+@media (min-width: 800px) and (max-width: 844px) {
+  .SavingsTypeCard  {
+    margin-left: -2.5em;
+  }
+}
+@media (min-width: 845px) and (max-width: 900px) {
+  .SavingsTypeCard  {
+    margin-left: -2.5em;
+  }
+}
+@media (min-width: 900px) and (max-width: 960px) {
+  .SavingsTypeCard  {
+    margin-left: -1.5em;
+  }
+}
+@media (min-width: 960px) and (max-width: 1200px) {
+  .SavingsTypeCard  {
+    margin-left: 3.5em;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 520px) {
   .SavingsTypeCard {
-     h4 {
-       margin-bottom: 1em;
-     }
-    .SavingsTypeImg {
-      width: 9em;
-      height: auto;
-     }
-
+    margin-left: -4em;
+    width: 30em;
+      .BtnEnquire {
+        display: flex;
+        margin: 15px 0px 5px 0px;
+      }
+  }
+}
+@media (min-width: 521px) and (max-width: 600px) {
+  .SavingsTypeCard {
+    margin-left: -4em;
+    width: 31em;
+      .BtnEnquire {
+        display: flex;
+        margin: 15px 0px 5px 0px;
+      }
+  }
+}
+@media (min-width: 601px) and (max-width: 660px) {
+  .SavingsTypeCard {
+    margin-left: -4em;
+    width: 35em;
+    .BtnEnquire {
+      display: flex;
+      margin: 15px 0px 5px 0px;
     }
   }
-
-@media (max-width: 636px) {
+}
+@media (min-width: 660px) and (max-width: 730px) {
   .SavingsTypeCard {
-    width: 135%;
-    margin-left: -19em;
+    margin-left: -4em;
+    width: 40em;
   }
 }
 
-@media (max-width: 587px) {
+@media (min-width: 360px) and (max-width: 480px) {
   .SavingsTypeCard {
-    width: 145%;
-    margin-left: -6.7em;
+    margin-left: -4.5em;
+    width: 25em;
+      .BtnEnquire {
+        display: flex;
+        margin: 15px 0px 5px 0px;
+      }
   }
 }
 
-@media (max-width: 497px) {
-  .SavingsTypeCard {
-    width: 232%;
-    margin-left: -5.7em;
-  }
-}
 
-@media (max-width: 438px) {
-  .SavingsTypeCard {
-    width: 232%;
-    margin-left: -4.7em;
-  }
-}
