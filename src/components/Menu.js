@@ -54,7 +54,7 @@ class Menu extends React.Component {
           <div className={style.VerticalLine}></div>
           <div className={style.MenuListItems}>
             <Link to={'/mobile-banking'}>
-              <h5 className={style.MenuListHeading}>Mobile Banking</h5>
+              <h5 className={style.MenuListHeading}>Other Services</h5>
             </Link>
             <ul>
               <li>Mobile Banking/Mobile Money Service</li>
