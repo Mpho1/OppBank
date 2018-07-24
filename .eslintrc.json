@@ -8,5 +8,8 @@
         "react/jsx-uses-react": "error",
         "react/jsx-uses-vars": "error",
         "graphql/template-strings": "off"
+    },
+    "env": {
+        "browser": true
     }
 }
