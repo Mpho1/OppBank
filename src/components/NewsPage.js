@@ -2,7 +2,6 @@ import React from 'react'
 import Link from 'gatsby-link'
 import bootstrapGrid from '../styles/bootstrap-grid.module.scss'
 import NewsLayout from './NewsLayout'
-import DownloadLink from './DownloadLink'
 
 import style from './NewsPage.module.scss'
 
@@ -85,8 +84,8 @@ class NewsPage extends React.Component {
           <div className={style.financialBlock}>
             <div className={style.financialContent}>
               <p className={style.financialText}>Download the latest results of opportunity bank</p>
-              <p className={style.download}>
-                <DownloadLink/>
+              <p>
+                {this.props.href}
               </p>
             </div>
           </div>

@@ -14,8 +14,12 @@ class Menu extends React.Component {
             </Link>
             <ul>
               <li>Ordinary Savings Account</li>
-              <li>Business Savings Account</li>
-              <li>Fixed Deposit Account</li>
+              <Link to={'/products/business'}>
+                <li>Business Savings Account</li>
+              </Link>
+              <Link to={'/products/fixed-term'}>
+                <li>Fixed Deposit Account</li>
+              </Link>
               <li>Institutional Fixed Account</li>
               <li>Group Savings Account</li>
               <li>Target Savings Account</li>
@@ -45,9 +49,6 @@ class Menu extends React.Component {
             <ul>
               <li>Mobile Banking/Mobile Money Service</li>
               <li>Interswitch ATM Service</li>
-              <li>Salary Processing</li>
-              <li>School Fees Collection</li>
-              <li>Standing Orders</li>
               <li>Western Union</li>
             </ul>
           </div>
@@ -57,12 +58,9 @@ class Menu extends React.Component {
               <h5 className={style.MenuListHeading}>Other Services</h5>
             </Link>
             <ul>
-              <li>Mobile Banking/Mobile Money Service</li>
-              <li>Interswitch ATM Service</li>
               <li>Salary Processing</li>
               <li>School Fees Collection</li>
               <li>Standing Orders</li>
-              <li>Western Union</li>
             </ul>
           </div>
         </div>

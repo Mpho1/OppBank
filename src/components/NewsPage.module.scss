@@ -54,7 +54,7 @@
   margin-left: 4.8em;
   background-color: $darkThunder;
   margin-bottom: 2em;
-  width: 70em;
+  width: 69.8em;
 
   .financialContent {
     text-transform: uppercase;
@@ -70,17 +70,6 @@
     .financialText {
       color: $white;
     }
-
-    .download {
-      color: $lightBlue;
-      margin-left: 65em;
-
-      .downloadImg {
-        width: .9em;
-        height: auto;
-        margin-left: .5em;
-      }
-    }
   }
 }
 
@@ -92,6 +81,19 @@
   .sideNews {
     margin-left: 3em;
   }
+
+
+  .financialBlock {
+    margin-left: 3em;
+    width: 65em;
+  }
+}
+
+@media (max-width: 1280px) {
+  .financialBlock {
+    margin-left: 3em;
+    width: 62.3em;
+  }
 }
 
 @media (max-width: 1200px) {
@@ -102,8 +104,24 @@
   .sideNews {
     margin-left: 1.7em;
   }
+
+  .financialBlock {
+    margin-left: 2em;
+    width: 59em;
+  }
 }
 
+@media (min-width: 1130px) and (max-width: 1178px) {
+  .financialBlock {
+    width: 57em;
+  }
+}
+
+@media (min-width: 1000px) and (max-width: 1129px) {
+  .financialBlock {
+    width: 49em;
+  }
+}
 @media (max-width: 980px) {
   .newsContainer {
     margin-left: 28px;
@@ -112,6 +130,11 @@
   .sideNews {
     margin-left: -.8em;
     padding: 1.5em .2em 1em .2em;
+  }
+
+  .financialBlock {
+    margin-left: -1em;
+    width: 43em;
   }
 }
 
@@ -124,6 +147,11 @@
     margin-top: -8em;
     padding: 1em;
   }
+
+  .financialBlock {
+    margin-left: -1em;
+    width: 40em;
+  }
 }
 
 @media (max-width: 766px) {
@@ -134,6 +162,11 @@
       max-width: 650px;
     }
   }
+
+  .financialBlock {
+    margin-left: -1em;
+    width: 36em;
+  }
 }
 
 @media (max-width: 620px) {
@@ -143,5 +176,15 @@
 
   .sideNews {
     display: none;
+  }
+
+  .financialBlock {
+    margin-left: -1em;
+    width: 29.2em;
+
+    .financialText {
+      font-size: 9px;
+      margin-left: -2em;
+    }
   }
 }

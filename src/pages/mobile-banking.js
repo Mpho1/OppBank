@@ -23,7 +23,7 @@ const MobileBanking = ({data}) => (
                 header={node.title}
                 type={node.type}
                 text={node.description.description}
-                link={`/mobile-banking/${node.slug}`}
+                link={`/products/${node.slug}`}
               />
             </div>
           )

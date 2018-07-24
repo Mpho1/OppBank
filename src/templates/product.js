@@ -1,36 +1,89 @@
 import React from 'react'
 import SavingsType from '../components/SavingsType'
 import graphql from 'graphql'
+import ContactMe from '../components/ContactMe'
 import PageHeader from '../components/PageHeader'
 
-const News = ({data}) => (
-  <div>
-    <PageHeader title="Get The Latest News" subtitle="Read all about the latest Opportunity news"/>
-    <SavingsType
-      image={require('../img/savings.svg')}
-      productType="Fixed Term"
-      productTypeCategory="Deposit Account"
-      description="This an accont aimed at those customers who want to save without withdrawing for specified periods and earn attractive interests."
-      featuresItems="Minimum amount is U.shs 100,000/=', 'Viable for 3, 6, 12 months, Marketing', 'Premature withdrawals will cause you to forfeit interest', 'Interest is paid at the end of each contract less withholding tax', 'Ability yo roll over savings after expiry pretiod', 'Interest 5% pa <10m; 9% pa 10m-50m UGX', 'Interest is negotiable for 100m and above for more than 12 (twelve) months"/>
-  </div>
-)
+import styles from './product.module.scss'
+
+class News extends React.Component {
+  componentWillMount () {
+    this.setState(() => {
+      return {
+        hideApplyForm: true
+      }
+    })
+  }
+
+  hideUnhideApplyForm (hide) {
+    this.setState(() => {
+      return {
+        hideApplyForm: hide
+      }
+    })
+  }
+
+  render () {
+    return (
+      <div>
+        <PageHeader title="Get The Latest News" subtitle="Read all about the latest Opportunity news"/>
+        <div style={style}>
+          <SavingsType
+            image={this.props.data.contentfulProduct.image.file.url}
+            productType={this.props.data.contentfulProduct.title}
+            productTypeCategory={this.props.data.contentfulProduct.type}
+            description={this.props.data.contentfulProduct.description.description}
+            featuresItems={this.props.data.contentfulProduct.features.features}
+            requirementItems={this.props.data.contentfulProduct.requirements.requirements}
+            key={this.props.data.contentfulProduct.slug}
+            hideUnhideApplyForm={this.hideUnhideApplyForm.bind(this)}
+            hide={this.state.hideApplyForm}/>
+
+          <div className={styles.career}>
+            <ContactMe
+              name="name"
+              surname="surname"
+              contactNumber="Contact Number"
+              email="Email"
+              message="message"
+              hideUnhideApplyForm={this.hideUnhideApplyForm.bind(this)}
+              hide={this.state.hideApplyForm}/>
+          </div>
+        </div>
+      </div>
+    )
+  }
+}
+
+const style = {
+  display: `flex`
+}
 
 export default News
 
-export const pageQuery = graphql`
-    query SingleProductQuery($slug: String!){
-        contentfulProduct(slug: {eq: $slug}) {
-            title
-            description{
-              description
-            }
-            features{
-              features
-            }
-            requirements{
-              requirements
-            }
-            slug
+export const singleProductTypeQuery = graphql`
+  query SingleProductQuery($slug: String!){
+    contentfulProduct(slug: {eq: $slug}) {
+      title
+      type
+      image {
+        id
+        file {
+          url
+          fileName
+          contentType
         }
+      }
+      description{
+        description
+      }
+      features{
+        features
+      }
+      requirements{
+        requirements
+      }
+      slug
     }
+  }
 `

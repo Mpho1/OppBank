@@ -2,6 +2,7 @@ import React from 'react'
 import PageHeader from '../components/PageHeader'
 import NewsPage from '../components/NewsPage'
 import NewsLayout from '../components/NewsLayout'
+import DownloadLink from '../components/DownloadLink'
 import graphql from 'graphql'
 
 class News extends React.Component {
@@ -25,9 +26,20 @@ class News extends React.Component {
             )
           })}
         </NewsPage>
+        <div style={style}>
+          <DownloadLink
+            href= {this.props.data.allContentfulFinancialResult.edges[0].node.file.file.url}/>
+        </div>
       </div>
     )
   }
+}
+
+const style = {
+  marginTop: '-4em',
+  marginLeft: '3em',
+  marginBottom: '4em',
+  marginRight: '6em'
 }
 
 export default News
@@ -54,6 +66,21 @@ export const newsPage = graphql`
            }
          }
          slug
+       }
+     }
+   },
+   allContentfulFinancialResult {
+     edges {
+       node {
+         title
+         file {
+           id
+           file {
+             url
+             fileName
+             contentType
+           }
+         }
        }
      }
    }
