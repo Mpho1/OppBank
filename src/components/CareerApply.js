@@ -53,7 +53,7 @@ class CareerApply extends React.Component {
               <input type="text" name="contactNumber" placeholder={this.props.contactNumber} className={style.inputField} onChange={this.handleChange.bind(this)}/>
             </p>
             <p>
-              <input type="text" name="email" placeholder={this.props.email} className={style.inputField} onChange={this.handleChange.bind(this)}/>
+              <input type="email" name="email" placeholder={this.props.email} className={style.inputField} onChange={this.handleChange.bind(this)}/>
             </p>
             <div>
               <input type="text" className={style.fileField} placeholder={this.state.fileName.length === 0 ? this.props.attachment : this.state.fileName}/>
