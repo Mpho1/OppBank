@@ -1,5 +1,6 @@
 import React from 'react'
 import style from './ContactMe.module.scss'
+import SmtpService from './SmtpService'
 
 class ContactMe extends React.Component {
   constructor (props) {
@@ -31,6 +32,29 @@ class ContactMe extends React.Component {
 
   handleSubmit (event) {
     event.preventDefault()
+
+    let sender = new SmtpService()
+
+    let fromEmail = this.state.email
+    let emailBody = `
+      name: ${this.state.name}
+      surname: ${this.state.surname}
+      contact number: ${this.state.contactNumber}
+      email: ${this.state.email}
+      message: ${this.state.message}
+    `
+    sender.send(
+      fromEmail, // From
+      'info@opportyunitybank.co.ug', // To
+      'Products enquiry', // Subject
+      emailBody, // Body
+      {
+        // SMTP Credentials
+        token: '434963d2-7d6c-42cc-b1ad-0cbc1465abf9'
+        // This token was generated at SMTPJS.COM with mailgun SMTP Credentials
+      },
+      function done (message) { console.log('Message has been sent') }
+    )
   }
 
   render () {
