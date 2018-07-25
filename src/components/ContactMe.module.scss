@@ -1,0 +1,345 @@
+@import "../constants/colors.module.scss";
+
+.applyForm {
+  border: 1px solid $white;
+  border-radius: 3px;
+  box-shadow: 0 0 10px #ddd;
+  padding: 20px 2px 10px 20px;
+  text-transform: uppercase;
+  color: $darkBlue;
+  width: 17.7em;
+
+  .formText {
+    color: $blue;
+  }
+
+  p {
+    margin-bottom: 3px;
+  }
+
+  .inputField {
+    border-radius: 4px;
+    border: 1px solid $offWhite;
+    width: 90%;
+    padding: 10px 0px 10px 15px;
+    text-transform: uppercase;
+    font-size: 11px;
+    margin-bottom: 9px;
+  }
+
+  ::placeholder {
+    color: $lightBlue;
+    opacity: 1;
+    text-overflow: ellipsis !important;
+    overflow: hidden !important;
+  }
+
+  .messageTextarea {
+    width: 91%;
+    height: 100px;
+    padding: 1em 1em 8em 1em;
+    box-sizing: border-box;
+    border: 1px solid $offWhite;
+    border-radius: 3px;
+    resize: none;
+    text-transform: uppercase;
+    font-size: 11px;
+  }
+
+  hr {
+    display: block;
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+    margin-left: 2px;
+    margin-right: auto;
+    border-style: solid;
+    border-width: 0em;
+    width: 14.8em;
+    background: $offWhite;
+  }
+
+  .submitButton {
+    border-radius: 5px;
+    background-color: $lightBlue;
+    margin-left: 61%;
+    margin-top: 10px;
+    border-color: $lightBlue;
+    color: $white;
+    font-size: 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 10px 28px;
+    letter-spacing: 1px;
+  }
+}
+
+.block {
+  transition: left 1s;
+  position: relative;
+}
+
+.blockShow {
+  left: 0;
+
+    .closeButton {
+      background-color: $white;
+      float: right;
+      margin-right: 10px;
+      padding: 0px;
+      border: 1px solid $white;
+    }
+}
+
+.blockHidden {
+  left: 120%;
+}
+
+@media (max-width: 1390px) {
+  .applyForm {
+    hr {
+      width: 16.7em;
+    }
+  }
+}
+
+@media (max-width: 1339px) {
+  .applyForm {
+    hr {
+      width: 16em;
+    }
+  }
+
+  .blockShow {
+    left: 0;
+    width: 407%;
+    margin-left: -7em;
+    z-index: 4;
+    cursor: pointer;
+    background-color: $white;
+  }
+
+  .blockHidden {
+    left: 150%;
+  }
+}
+
+@media (max-width: 1203px) {
+  .applyForm {
+    .submitButton {
+       margin-left: 56%;
+    }
+
+    hr {
+      width: 15em;
+    }
+  }
+}
+
+@media (max-width: 1162px) {
+  .applyForm {
+    background-color: $white;
+
+    .submitButton {
+       margin-left: 52%;
+    }
+
+    hr {
+      display: none;
+    }
+  }
+
+  .blockShow {
+    left: 0;
+    width: 407%;
+    margin-left: -15em;
+    z-index: 4;
+    cursor: pointer;
+    background-color: $white;
+  }
+
+  .blockHidden {
+    left: 150%;
+  }
+}
+
+@media (max-width: 991px) {
+  .applyForm {
+    .submitButton {
+       margin-left: 55%;
+    }
+
+    hr {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 990px) {
+  .applyForm {
+    background-color: $white;
+
+    .submitButton {
+       margin-left: 49%;
+       padding: 10px 28px;
+    }
+  }
+
+  .blockShow {
+    left: 0;
+    width: 407%;
+    margin-left: -15em;
+    z-index: 4;
+    cursor: pointer;
+    background-color: $white;
+  }
+
+  .blockHidden {
+    left: 150%;
+  }
+}
+
+@media (max-width: 900px) {
+  .applyForm {
+    background-color: $white;
+
+    .submitButton {
+       margin-left: 43%;
+       padding: 10px 28px;
+    }
+  }
+
+  .blockShow {
+    left: 0;
+    width: 407%;
+    margin-left: -23em;
+    z-index: 4;
+    cursor: pointer;
+    background-color: $white;
+  }
+
+  .blockHidden {
+    left: 150%;
+  }
+}
+
+@media (max-width: 796px) {
+  .applyForm {
+    background-color: $white;
+
+    .submitButton {
+       margin-left: 19%;
+    }
+  }
+
+  .blockShow {
+    left: 0;
+    width: 407%;
+    margin-left: -26em;
+    z-index: 4;
+    cursor: pointer;
+    background-color: $white;
+  }
+
+  .blockHidden {
+    left: 150%;
+  }
+}
+
+@media (max-width: 636px) {
+  .applyForm {
+    margin-left: -10em;
+    background-color: white;
+
+    .submitButton {
+       margin-left: 26%;
+       padding: 7px 14px;
+    }
+  }
+
+  .blockShow {
+    left: 0;
+    width: 407%;
+    margin-left: -27em;
+    z-index: 4;
+    cursor: pointer;
+    background-color: $white;
+  }
+
+  .blockHidden {
+    left: 150%;
+  }
+}
+
+@media (max-width: 587px) {
+  .applyForm {
+    margin-left: -3.7em;
+    background-color: white;
+  }
+
+  .blockHidden {
+    left: 150% !important;
+  }
+
+  .blockShow {
+    left: 0;
+    width: 407%;
+    margin-left: -30em;
+    z-index: 4;
+    cursor: pointer;
+    background-color: $white;
+  }
+}
+
+@media (max-width: 496px) {
+  .blockShow {
+    left: 0;
+    width: 407%;
+    margin-left: -18em;
+    z-index: 4;
+    cursor: pointer;
+    background-color: $white;
+  }
+
+  .applyForm {
+    margin-left: -12em;
+    background-color: white;
+
+    .submitButton {
+       margin-left: 35%;
+       padding: 7px 14px;
+    }
+  }
+
+  .blockHidden {
+    left: 470% !important;
+  }
+}
+
+@media (max-width: 450px) {
+  .blockShow {
+    left: 0;
+    width: 360%;
+    margin-left: -14em;
+    z-index: 4;
+    cursor: pointer;
+    background-color: $white;
+  }
+
+  .applyForm {
+    .submitButton {
+       margin-left: 35%;
+       padding: 7px 14px;
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .blockShow {
+    left: 0;
+    width: 420%;
+    margin-left: -15em;
+    z-index: 4;
+    cursor: pointer;
+    background-color: $white;
+  }
+}

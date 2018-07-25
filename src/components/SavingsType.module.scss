@@ -5,13 +5,12 @@
   display: flex;
   width: 45em;
   padding-left:5em;
-  margin: 4em 0em 4em 8em;
+  margin: 4em 0em 4em 5em;
 
   .SavingsTypeImg {
-    height: 20em;
-    width: 100px;
-    display: flex;
-    margin-top: -7.5em;
+    height: 7em;
+    width: 124px;
+    margin-top: -0.5em;
   }
 
   .SavingsTypeList {
@@ -30,7 +29,6 @@
     color: $white;
     text-transform: uppercase;
     font-weight: bold;
-    font-family: BrandonGrotesque;
     padding: 10px 35px;
     border-radius: 25px 25px 25px 5px;
     letter-spacing: 1.8px;
@@ -44,7 +42,6 @@
     text-transform: uppercase;
     padding: 10px 20px;
     border-radius: 25px 25px 25px 5px;
-    font-family: BrandonGrotesque;
     font-weight: bold;
     letter-spacing: 1.8px;
     text-align: center;
@@ -73,6 +70,7 @@
     border-style: solid;
     border-width: 0em;
     background: $offWhite;
+    width: 30em;
   }
 
   .title {
@@ -93,7 +91,7 @@
   .description {
     font-size: 15px;
     color: $lightGrey;
-
+    max-width: 580px;
   }
 
   .featuresList {
@@ -119,19 +117,19 @@
 
 @media (min-width: 900px) and (max-width: 960px) {
   .SavingsTypeCard {
-    margin-left: -1.5em;
+    margin-left: -4.6em;
   }
 }
 
 @media (min-width: 845px) and (max-width: 900px) {
   .SavingsTypeCard {
-    margin-left: -2.5em;
+    margin-left: -4.6em;
   }
 }
 
 @media (min-width: 800px) and (max-width: 844px) {
   .SavingsTypeCard {
-    margin-left: -2.5em;
+    margin-left: -4.6em;
   }
 }
 
@@ -163,9 +161,12 @@
     margin-left: -4em;
     width: 35em;
 
-    .BtnEnquire {
+    .Buttons {
       display: flex;
-      margin: 15px 0px 5px 0px;
+    }
+
+    .BtnEnquire {
+      margin-left: 4em;
     }
   }
 }
@@ -175,9 +176,19 @@
     margin-left: -4em;
     width: 31em;
 
-    .BtnEnquire {
+    .description {
+      max-width: 30em;
+    }
+
+    hr {
+      width: 26em;
+    }
+
+    .Buttons {
       display: flex;
-      margin: 15px 0px 5px 0px;
+    }
+    .BtnEnquire {
+      margin-left: 1em;
     }
   }
 }
@@ -198,6 +209,14 @@
   .SavingsTypeCard {
     margin-left: -4.5em;
     width: 25em;
+
+    .description {
+      max-width: 350px;
+    }
+
+    hr {
+      width: 18.5em;
+    }
 
     .BtnEnquire {
       display: flex;

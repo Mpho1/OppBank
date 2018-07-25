@@ -57,7 +57,7 @@ exports.createPages = ({graphql, boundActionCreators}) => {
       })
     )
 
-    const productTemplate = path.resolve('src/templates/product.js')
+    const savingsTemplate = path.resolve('src/templates/savings.js')
     resolve(
       graphql(`
               {
@@ -76,8 +76,98 @@ exports.createPages = ({graphql, boundActionCreators}) => {
         if (result.data) {
           result.data.allContentfulProduct.edges.forEach(({node}) => {
             createPage({
-              path: `/products/${node.slug}`,
-              component: productTemplate,
+              path: `/savings/${node.slug}`,
+              component: savingsTemplate,
+              context: {
+                slug: node.slug
+              }
+            })
+          })
+        }
+      })
+    )
+
+    const loanTemplate = path.resolve('src/templates/loans.js')
+    resolve(
+      graphql(`
+              {
+                allContentfulLoanProducts(limit: 100) {
+                  edges {
+                    node {
+                      slug
+                    }
+                  }
+                }
+              }
+        `).then((result) => {
+        if (result.errors) {
+          reject(result.errors)
+        }
+        if (result.data) {
+          result.data.allContentfulLoanProducts.edges.forEach(({node}) => {
+            createPage({
+              path: `/loans/${node.slug}`,
+              component: loanTemplate,
+              context: {
+                slug: node.slug
+              }
+            })
+          })
+        }
+      })
+    )
+
+    const mobileBankingTemplate = path.resolve('src/templates/mobile-banking.js')
+    resolve(
+      graphql(`
+              {
+                allContentfulMobileBankingProducts(limit: 100) {
+                  edges {
+                    node {
+                      slug
+                    }
+                  }
+                }
+              }
+        `).then((result) => {
+        if (result.errors) {
+          reject(result.errors)
+        }
+        if (result.data) {
+          result.data.allContentfulMobileBankingProducts.edges.forEach(({node}) => {
+            createPage({
+              path: `/mobile-banking/${node.slug}`,
+              component: mobileBankingTemplate,
+              context: {
+                slug: node.slug
+              }
+            })
+          })
+        }
+      })
+    )
+
+    const otherServicesTemplate = path.resolve('src/templates/other-services.js')
+    resolve(
+      graphql(`
+              {
+                allContentfulOtherServices(limit: 100) {
+                  edges {
+                    node {
+                      slug
+                    }
+                  }
+                }
+              }
+        `).then((result) => {
+        if (result.errors) {
+          reject(result.errors)
+        }
+        if (result.data) {
+          result.data.allContentfulOtherServices.edges.forEach(({node}) => {
+            createPage({
+              path: `/other-services/${node.slug}`,
+              component: otherServicesTemplate,
               context: {
                 slug: node.slug
               }

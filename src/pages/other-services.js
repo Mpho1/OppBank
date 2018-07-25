@@ -6,15 +6,15 @@ import PageHeader from '../components/PageHeader'
 import ItemSwiper from '../components/ItemSwiper'
 import ContentsSection from '../components/ContentsSection'
 
-const Loans = ({data}) => (
+const OtherServices = ({data}) => (
   <div>
     <PageHeader
-      title="Loans"
+      title="Other Services"
       subtitle="Let that brush dance around there and play. God gave you this gift of imagination. Use it, Every single thing in the world has its own personality">
     </PageHeader>
     <ContentsSection>
       <ItemSwiper>
-        {data.allContentfulLoanProducts.edges.map(({node}) => {
+        {data.allContentfulOtherServices.edges.map(({node}) => {
           return (
             <div style={style}>
               <ProductLayout
@@ -23,7 +23,7 @@ const Loans = ({data}) => (
                 header={node.title}
                 type={node.type}
                 text={node.description.description}
-                link={`/loans/${node.slug}`}
+                link={`/other-services/${node.slug}`}
               />
             </div>
           )
@@ -38,11 +38,11 @@ const style = {
   marginTop: '-3em'
 }
 
-export default Loans
+export default OtherServices
 
-export const loansQuery = graphql`
-  query loansContentQuery {
-    allContentfulLoanProducts {
+export const OtherServicesQuery = graphql`
+  query OtherServicesContentQuery {
+    allContentfulOtherServices {
       edges {
         node {
           title
