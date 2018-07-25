@@ -12,17 +12,25 @@ class Menu extends React.Component {
             <Link to={'/savings'}>
               <h5 className={style.MenuListHeading}>Savings Accounts</h5>
             </Link>
-            <ul>
-              <li>Ordinary Savings Account</li>
-              <Link to={'/products/business'}>
+            <ul className={style.MenuProductTypes}>
+              <Link to={'/savings/ordinary-savings'}>
+                <li>Ordinary Savings Account</li>
+              </Link>
+              <Link to={'/savings/business'}>
                 <li>Business Savings Account</li>
               </Link>
-              <Link to={'/products/fixed-term'}>
+              <Link to={'/savings/fixed-term'}>
                 <li>Fixed Deposit Account</li>
               </Link>
-              <li>Institutional Fixed Account</li>
-              <li>Group Savings Account</li>
-              <li>Target Savings Account</li>
+              <Link to={'/savings/institutional-fixed'}>
+                <li>Institutional Fixed Account</li>
+              </Link>
+              <Link to={'/savings/group-savings'}>
+                <li>Group Savings Account</li>
+              </Link>
+              <Link to={'/savings/target-savings'}>
+                <li>Target Savings Account</li>
+              </Link>
             </ul>
           </div>
           <div className={style.VerticalLine}></div>
@@ -30,15 +38,31 @@ class Menu extends React.Component {
             <Link to={'/loans'}>
               <h5 className={style.MenuListHeading}>Loans</h5>
             </Link>
-            <ul>
-              <li>Solidarity Loans</li>
-              <li>Business Loans</li>
-              <li>Payroll Loans</li>
-              <li>School Fees Loans</li>
-              <li>Education Finance</li>
-              <li>Asset Financing</li>
-              <li>Microfinance Loans</li>
-              <li>Solar Loans</li>
+            <ul className={style.MenuProductTypes}>
+              <Link to={'/loans/solidarity-loans'}>
+                <li>Solidarity Loans</li>
+              </Link>
+              <Link to={'/loans/business-loans'}>
+                <li>Business Loans</li>
+              </Link>
+              <Link to={'/loans/payroll-loans'}>
+                <li>Payroll Loans</li>
+              </Link>
+              <Link to={'/loans/school-fees-loans'}>
+                <li>School Fees Loans</li>
+              </Link>
+              <Link to={'/loans/education-financing'}>
+                <li>Education Finance</li>
+              </Link>
+              <Link to={'/loans/asset-financing'}>
+                <li>Asset Financing</li>
+              </Link>
+              <Link to={'/loans/microfinance-loans'}>
+                <li>Microfinance Loans</li>
+              </Link>
+              <Link to={'/loans/solar-loans'}>
+                <li>Solar Loans</li>
+              </Link>
             </ul>
           </div>
           <div className={style.VerticalLine}></div>
@@ -46,21 +70,36 @@ class Menu extends React.Component {
             <Link to={'/mobile-banking'}>
               <h5 className={style.MenuListHeading}>Mobile Banking</h5>
             </Link>
-            <ul>
-              <li>Mobile Banking/Mobile Money Service</li>
-              <li>Interswitch ATM Service</li>
-              <li>Western Union</li>
+            <ul className={style.MenuProductTypes}>
+              <Link to={'/mobile-banking/banking-money'}>
+                <li>Mobile Banking/Mobile Money</li>
+              </Link>
+              <Link to={'/mobile-banking/interswitch-ATM'}>
+                <li>Interswitch ATM Service</li>
+              </Link>
+              <Link to={'/mobile-banking/western-union'}>
+                <li>Western Union</li>
+              </Link>
             </ul>
           </div>
           <div className={style.VerticalLine}></div>
           <div className={style.MenuListItems}>
-            <Link to={'/mobile-banking'}>
+            <Link to={'/other-services'}>
               <h5 className={style.MenuListHeading}>Other Services</h5>
             </Link>
-            <ul>
-              <li>Salary Processing</li>
-              <li>School Fees Collection</li>
-              <li>Standing Orders</li>
+            <ul className={style.MenuProductTypes}>
+              <Link to={'/other-services/salary-processing'}>
+                <li>Salary Processing</li>
+              </Link>
+              <Link to={'/other-services/school-fees-collection'}>
+                <li>School Fees Collection</li>
+              </Link>
+              <Link to={'/other-services/standing-orders'}>
+                <li>Standing Orders</li>
+              </Link>
+              <Link to={'/other-services/bill-collection'}>
+                <li>Bill Collection</li>
+              </Link>
             </ul>
           </div>
         </div>

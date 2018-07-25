@@ -23,7 +23,7 @@ const Savings = ({data}) => (
                 header={node.title}
                 type={node.type}
                 text={node.description.description}
-                link={`/products/${node.slug}`}
+                link={`/savings/${node.slug}`}
               />
             </div>
           )

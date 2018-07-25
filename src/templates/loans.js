@@ -4,9 +4,9 @@ import graphql from 'graphql'
 import ContactMe from '../components/ContactMe'
 import PageHeader from '../components/PageHeader'
 
-import styles from './product.module.scss'
+import styles from './savings.module.scss'
 
-class News extends React.Component {
+class LoanProducts extends React.Component {
   componentWillMount () {
     this.setState(() => {
       return {
@@ -26,16 +26,16 @@ class News extends React.Component {
   render () {
     return (
       <div>
-        <PageHeader title="Get The Latest News" subtitle="Read all about the latest Opportunity news"/>
+        <PageHeader title="Mobile Banking Products" subtitle="Read all about the latest Opportunity news"/>
         <div style={style}>
           <SavingsType
-            image={this.props.data.contentfulProduct.image.file.url}
-            productType={this.props.data.contentfulProduct.title}
-            productTypeCategory={this.props.data.contentfulProduct.type}
-            description={this.props.data.contentfulProduct.description.description}
-            featuresItems={this.props.data.contentfulProduct.features.features}
-            requirementItems={this.props.data.contentfulProduct.requirements.requirements}
-            key={this.props.data.contentfulProduct.slug}
+            image={this.props.data.contentfulLoanProducts.image.file.url}
+            productType={this.props.data.contentfulLoanProducts.title}
+            productTypeCategory={this.props.data.contentfulLoanProducts.type}
+            description={this.props.data.contentfulLoanProducts.description.description}
+            featuresItems={this.props.data.contentfulLoanProducts.features.features}
+            requirementItems={this.props.data.contentfulLoanProducts.requirements.requirements}
+            key={this.props.data.contentfulLoanProducts.slug}
             hideUnhideApplyForm={this.hideUnhideApplyForm.bind(this)}
             hide={this.state.hideApplyForm}/>
 
@@ -59,11 +59,11 @@ const style = {
   display: `flex`
 }
 
-export default News
+export default LoanProducts
 
-export const singleProductTypeQuery = graphql`
-  query SingleProductQuery($slug: String!){
-    contentfulProduct(slug: {eq: $slug}) {
+export const singleLoanProductsTypeQuery = graphql`
+  query SingleLoanProductsQuery($slug: String!){
+    contentfulLoanProducts(slug: {eq: $slug}) {
       title
       type
       image {
