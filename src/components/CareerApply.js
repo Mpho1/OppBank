@@ -1,5 +1,6 @@
 import React from 'react'
 import style from './CareerApply.module.scss'
+import SmtpService from './SmtpService'
 
 class CareerApply extends React.Component {
   constructor (props) {
@@ -35,6 +36,46 @@ class CareerApply extends React.Component {
 
   handleSubmit (event) {
     event.preventDefault()
+
+    let sender = new SmtpService()
+
+    let attachment = this.state.file
+    let fromEmail = this.state.email
+    let emailBody = `
+      name: ${this.state.name}
+      contact number: ${this.state.contactNumber}
+    `
+
+    let reader = new FileReader()
+
+    if (attachment) {
+      reader.readAsBinaryString(attachment)
+
+      reader.onload = function () {
+        let emailAttachment = 'data:' + attachment.type + ';base64,' + btoa(reader.result)
+
+        sender.sendWithAttachment(
+          fromEmail, // From
+          'hr@opportunitybank.co.ug', // To
+          'Job Application on opportunity bank', // Subject
+          emailBody, // Body
+          {
+            // SMTP Credentials
+            token: '434963d2-7d6c-42cc-b1ad-0cbc1465abf9'
+            // This token was generated at SMTPJS.COM with mailgun SMTP Credentials
+          },
+          '', // This field is blank as SMTP (Mailgun) username is passed in the token field
+          '', // This field is blank as SMTP (Mailgun) password is passed in the token field
+          emailAttachment,
+          function done (message) { console.log('Message has been sent') }
+        )
+      }
+      reader.onerror = function () {
+        console.log('The email could not be sent')
+      }
+    } else {
+      alert('no attachment')
+    }
   }
 
   render () {
@@ -47,21 +88,21 @@ class CareerApply extends React.Component {
           <h4 className={style.formText}>Contact me</h4>
           <div className={style.fields}>
             <p>
-              <input type="text" name="name" placeholder={this.props.name} className={style.inputField} onChange={this.handleChange.bind(this)}/>
+              <input type='text' name='name' placeholder={this.props.name} className={style.inputField} onChange={this.handleChange.bind(this)}/>
             </p>
             <p>
-              <input type="text" name="contactNumber" placeholder={this.props.contactNumber} className={style.inputField} onChange={this.handleChange.bind(this)}/>
+              <input type='text' name='contactNumber' placeholder={this.props.contactNumber} className={style.inputField} onChange={this.handleChange.bind(this)}/>
             </p>
             <p>
-              <input type="text" name="email" placeholder={this.props.email} className={style.inputField} onChange={this.handleChange.bind(this)}/>
+              <input type='text' name='email' placeholder={this.props.email} className={style.inputField} onChange={this.handleChange.bind(this)}/>
             </p>
             <div>
-              <input type="text" className={style.fileField} placeholder={this.state.fileName.length === 0 ? this.props.attachment : this.state.fileName}/>
-              <button type="button" className={style.uploadButton}>Upload CV</button>
-              <input type="file" className={style.invisibleField} onChange={this.onChange.bind(this)}/>
+              <input type='text' className={style.fileField} placeholder={this.state.fileName.length === 0 ? this.props.attachment : this.state.fileName}/>
+              <button type='button' className={style.uploadButton}>Upload CV</button>
+              <input type='file' className={style.invisibleField} onChange={this.onChange.bind(this)}/>
             </div>
             <hr/>
-            <input type="submit" value="Submit" className={style.submitButton}/>
+            <input type='submit' value='Submit' className={style.submitButton}/>
           </div>
         </form>
       </div>
