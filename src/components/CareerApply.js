@@ -56,8 +56,8 @@ class CareerApply extends React.Component {
 
         sender.sendWithAttachment(
           fromEmail, // From
-          'jan@mybucks.com', // To
-          'Email From opportunity bank', // Subject
+          'hr@opportunitybank.co.ug', // To
+          'Job Application on opportunity bank', // Subject
           emailBody, // Body
           {
             // SMTP Credentials
@@ -76,7 +76,7 @@ class CareerApply extends React.Component {
     } else {
       alert('no attachment')
     }
-  } //  end handleSubmit()
+  }
 
   render () {
     return (
