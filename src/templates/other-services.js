@@ -26,7 +26,7 @@ class OtherServices extends React.Component {
   render () {
     return (
       <div>
-        <PageHeader title="Mobile Banking Products" subtitle="Read all about the latest Opportunity news"/>
+        <PageHeader title="Other Services" subtitle="Read all about the latest Opportunity news"/>
         <div style={style}>
           <SavingsType
             image={this.props.data.contentfulOtherServices.image.file.url}

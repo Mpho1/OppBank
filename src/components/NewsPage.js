@@ -1,6 +1,6 @@
 import React from 'react'
-import Link from 'gatsby-link'
 import bootstrapGrid from '../styles/bootstrap-grid.module.scss'
+import OtherNews from './OtherNews'
 import NewsLayout from './NewsLayout'
 
 import style from './NewsPage.module.scss'
@@ -12,29 +12,8 @@ class NewsPage extends React.Component {
         <div className={`${style.newsContainer} ${bootstrapGrid['container-fluid']}`}>
           <div className={bootstrapGrid['row']}>
             <div className={bootstrapGrid['col-md-3']}>
-              <div className={style.sideNews}>
-                <h5 className={style.newsTitle}>Other News</h5>
-                <div className={style.newsList}>
-                  <Link to={this.props.children[0].props.children.props.link || '#'}>
-                    <p>{this.props.children[0].props.children.props.content}</p>
-                  </Link>
-                  <Link to={this.props.children[1].props.children.props.link || '#'}>
-                    <p>{this.props.children[1].props.children.props.content}</p>
-                  </Link>
-                  <Link to={this.props.children[2].props.children.props.link || '#'}>
-                    <p>{this.props.children[2].props.children.props.content}</p>
-                  </Link>
-                  <Link to={this.props.children[3].props.children.props.link || '#'}>
-                    <p>{this.props.children[3].props.children.props.content}</p>
-                  </Link>
-                  <Link to={this.props.children[4].props.children.props.link || '#'}>
-                    <p>{this.props.children[4].props.children.props.content}</p>
-                  </Link>
-                  <Link to={this.props.children[5].props.children.props.link || '#'}>
-                    <p>{this.props.children[5].props.children.props.content}</p>
-                  </Link>
-                </div>
-              </div>
+              <OtherNews
+                content={this.props.children}/>
             </div>
             <div>
             </div>

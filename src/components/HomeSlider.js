@@ -37,7 +37,7 @@ class HomeSlider extends React.Component {
         <Slide
           className={styles.slide2}
           heading={'Empower your future'}
-          blurb={'Learn more about our chuld education loans'}
+          blurb={'Learn more about our child education loans'}
         />
         <Slide
           className={styles.slide3}

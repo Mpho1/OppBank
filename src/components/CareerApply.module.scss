@@ -101,6 +101,18 @@
   }
 }
 
+.submittedForm {
+  border: 1px solid $white;
+  border-radius: 3px;
+  box-shadow: 0 0 10px #ddd;
+  padding: 5em 2em 3em 2em;
+  text-transform: uppercase;
+  color: $darkBlue;
+  width: 17.7em;
+  text-align: center;
+  display: none;
+}
+
 .block {
   transition: left 1s;
   position: relative;
