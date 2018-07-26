@@ -1,17 +1,17 @@
 import React from 'react'
 import style from './ContactUsInfo.module.scss'
 
-const AddressList = ['Plot 7A, John Babiha', '(Acacia Avenue)', 'P.O. BOX 33513, Kampala']
+const addressList = ['Plot 7A, John Babiha', '(Acacia Avenue)', 'P.O. BOX 33513, Kampala']
 
-const Items = AddressList.map((AddressList) =>
-  <p>{AddressList}</p>
+const items = addressList.map((addressList) =>
+  <p>{addressList}</p>
 )
 
 class ContactUsInfo extends React.Component {
   constructor (props) {
     super(props)
     this.state = {
-      NAME: '',
+      name: '',
       contactNumber: '',
       email: '',
       query: ''
@@ -46,7 +46,7 @@ class ContactUsInfo extends React.Component {
           Head Office
         </h4>
         <p className={style.description}>
-          {Items}
+          {items}
         </p>
         <h4>
           <img src={require('../img/Page1.svg')} className={style.icon}/>

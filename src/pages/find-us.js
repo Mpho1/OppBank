@@ -14,7 +14,7 @@ class FindUs extends React.Component {
           subtitle="Got more questions or would you rather feel more comfortable just visiting one of our branches?"/>
         <FindMap/>
         <MapContainer/>
-        <div className={styles.cardfindus}>
+        <div className={styles.cardFindUs}>
           <Cards/>
         </div>
       </div>
