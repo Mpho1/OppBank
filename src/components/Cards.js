@@ -1,26 +1,26 @@
 import React from 'react'
-import styles from './card.module.scss'
+import style from './card.module.scss'
 
 const CardContent = ({image, title}) => (
   <div>
-    <div className={styles.CardImage}>
+    <div className={style.cardimage}>
       <img src={image} />
     </div>
-    <h4>
+    <h1>
       {title}
-    </h4>
+    </h1>
   </div>
 )
 
 const Cards = () => (
-  <div className={styles.CardContainer}>
-    <div className={styles.CardInfo}>
+  <div className={style.cardcontainer}>
+    <div className={style.cardinfo}>
       <CardContent
         image={require('../img/contact_us.svg')}
         title='Contact us'
       />
     </div>
-    <div className={styles.CardInfo}>
+    <div className={style.cardinfo}>
       <CardContent
         image={require('../img/find_us.svg')}
         title='Find us'
