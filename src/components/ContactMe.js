@@ -90,7 +90,7 @@ class ContactMe extends React.Component {
               <input type="text" name="contactNumber" placeholder={this.props.contactNumber} className={style.inputField} onChange={this.handleChange.bind(this)}/>
             </p>
             <p>
-              <input type="text" name="email" placeholder={this.props.email} className={style.inputField} onChange={this.handleChange.bind(this)}/>
+              <input type="email" name="email" placeholder={this.props.email} className={style.inputField} onChange={this.handleChange.bind(this)}/>
             </p>
             <div>
               <input type="textarea" name="message" className={style.messageTextarea} placeholder={this.props.message} onChange={this.handleChange.bind(this)}/>
