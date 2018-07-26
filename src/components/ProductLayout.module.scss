@@ -19,6 +19,7 @@
 .productLayoutHeader {
   color: $blue;
   text-transform: uppercase;
+  font-size: 13px;
 }
 
 .productLayoutType {
@@ -32,6 +33,10 @@
   margin-top: -1.5em;
   color: $lightGrey;
   padding: 0em 2em;
+  max-width: 200px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .productLayoutButton {

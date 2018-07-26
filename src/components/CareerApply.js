@@ -69,6 +69,8 @@ class CareerApply extends React.Component {
           emailAttachment,
           function done (message) { console.log('Message has been sent') }
         )
+        document.getElementById('contactForm').style.display = 'none'
+        document.getElementById('submitMessage').style.display = 'block'
       }
       reader.onerror = function () {
         console.log('The email could not be sent')
@@ -81,7 +83,7 @@ class CareerApply extends React.Component {
   render () {
     return (
       <div className={ `${(this.props.hide ? style.blockHidden : style.blockShow)} ${style.block}` }>
-        <form className={style.applyForm} onSubmit={this.handleSubmit}>
+        <form id="contactForm" className={style.applyForm} onSubmit={this.handleSubmit}>
           <button
             className={style.closeButton} onClick={() => { this.props.hideUnhideApplyForm(true) }}>x
           </button>
@@ -105,6 +107,12 @@ class CareerApply extends React.Component {
             <input type='submit' value='Submit' className={style.submitButton}/>
           </div>
         </form>
+        <div id="submitMessage" className={style.submittedForm}>
+          <div>
+            <h4>Successful</h4>
+            <p>Thank you, your application has been successfully submitted.</p>
+          </div>
+        </div>
       </div>
     )
   }

@@ -45,22 +45,36 @@ class ContactMe extends React.Component {
     `
     sender.send(
       fromEmail, // From
-      'info@opportyunitybank.co.ug', // To
-      'Products enquiry', // Subject
+      'emechebeonyebuchi@gmail.com', // To info@opportunitybank.co.ug
+      'Products Enquiry From Opportunity Bank', // Subject
       emailBody, // Body
       {
         // SMTP Credentials
         token: '434963d2-7d6c-42cc-b1ad-0cbc1465abf9'
         // This token was generated at SMTPJS.COM with mailgun SMTP Credentials
       },
-      function done (message) { console.log('Message has been sent') }
+      function done (message) {
+      }
     )
+    document.getElementById('contactForm').style.display = 'none'
+    document.getElementById('submitMessage').style.display = 'block'
   }
 
   render () {
+    // validation before submit
+    function validate (name, email) {
+      return {
+        name: name.length === 0,
+        email: email.length === 0
+      }
+    }
+
+    const errors = validate(this.state.name, this.state.email)
+    const isEnabled = !Object.keys(errors).some(x => errors[x])
+
     return (
       <div className={ `${(this.props.hide ? style.blockHidden : style.blockShow)} ${style.block}` }>
-        <form className={style.applyForm} onSubmit={this.handleSubmit}>
+        <form id="contactForm" className={style.applyForm} onSubmit={this.handleSubmit}>
           <button
             className={style.closeButton} onClick={() => { this.props.hideUnhideApplyForm(true) }}>x
           </button>
@@ -82,9 +96,16 @@ class ContactMe extends React.Component {
               <input type="textarea" name="message" className={style.messageTextarea} placeholder={this.props.message} onChange={this.handleChange.bind(this)}/>
             </div>
             <hr/>
-            <input type="submit" value="Submit" className={style.submitButton}/>
+            <input type="submit" value="Submit" className={errors.email ? style.error : style.submitButton}
+              disabled={!isEnabled}/>
           </div>
         </form>
+        <div id="submitMessage" className={style.submittedForm}>
+          <div>
+            <h4>Successful</h4>
+            <p>Thank you, your enquiry has been successfully submitted.</p>
+          </div>
+        </div>
       </div>
     )
   }

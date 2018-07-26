@@ -16,19 +16,19 @@ class Menu extends React.Component {
               <Link to={'/savings/ordinary-savings'}>
                 <li>Ordinary Savings Account</li>
               </Link>
-              <Link to={'/savings/business'}>
+              <Link to={'/savings/business-savings'}>
                 <li>Business Savings Account</li>
               </Link>
-              <Link to={'/savings/fixed-term'}>
+              <Link to={'/savings/fixed-term-deposit-account'}>
                 <li>Fixed Deposit Account</li>
               </Link>
-              <Link to={'/savings/institutional-fixed'}>
+              <Link to={'/savings/institutional-fixed-deposit-account'}>
                 <li>Institutional Fixed Account</li>
               </Link>
-              <Link to={'/savings/group-savings'}>
+              <Link to={'/savings/group-savings-account'}>
                 <li>Group Savings Account</li>
               </Link>
-              <Link to={'/savings/target-savings'}>
+              <Link to={'/savings/target-savings-account'}>
                 <li>Target Savings Account</li>
               </Link>
             </ul>
@@ -43,7 +43,7 @@ class Menu extends React.Component {
                 <li>Solidarity Loans</li>
               </Link>
               <Link to={'/loans/business-loans'}>
-                <li>Business Loans</li>
+                <li>Small to Medium Business Loans</li>
               </Link>
               <Link to={'/loans/payroll-loans'}>
                 <li>Payroll Loans</li>
