@@ -10,7 +10,7 @@ const MobileBanking = ({data}) => (
   <div>
     <PageHeader
       title="Mobile Banking"
-      subtitle="Let that brush dance around there and play. God gave you this gift of imagination. Use it, Every single thing in the world has its own personality">
+      subtitle="Have the power to access your money when, and where you need it with our mobile banking services.">
     </PageHeader>
     <ContentsSection>
       <ItemSwiper>

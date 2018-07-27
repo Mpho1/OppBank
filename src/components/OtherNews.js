@@ -1,5 +1,6 @@
 import React from 'react'
 import graphql from 'graphql'
+import Link from 'gatsby-link'
 
 import style from './NewsPage.module.scss'
 

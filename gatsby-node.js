@@ -147,11 +147,11 @@ exports.createPages = ({graphql, boundActionCreators}) => {
       })
     )
 
-    const otherServicesTemplate = path.resolve('src/templates/other-services.js')
+    const valueAddedServicesTemplate = path.resolve('src/templates/value-added-services.js')
     resolve(
       graphql(`
               {
-                allContentfulOtherServices(limit: 100) {
+                allContentfulValueAddedServices(limit: 100) {
                   edges {
                     node {
                       slug
@@ -164,10 +164,10 @@ exports.createPages = ({graphql, boundActionCreators}) => {
           reject(result.errors)
         }
         if (result.data) {
-          result.data.allContentfulOtherServices.edges.forEach(({node}) => {
+          result.data.allContentfulValueAddedServices.edges.forEach(({node}) => {
             createPage({
-              path: `/other-services/${node.slug}`,
-              component: otherServicesTemplate,
+              path: `/value-added-services/${node.slug}`,
+              component: valueAddedServicesTemplate,
               context: {
                 slug: node.slug
               }

@@ -62,10 +62,10 @@ const ProductsCard = ({addBoxShadow}) => (
     </div>
     <div className={`${styles.columnSpacing} ${bootstrapGrid['col-md-3']} ${addBoxShadow ? styles.boxShadow : ''}`}>
       <div className={`${styles.productInfo}`}>
-        <Link to={'/mobile-banking'}>
+        <Link to={'/value-added-services'}>
           <ProductsContent
             image={require('../img/other_services.svg')}
-            title='Other services'
+            title='Value Added Services'
             text='Gain control over your finances with a free cash withdraw per month.'
           />
         </Link>
