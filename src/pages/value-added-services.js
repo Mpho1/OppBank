@@ -6,15 +6,14 @@ import PageHeader from '../components/PageHeader'
 import ItemSwiper from '../components/ItemSwiper'
 import ContentsSection from '../components/ContentsSection'
 
-const OtherServices = ({data}) => (
+const ValueAddedServices = ({data}) => (
   <div>
     <PageHeader
-      title="Other Services"
-      subtitle="Let that brush dance around there and play. God gave you this gift of imagination. Use it, Every single thing in the world has its own personality">
+      title="Value Added Service">
     </PageHeader>
     <ContentsSection>
       <ItemSwiper>
-        {data.allContentfulOtherServices.edges.map(({node}) => {
+        {data.allContentfulValueAddedServices.edges.map(({node}) => {
           return (
             <div style={style}>
               <ProductLayout
@@ -23,7 +22,7 @@ const OtherServices = ({data}) => (
                 header={node.title}
                 type={node.type}
                 text={node.description.description}
-                link={`/other-services/${node.slug}`}
+                link={`/value-added-services/${node.slug}`}
               />
             </div>
           )
@@ -38,11 +37,11 @@ const style = {
   marginTop: '-3em'
 }
 
-export default OtherServices
+export default ValueAddedServices
 
-export const OtherServicesQuery = graphql`
-  query OtherServicesContentQuery {
-    allContentfulOtherServices {
+export const ValueAddedServicesQuery = graphql`
+  query ValueAddedServicesContentQuery {
+    allContentfulValueAddedServices {
       edges {
         node {
           title

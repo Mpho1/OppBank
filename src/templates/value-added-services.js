@@ -6,7 +6,7 @@ import PageHeader from '../components/PageHeader'
 
 import styles from './savings.module.scss'
 
-class OtherServices extends React.Component {
+class ValueAddedServices extends React.Component {
   componentWillMount () {
     this.setState(() => {
       return {
@@ -26,16 +26,16 @@ class OtherServices extends React.Component {
   render () {
     return (
       <div>
-        <PageHeader title="Other Services" subtitle="Read all about the latest Opportunity news"/>
+        <PageHeader title="Value Added Services"/>
         <div style={style}>
           <SavingsType
-            image={this.props.data.contentfulOtherServices.image.file.url}
-            productType={this.props.data.contentfulOtherServices.title}
-            productTypeCategory={this.props.data.contentfulOtherServices.type}
-            description={this.props.data.contentfulOtherServices.description.description}
-            featuresItems={this.props.data.contentfulOtherServices.features.features}
-            requirementItems={this.props.data.contentfulOtherServices.requirements.requirements}
-            key={this.props.data.contentfulOtherServices.slug}
+            image={this.props.data.contentfulValueAddedServices.image.file.url}
+            productType={this.props.data.contentfulValueAddedServices.title}
+            productTypeCategory={this.props.data.contentfulValueAddedServices.type}
+            description={this.props.data.contentfulValueAddedServices.description.description}
+            featuresItems={this.props.data.contentfulValueAddedServices.features.features}
+            requirementItems={this.props.data.contentfulValueAddedServices.requirements.requirements}
+            key={this.props.data.contentfulValueAddedServices.slug}
             hideUnhideApplyForm={this.hideUnhideApplyForm.bind(this)}
             hide={this.state.hideApplyForm}/>
 
@@ -59,11 +59,11 @@ const style = {
   display: `flex`
 }
 
-export default OtherServices
+export default ValueAddedServices
 
-export const singleOtherServicesTypeQuery = graphql`
-  query SingleOtherServicesQuery($slug: String!){
-    contentfulOtherServices(slug: {eq: $slug}) {
+export const singleValueAddedServicesTypeQuery = graphql`
+  query SingleValueAddedServicesQuery($slug: String!){
+    contentfulValueAddedServices(slug: {eq: $slug}) {
       title
       type
       image {

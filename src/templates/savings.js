@@ -26,7 +26,7 @@ class News extends React.Component {
   render () {
     return (
       <div>
-        <PageHeader title="Savings Product" subtitle="Read all about the latest Opportunity news"/>
+        <PageHeader title="Savings Product" subtitle="Opportunity Bank holds the solution for you to empower your family, your community, your business and your future."/>
         <div style={style}>
           <SavingsType
             image={this.props.data.contentfulProduct.image.file.url}

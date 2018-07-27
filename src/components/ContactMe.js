@@ -45,7 +45,7 @@ class ContactMe extends React.Component {
     `
     sender.send(
       fromEmail, // From
-      'info@opportunitybank.co.ug', // To
+      'customerservice@opportunitybank.co.ug', // To
       'Products Enquiry From Opportunity Bank', // Subject
       emailBody, // Body
       {
@@ -102,6 +102,7 @@ class ContactMe extends React.Component {
         </form>
         <div id="submitMessage" className={style.submittedForm}>
           <div>
+            <img src={require('../img/approve.svg')} className={style.submittedImg}/>
             <h4>Successful</h4>
             <p>Thank you, your enquiry has been successfully submitted.</p>
           </div>

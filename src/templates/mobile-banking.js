@@ -26,7 +26,7 @@ class MobileBanking extends React.Component {
   render () {
     return (
       <div>
-        <PageHeader title="Mobile Banking Products" subtitle="Read all about the latest Opportunity news"/>
+        <PageHeader title="Mobile Banking Products" subtitle="Have the power to access your money when, and where you need it with our mobile banking services."/>
         <div style={style}>
           <SavingsType
             image={this.props.data.contentfulMobileBankingProducts.image.file.url}

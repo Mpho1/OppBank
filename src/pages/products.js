@@ -8,7 +8,7 @@ const Products = () => (
   <div>
     <PageHeader
       title="PRODUCTS"
-      subtitle="Let that brush around there and play. God gave you this gift of imagination. Use it. Every single thing in the world has its own personality"/>
+      subtitle="Opportunity Bank Uganda offers tailor made credit and savings and banking products to suit your pocket and your lifestyle."/>
     <div className={style.products}>
       <ProductsCard
         addBoxShadow={true}

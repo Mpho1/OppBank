@@ -56,7 +56,7 @@ class CareerApply extends React.Component {
 
         sender.sendWithAttachment(
           fromEmail, // From
-          'hr@opportunitybank.co.ug', // To
+          'recruitment@opportunitybank.co.ug', // To
           'Job Application on opportunity bank', // Subject
           emailBody, // Body
           {

@@ -57,7 +57,7 @@ const Footer = () => (
             <li>Savings accounts</li>
             <li>Loans</li>
             <li>Mobile Banking</li>
-            <li>Other services</li>
+            <li>Value Added Services</li>
           </ul>
         </div>
         <div className={styles.footerLinkCol}>

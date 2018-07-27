@@ -10,7 +10,7 @@ const Loans = ({data}) => (
   <div>
     <PageHeader
       title="Loans"
-      subtitle="Let that brush dance around there and play. God gave you this gift of imagination. Use it, Every single thing in the world has its own personality">
+      subtitle="Personal, business and home financing with flexible terms, and attractive rates.">
     </PageHeader>
     <ContentsSection>
       <ItemSwiper>

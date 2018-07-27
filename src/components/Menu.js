@@ -31,6 +31,9 @@ class Menu extends React.Component {
               <Link to={'/savings/target-savings-account'}>
                 <li>Target Savings Account</li>
               </Link>
+              <Link to={'/savings/extra-save-account'}>
+                <li>Extra Save Account</li>
+              </Link>
             </ul>
           </div>
           <div className={style.VerticalLine}></div>
@@ -84,20 +87,20 @@ class Menu extends React.Component {
           </div>
           <div className={style.VerticalLine}></div>
           <div className={style.MenuListItems}>
-            <Link to={'/other-services'}>
-              <h5 className={style.MenuListHeading}>Other Services</h5>
+            <Link to={'/value-added-services'}>
+              <h5 className={style.MenuListHeading}>Value Added Services</h5>
             </Link>
             <ul className={style.MenuProductTypes}>
-              <Link to={'/other-services/salary-processing'}>
+              <Link to={'/value-added-services/salary-processing'}>
                 <li>Salary Processing</li>
               </Link>
-              <Link to={'/other-services/school-fees-collection'}>
+              <Link to={'/value-added-services/school-fees-collection'}>
                 <li>School Fees Collection</li>
               </Link>
-              <Link to={'/other-services/standing-orders'}>
+              <Link to={'/value-added-services/standing-orders'}>
                 <li>Standing Orders</li>
               </Link>
-              <Link to={'/other-services/bill-collection'}>
+              <Link to={'/value-added-services/bill-collection'}>
                 <li>Bill Collection</li>
               </Link>
             </ul>

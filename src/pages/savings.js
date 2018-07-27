@@ -10,7 +10,7 @@ const Savings = ({data}) => (
   <div>
     <PageHeader
       title="SAVINGS ACCOUNT"
-      subtitle="Let that brush dance around there and play. God gave you this gift of imagination. Use it, Every single thing in the world has its own personality">
+      subtitle="Opportunity Bank holds the solution for you to empower your family, your community, your business and your future.">
     </PageHeader>
     <ContentsSection>
       <ItemSwiper>

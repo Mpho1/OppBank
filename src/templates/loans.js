@@ -26,7 +26,7 @@ class LoanProducts extends React.Component {
   render () {
     return (
       <div>
-        <PageHeader title="Loans Products" subtitle="Read all about the latest Opportunity news"/>
+        <PageHeader title="Loans Products" subtitle="Personal, business and home financing with flexible terms, and attractive rates."/>
         <div style={style}>
           <SavingsType
             image={this.props.data.contentfulLoanProducts.image.file.url}
