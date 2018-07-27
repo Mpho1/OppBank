@@ -1,6 +1,6 @@
 @import "../constants/colors.module.scss";
 
-.cardcontainer {
+.cardContainer {
   margin: -35.5em 0em 0em 51em;
   margin-bottom: 23em;
 
@@ -14,7 +14,7 @@
     padding: .4em;
   }
 
-  .cardimage {
+  .cardImage {
     height: 80px;
     align-items: center;
     margin-top: 10px;
@@ -32,14 +32,14 @@
 }
 
 @media (max-width: 650px) {
-  .cardinfo {
+  .cardInfo {
     display: none;
     padding: 5px 5px;
   }
 }
 
 @media (max-width: 1200px) {
-  .cardcontainer {
+  .cardContainer {
     display: none;
   }
 }

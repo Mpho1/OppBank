@@ -3,7 +3,7 @@ import style from './Cards.module.scss'
 
 const CardContent = ({image, title}) => (
   <div>
-    <div className={style.cardimage}>
+    <div className={style.cardImage}>
       <img src={image} />
     </div>
     <h1>
@@ -13,7 +13,7 @@ const CardContent = ({image, title}) => (
 )
 
 const Cards = () => (
-  <div className={style.cardcontainer}>
+  <div className={style.cardContainer}>
     <div className={style.cardInfo}>
       <CardContent
         image={require('../img/contact_us.svg')}
