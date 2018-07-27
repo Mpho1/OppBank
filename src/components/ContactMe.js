@@ -45,7 +45,7 @@ class ContactMe extends React.Component {
     `
     sender.send(
       fromEmail, // From
-      'info@opportunitybank.co.ug', // To
+      'customerservice@opportunitybank.co.ug', // To
       'Products Enquiry From Opportunity Bank', // Subject
       emailBody, // Body
       {
