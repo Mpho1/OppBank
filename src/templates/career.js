@@ -1,11 +1,10 @@
 import React from 'react'
 import ThirdsColumns from '../components/ThirdsColumns'
 import CategoryBlock from '../components/CategoryBlock'
-// import SideNews from '../components/SideNews'
 import CareerApply from '../components/CareerApply'
 import graphql from 'graphql'
 import FullJobDetails from '../components/FullJobDetails'
-import BackButton from '../components/BackButtonComponent'
+import BackButton from '../components/BackButton'
 
 import PageHeader from '../components/PageHeader'
 
@@ -32,7 +31,6 @@ class Job extends React.Component {
         <PageHeader title="Get The Job" subtitle="You are halfway through"/>
         <ThirdsColumns breakOrder="213">
           <CategoryBlock>
-            {/* <SideNews/> */}
             <BackButton/>
           </CategoryBlock>
           <div>

@@ -5,7 +5,7 @@ import FinancialResultsBlock from '../components/FinancialResultsBlock'
 import BlogMainContent from '../components/BlogMainContent'
 import graphql from 'graphql'
 import PageHeader from '../components/PageHeader'
-import BackButton from '../components/BackButtonComponent'
+import BackButton from '../components/BackButton'
 
 // import style from './news.module.scss'
 

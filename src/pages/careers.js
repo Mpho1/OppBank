@@ -6,10 +6,9 @@ import DoubleSearchField from '../components/DoubleSearchField'
 import ThirdsColumns from '../components/ThirdsColumns'
 import CategoryBlock from '../components/CategoryBlock'
 import CareerApply from '../components/CareerApply'
-// import SideNews from '../components/SideNews'
 import NoJob from '../components/NoJob'
 import Pagination from '../components/Pagination'
-import BackButton from '../components/BackButtonComponent'
+import BackButton from '../components/BackButton'
 
 class CareerPage extends React.Component {
   constructor () {
@@ -83,9 +82,7 @@ class CareerPage extends React.Component {
         </PageHeader>
         <ThirdsColumns>
           <CategoryBlock>
-            {/* <SideNews/> */}
             <BackButton/>
-
           </CategoryBlock>
           <div>
             <Pagination
