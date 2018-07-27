@@ -31,6 +31,9 @@ class Menu extends React.Component {
               <Link to={'/savings/target-savings-account'}>
                 <li>Target Savings Account</li>
               </Link>
+              <Link to={'/savings/extra-save-account'}>
+                <li>Extra Save Account</li>
+              </Link>
             </ul>
           </div>
           <div className={style.VerticalLine}></div>
