@@ -5,7 +5,7 @@ class ContactUsInfo extends React.Component {
   constructor (props) {
     super(props)
     this.state = {
-      NAME: '',
+      name: '',
       contactNumber: '',
       email: '',
       query: ''

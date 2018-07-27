@@ -9,26 +9,24 @@
   border-radius: 3px;
   box-shadow: 0px 0px 9px 0px $lightGrey;
   background-color: $white;
-  
+
   .placeholders {
-    margin: -24em 0px 0px 300px;
-    font-family: ProximaNova;
-    font-size: 16px;
+    margin: -30em 0px 0px 300px;
+    font-size: 13px;
 
     .inputBox {
       width: 300px;
       height: 40px;
       padding: 10px;
       border-radius: 5px;
-      border: solid 2px $offWhite;
-      
+      border: 1px solid $lightGrey;
     }
 
     .inputQuery {
       width: 300px;
       height: 100px;
       padding: 10px;
-      border: solid 3.5px $offWhite;
+      border: 3.5px solid $lightWhite;
     }
 
     .submitButton {
@@ -40,7 +38,8 @@
       width: 150px;
       height: 40px;
       border-radius: 5px;
-      background-color: $lightBlue;  
+      border: 1px solid $lightBlue;
+      background-color: $lightBlue;
     }
   }
   
@@ -57,16 +56,17 @@
     font-weight: bold;
     line-height: 30px;
     color: $blue;
+    font-family: ProximaNova;
   }
 
   .icon {
     width: 21px;
     height: 21px;
-    margin: 0px 10px 0px 0px;    
+    margin: 0px 10px 0px 0px;
   }
 
   .description {
-    font-size: 15px;
+    font-size: 13px;
     line-height: 0;
     color: $charcoalBlack;
     margin-left: 50px;
@@ -276,4 +276,3 @@
     width: 95%;
   }
 }
-

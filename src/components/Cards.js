@@ -1,5 +1,5 @@
 import React from 'react'
-import style from './card.module.scss'
+import style from './Cards.module.scss'
 
 const CardContent = ({image, title}) => (
   <div>
@@ -14,13 +14,13 @@ const CardContent = ({image, title}) => (
 
 const Cards = () => (
   <div className={style.cardcontainer}>
-    <div className={style.cardinfo}>
+    <div className={style.cardInfo}>
       <CardContent
         image={require('../img/contact_us.svg')}
         title='Contact us'
       />
     </div>
-    <div className={style.cardinfo}>
+    <div className={style.cardInfo}>
       <CardContent
         image={require('../img/find_us.svg')}
         title='Find us'
