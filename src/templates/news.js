@@ -5,48 +5,50 @@ import FinancialResultsBlock from '../components/FinancialResultsBlock'
 import BlogMainContent from '../components/BlogMainContent'
 import graphql from 'graphql'
 import PageHeader from '../components/PageHeader'
+import BackButton from '../components/BackButtonComponent'
 
-import style from './news.module.scss'
+// import style from './news.module.scss'
 
-const newsList = ['General Management', 'Media, Advertising, Marketing', 'Admin, Office Support', 'Banking, Finance, Insurance', 'Textile/Clothing', 'Legal', 'Mining', 'Human Resources', 'Accounting']
+// const newsList = ['General Management', 'Media, Advertising, Marketing', 'Admin, Office Support', 'Banking, Finance, Insurance', 'Textile/Clothing', 'Legal', 'Mining', 'Human Resources', 'Accounting']
 
-const newsCategoryItems = newsList.map((newsList) =>
-  <li key={newsList}>{newsList}</li>
-)
+// const newsCategoryItems = newsList.map((newsList) =>
+//   <li key={newsList}>{newsList}</li>
+// )
 
-const finacialList = ['General Management']
+// const finacialList = ['General Management']
 
-const newsFinancialItems = finacialList.map((financialList) =>
-  <li key={financialList}>{financialList}</li>
-)
+// const newsFinancialItems = finacialList.map((financialList) =>
+//   <li key={financialList}>{financialList}</li>
+// )
 
-const SideNews = () => (
-  <div className={style.newsSection}>
-    <div>
-      <h5 className={style.newsTitle}>News</h5>
-    </div>
-    <div>
-      <ul className={style.newsList}>
-        {newsCategoryItems}
-      </ul>
-    </div>
-    <div>
-      <h5 className={style.newsTitle}>Financial News</h5>
-    </div>
-    <div>
-      <ul className={style.newsList}>
-        {newsFinancialItems}
-      </ul>
-    </div>
-  </div>
-)
+// const SideNews = () => (
+//   <div className={style.newsSection}>
+//     <div>
+//       <h5 className={style.newsTitle}>News</h5>
+//     </div>
+//     <div>
+//       <ul className={style.newsList}>
+//         {newsCategoryItems}
+//       </ul>
+//     </div>
+//     <div>
+//       <h5 className={style.newsTitle}>Financial News</h5>
+//     </div>
+//     <div>
+//       <ul className={style.newsList}>
+//         {newsFinancialItems}
+//       </ul>
+//     </div>
+//   </div>
+// )
 
 const News = ({data}) => (
   <div>
     <PageHeader title="Get The Latest News" subtitle="Read all about the latest Opportunity news"/>
     <ThirdsColumns breakOrder="213">
       <CategoryBlock>
-        <SideNews/>
+        {/* <SideNews/> */}
+        <BackButton/>
       </CategoryBlock>
 
       <BlogMainContent
