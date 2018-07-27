@@ -1,5 +1,6 @@
 import React from 'react'
 import Logo from './Logo'
+import Link from 'gatsby-link'
 
 import styles from './Footer.module.scss'
 
@@ -38,7 +39,7 @@ const Footer = () => (
             Email
           </h4>
           <p>
-            info@opportunity.co.ug
+            customerservice@opportunitybank.co.ug
           </p>
         </div>
         <div>
@@ -52,24 +53,42 @@ const Footer = () => (
       </div>
       <div className={styles.footerLinks}>
         <div className={styles.footerLinkCol}>
-          <h6>PRODUCTS</h6>
+          <Link to={'/products'}>
+            <h6>PRODUCTS</h6>
+          </Link>
           <ul>
-            <li>Savings accounts</li>
-            <li>Loans</li>
-            <li>Mobile Banking</li>
-            <li>Value Added Services</li>
+            <Link to={'/savings'}>
+              <li>Savings accounts</li>
+            </Link>
+            <Link to={'/loans'}>
+              <li>Loans</li>
+            </Link>
+            <Link to={'/mobile-banking'}>
+              <li>Mobile Banking</li>
+            </Link>
+            <Link to={'/value-added-services'}>
+              <li>Value Added Services</li>
+            </Link>
           </ul>
         </div>
         <div className={styles.footerLinkCol}>
-          <h6>CONTACT US</h6>
+          <Link to={'/contact-us'}>
+            <h6>CONTACT US</h6>
+          </Link>
           <ul>
-            <li>Contact us</li>
-            <li>Find us</li>
-            <li>Feedback</li>
+            <Link to={'/contact-us'}>
+              <li>Contact us</li>
+            </Link>
+            <Link to={'/find-us'}>
+              <li>Find us</li>
+            </Link>
           </ul>
         </div>
         <div className={styles.footerLinkCol}>
-          <h6>CAREERS</h6>
+          <Link to={'/careers'}>
+            <h6>CAREERS</h6>
+          </Link>
+
         </div>
         <div className={styles.footerLinkCol}>
           <h6>LEGAL</h6>
