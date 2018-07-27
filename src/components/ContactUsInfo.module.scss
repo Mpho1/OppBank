@@ -1,6 +1,6 @@
 @import "../constants/colors.module.scss";
 
-.contactform {
+.contactForm {
   padding: 30px 2px 0px 50px;
   margin-left: 150px;
   margin-bottom:5em;
@@ -15,7 +15,7 @@
     font-family: ProximaNova;
     font-size: 16px;
 
-    .inputbox {
+    .inputBox {
       width: 300px;
       height: 40px;
       padding: 10px;
@@ -24,14 +24,14 @@
       
     }
 
-    .inputquery {
+    .inputQuery {
       width: 300px;
       height: 100px;
       padding: 10px;
       border: solid 3.5px $offWhite;
     }
 
-    .submitbutton {
+    .submitButton {
       font-family: BrandonGrotesque;
       font-size: 15px;
       font-weight: bold;
@@ -44,7 +44,7 @@
     }
   }
   
-  .contactus {
+  .contactUs {
     font-size: 30px;
     font-weight: bold;
     line-height: 50px;
@@ -72,7 +72,7 @@
     margin-left: 50px;
   }
 
-  .findus {
+  .findUs {
     margin-left: 50px;
     font-size: 18px;
     font-weight: bold;
@@ -80,7 +80,7 @@
     color: $blue;
   }
 
-  .socialicon {
+  .socialIcon {
     padding: 0px 4px 5px 5px;
     margin: -15px -30px 0px 40px;
     width: 40px;
@@ -93,11 +93,11 @@
 }
 
 @media (min-width: 360px) and (max-width: 399px) {
-  .contactform {
+  .contactForm {
     margin-left: 20px;
     width: 90%;
 
-    .contactus {
+    .contactUs {
       display: block;
     }
 
@@ -105,18 +105,18 @@
       margin: 2em 0px 0px -33px;
     }
 
-    .icon, .description, .findus, .socialicon, h4 {
+    .icon, .description, .findUs, .socialIcon, h4 {
       display: none; 
     } 
   }
 }
 
 @media (min-width: 400px) and (max-width: 418px) {
-  .contactform {
+  .contactForm {
     margin-left: 20px;
     width: 90%;
 
-    .contactus {
+    .contactUs {
       display: block;
     }
 
@@ -124,18 +124,18 @@
       margin: 2em 0px 0px -15px;
     }
 
-    .icon, .description, .findus, .socialicon, h4 {
+    .icon, .description, .findUs, .socialIcon, h4 {
       display: none; 
     } 
   }
 }
 
 @media (min-width: 419px) and (max-width: 431px) {
-  .contactform {
+  .contactForm {
     margin-left: 32px;
     width: 85%;
     
-    .contactus {
+    .contactUs {
       display: block;
     }
 
@@ -143,18 +143,18 @@
       margin: 2em 0px 0px -15px;
     }
 
-    .icon, .description, .findus, .socialicon, h4 {
+    .icon, .description, .findUs, .socialIcon, h4 {
       display: none; 
     } 
   }
 }
 
 @media (min-width: 432px) and (max-width: 455px) {
-  .contactform {
+  .contactForm {
     margin-left: 32px;
     width: 85%;
 
-    .contactus {
+    .contactUs {
       display: block;
       margin: 0px 0px 0px 40px;
     }
@@ -163,7 +163,7 @@
       margin: 2em 0px 0px -17px;
     }
 
-    .icon, .description, .findus, .socialicon, h4 {
+    .icon, .description, .findUs, .socialIcon, h4 {
       display: none; 
     } 
   }
@@ -171,11 +171,11 @@
 
 
 @media (min-width: 456px) and (max-width: 470px) {
-  .contactform {
+  .contactForm {
     margin-left: 50px;
     width: 80%;
 
-    .contactus {
+    .contactUs {
       display: block;
       margin: 0px 0px 0px 40px;
     }
@@ -184,18 +184,18 @@
       margin: 2em 0px 0px -17px;
     }
 
-    .icon, .description, .findus, .socialicon, h4 {
+    .icon, .description, .findUs, .socialIcon, h4 {
       display: none; 
     } 
   }
 }
 
 @media (min-width: 471px) and (max-width: 500px) {
-  .contactform {
+  .contactForm {
     margin-left: 40px;
     width: 85%;
 
-    .contactus {
+    .contactUs {
       display: block;
       margin: 0px 0px 0px 55px;
     }
@@ -204,18 +204,18 @@
       margin: 2em 0px 0px 5px;
     }
 
-    .icon, .description, .findus, .socialicon, h4 {
+    .icon, .description, .findUs, .socialIcon, h4 {
       display: none; 
     } 
   }
 }
 
 @media (min-width: 501px) and (max-width: 540px) {
-  .contactform {
+  .contactForm {
     margin-left: 40px;
     width: 85%;
 
-    .contactus {
+    .contactUs {
       display: block;
       margin: 0px 0px 0px 70px;
     }
@@ -224,18 +224,18 @@
       margin: 2em 0px 0px 20px;
     }
 
-    .icon, .description, .findus, .socialicon, h4 {
+    .icon, .description, .findUs, .socialIcon, h4 {
       display: none; 
     } 
   }
 }
 
 @media (min-width: 541px) and (max-width: 600px) {
-  .contactform {
+  .contactForm {
     margin-left: 70px;
     width: 75%;
 
-    .contactus {
+    .contactUs {
       display: block;
       margin: 0px 0px 0px 70px;
     }
@@ -244,18 +244,18 @@
       margin: 2em 0px 0px 30px;
     }
 
-    .icon, .description, .findus, .socialicon, h4 {
+    .icon, .description, .findUs, .socialIcon, h4 {
      display: none; 
     } 
   }
 }
 
 @media (min-width: 601px) and (max-width: 700px) {
-  .contactform {
+  .contactForm {
     margin-left: 85px;
     width: 75%;
 
-    .contactus {
+    .contactUs {
       display: block;
       margin: 0px 0px 0px 90px;
     }
@@ -264,14 +264,14 @@
       margin: 2em 0px 0px 40px;
     }
     
-    .icon, .description, .findus, .socialicon, h4 {
+    .icon, .description, .findUs, .socialIcon, h4 {
      display: none; 
     } 
   }
 }
 
 @media (min-width: 701px) and (max-width: 800px) {
-  .contactform {
+  .contactForm {
     margin-left: 20px;
     width: 95%;
   }

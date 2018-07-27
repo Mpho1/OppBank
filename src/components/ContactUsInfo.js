@@ -1,12 +1,6 @@
 import React from 'react'
 import style from './ContactUsInfo.module.scss'
 
-const AddressList = ['Plot 7A, John Babiha', '(Acacia Avenue)', 'P.O. BOX 33513, Kampala']
-
-const Items = AddressList.map((AddressList) =>
-  <p>{AddressList}</p>
-)
-
 class ContactUsInfo extends React.Component {
   constructor (props) {
     super(props)
@@ -37,8 +31,8 @@ class ContactUsInfo extends React.Component {
 
   render () {
     return (
-      <form className={style.contactform} onSubmit={this.handleSubmit}>
-        <h4 className={style.contactus}>
+      <form className={style.contactForm} onSubmit={this.handleSubmit}>
+        <h4 className={style.contactUs}>
           CONTACT US
         </h4>
         <h4>
@@ -46,7 +40,9 @@ class ContactUsInfo extends React.Component {
           Head Office
         </h4>
         <p className={style.description}>
-          {Items}
+            Plot 1259 Old Kiira road <br></br>
+            (Acacia Avenue) <br></br>
+            P.O. Box 33513, Kampala
         </p>
         <h4>
           <img src={require('../img/Page1.svg')} className={style.icon}/>
@@ -58,28 +54,28 @@ class ContactUsInfo extends React.Component {
           Email
         </h4>
         <p className={style.description}>info@opportunitybank.co.ug </p>
-        <p className={style.findus}>Find us on social media </p>
+        <p className={style.findUs}>Find us on social media </p>
         <div>
           <p>
-            <img src={require('../img/facebook.svg')} className={style.socialicon} />
-            <img src={require('../img/twitter.svg')} className={style.socialicon} />
-            <img src={require('../img/whatsapp.svg')} className={style.socialicon} />
+            <img src={require('../img/facebook.svg')} className={style.socialIcon} />
+            <img src={require('../img/twitter.svg')} className={style.socialIcon} />
+            <img src={require('../img/whatsapp.svg')} className={style.socialIcon} />
           </p>
         </div>
         <div className={style.placeholders}>
           <p>
-            <input type="text" name="name" placeholder= "NAME" className={style.inputbox} onChange={this.handleChange.bind(this)}/>
+            <input type="text" name="name" placeholder= "NAME" className={style.inputBox} onChange={this.handleChange.bind(this)}/>
           </p>
           <p>
-            <input type="email" name="email" placeholder="EMAIL" className={style.inputbox} onChange={this.handleChange.bind(this)}/>
+            <input type="email" name="email" placeholder="EMAIL" className={style.inputBox} onChange={this.handleChange.bind(this)}/>
           </p>
           <p>
-            <input type="text" name="contact number" placeholder="CONTACT NUMBER" className={style.inputbox} onChange={this.handleChange.bind(this)}/>
+            <input type="text" name="contact number" placeholder="CONTACT NUMBER" className={style.inputBox} onChange={this.handleChange.bind(this)}/>
           </p>
           <p>
-            <textarea id="subject" name="Your Query" placeholder="YOUR QUERY" className={style.inputquery} onChange={this.handleChange.bind(this)}/>
+            <textarea id="subject" name="Your Query" placeholder="YOUR QUERY" className={style.inputQuery} onChange={this.handleChange.bind(this)}/>
           </p>
-          <input type="submit" value="SUBMIT" className={style.submitbutton}/>
+          <input type="submit" value="SUBMIT" className={style.submitButton}/>
         </div>
       </form>
     )
