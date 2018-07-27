@@ -11,7 +11,7 @@
   background-color: $white;
 
   .placeholders {
-    margin: -30em 0px 0px 300px;
+    margin: -31em 0px 0px 300px;
     font-size: 13px;
 
     .inputBox {
@@ -46,7 +46,7 @@
   .contactUs {
     font-size: 30px;
     font-weight: bold;
-    line-height: 50px;
+    line-height: 30px;
     color: $blue;
   }
 
@@ -54,7 +54,7 @@
     margin-left: 20px;
     font-size: 25px;
     font-weight: bold;
-    line-height: 30px;
+    line-height: 0;
     color: $blue;
     font-family: ProximaNova;
   }
@@ -67,16 +67,14 @@
 
   .description {
     font-size: 13px;
-    line-height: 0;
-    color: $charcoalBlack;
     margin-left: 50px;
+    color: $charcoalBlack;
   }
 
   .findUs {
     margin-left: 50px;
     font-size: 18px;
     font-weight: bold;
-    line-height: 1;
     color: $blue;
   }
 

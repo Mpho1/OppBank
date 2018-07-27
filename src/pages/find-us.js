@@ -3,7 +3,7 @@ import PageHeader from '../components/PageHeader'
 import FindMap from '../components/FindMap'
 import MapContainer from '../components/MapContainer'
 import Cards from '../components/Cards'
-import styles from '../components/card.module.scss'
+import styles from '../components/Cards.module.scss'
 
 class FindUs extends React.Component {
   render () {
