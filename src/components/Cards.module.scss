@@ -1,0 +1,45 @@
+@import "../constants/colors.module.scss";
+
+.cardContainer {
+  margin: -35.5em 0em 0em 51em;
+  margin-bottom: 23em;
+
+  .cardInfo {
+    box-shadow: 0px 0px 9px 0px $lightGrey;
+    background-color: $white;
+    text-align: center;
+    margin: 5px 5px .8em 5px;
+    height: 120px;
+    width: 120px;
+    padding: .4em;
+  }
+
+  .cardImage {
+    height: 80px;
+    align-items: center;
+    margin-top: 10px;
+  }
+
+  h1 {
+    font-size: 13px;
+    text-transform: uppercase;
+    color: $paleBlue;
+  }
+}
+
+.cardFindUs {
+  margin-top: 7.4em;
+}
+
+@media (max-width: 650px) {
+  .cardInfo {
+    display: none;
+    padding: 5px 5px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .cardContainer {
+    display: none;
+  }
+}

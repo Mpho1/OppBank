@@ -1,0 +1,276 @@
+@import "../constants/colors.module.scss";
+
+.contactForm {
+  padding: 30px 2px 0px 50px;
+  margin-left: 150px;
+  margin-bottom:5em;
+  width: 750px;
+  height: 550px;
+  border-radius: 3px;
+  box-shadow: 0px 0px 9px 0px $lightGrey;
+  background-color: $white;
+
+  .placeholders {
+    margin: -31em 0px 0px 300px;
+    font-size: 13px;
+
+    .inputBox {
+      width: 300px;
+      height: 40px;
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid $lightGrey;
+    }
+
+    .inputQuery {
+      width: 300px;
+      height: 100px;
+      padding: 10px;
+      border: 3.5px solid $lightWhite;
+    }
+
+    .submitButton {
+      font-family: BrandonGrotesque;
+      font-size: 15px;
+      font-weight: bold;
+      text-align: center;
+      color: $white;
+      width: 150px;
+      height: 40px;
+      border-radius: 5px;
+      border: 1px solid $lightBlue;
+      background-color: $lightBlue;
+    }
+  }
+  
+  .contactUs {
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 30px;
+    color: $blue;
+  }
+
+  h4 {
+    margin-left: 20px;
+    font-size: 25px;
+    font-weight: bold;
+    line-height: 0;
+    color: $blue;
+    font-family: ProximaNova;
+  }
+
+  .icon {
+    width: 21px;
+    height: 21px;
+    margin: 0px 10px 0px 0px;
+  }
+
+  .description {
+    font-size: 13px;
+    margin-left: 50px;
+    color: $charcoalBlack;
+  }
+
+  .findUs {
+    margin-left: 50px;
+    font-size: 18px;
+    font-weight: bold;
+    color: $blue;
+  }
+
+  .socialIcon {
+    padding: 0px 4px 5px 5px;
+    margin: -15px -30px 0px 40px;
+    width: 40px;
+    height: 40px;
+  }
+
+  ::placeholder {
+    color: $lightBlue;
+  }
+}
+
+@media (min-width: 360px) and (max-width: 399px) {
+  .contactForm {
+    margin-left: 20px;
+    width: 90%;
+
+    .contactUs {
+      display: block;
+    }
+
+    .placeholders {
+      margin: 2em 0px 0px -33px;
+    }
+
+    .icon, .description, .findUs, .socialIcon, h4 {
+      display: none; 
+    } 
+  }
+}
+
+@media (min-width: 400px) and (max-width: 418px) {
+  .contactForm {
+    margin-left: 20px;
+    width: 90%;
+
+    .contactUs {
+      display: block;
+    }
+
+    .placeholders {
+      margin: 2em 0px 0px -15px;
+    }
+
+    .icon, .description, .findUs, .socialIcon, h4 {
+      display: none; 
+    } 
+  }
+}
+
+@media (min-width: 419px) and (max-width: 431px) {
+  .contactForm {
+    margin-left: 32px;
+    width: 85%;
+    
+    .contactUs {
+      display: block;
+    }
+
+    .placeholders {
+      margin: 2em 0px 0px -15px;
+    }
+
+    .icon, .description, .findUs, .socialIcon, h4 {
+      display: none; 
+    } 
+  }
+}
+
+@media (min-width: 432px) and (max-width: 455px) {
+  .contactForm {
+    margin-left: 32px;
+    width: 85%;
+
+    .contactUs {
+      display: block;
+      margin: 0px 0px 0px 40px;
+    }
+
+    .placeholders {
+      margin: 2em 0px 0px -17px;
+    }
+
+    .icon, .description, .findUs, .socialIcon, h4 {
+      display: none; 
+    } 
+  }
+}
+
+
+@media (min-width: 456px) and (max-width: 470px) {
+  .contactForm {
+    margin-left: 50px;
+    width: 80%;
+
+    .contactUs {
+      display: block;
+      margin: 0px 0px 0px 40px;
+    }
+
+    .placeholders {
+      margin: 2em 0px 0px -17px;
+    }
+
+    .icon, .description, .findUs, .socialIcon, h4 {
+      display: none; 
+    } 
+  }
+}
+
+@media (min-width: 471px) and (max-width: 500px) {
+  .contactForm {
+    margin-left: 40px;
+    width: 85%;
+
+    .contactUs {
+      display: block;
+      margin: 0px 0px 0px 55px;
+    }
+
+    .placeholders {
+      margin: 2em 0px 0px 5px;
+    }
+
+    .icon, .description, .findUs, .socialIcon, h4 {
+      display: none; 
+    } 
+  }
+}
+
+@media (min-width: 501px) and (max-width: 540px) {
+  .contactForm {
+    margin-left: 40px;
+    width: 85%;
+
+    .contactUs {
+      display: block;
+      margin: 0px 0px 0px 70px;
+    }
+
+    .placeholders {
+      margin: 2em 0px 0px 20px;
+    }
+
+    .icon, .description, .findUs, .socialIcon, h4 {
+      display: none; 
+    } 
+  }
+}
+
+@media (min-width: 541px) and (max-width: 600px) {
+  .contactForm {
+    margin-left: 70px;
+    width: 75%;
+
+    .contactUs {
+      display: block;
+      margin: 0px 0px 0px 70px;
+    }
+
+    .placeholders {
+      margin: 2em 0px 0px 30px;
+    }
+
+    .icon, .description, .findUs, .socialIcon, h4 {
+     display: none; 
+    } 
+  }
+}
+
+@media (min-width: 601px) and (max-width: 700px) {
+  .contactForm {
+    margin-left: 85px;
+    width: 75%;
+
+    .contactUs {
+      display: block;
+      margin: 0px 0px 0px 90px;
+    }
+
+    .placeholders {
+      margin: 2em 0px 0px 40px;
+    }
+    
+    .icon, .description, .findUs, .socialIcon, h4 {
+     display: none; 
+    } 
+  }
+}
+
+@media (min-width: 701px) and (max-width: 800px) {
+  .contactForm {
+    margin-left: 20px;
+    width: 95%;
+  }
+}
