@@ -50,14 +50,16 @@ class ContactMe extends React.Component {
       emailBody, // Body
       {
         // SMTP Credentials
-        token: '434963d2-7d6c-42cc-b1ad-0cbc1465abf9'
+        token: '434963d2-7d6c-42cc-b1ad-0cbc1465abf9',
         // This token was generated at SMTPJS.COM with mailgun SMTP Credentials
-      },
-      function done (message) {
+        callback: function done (message) {
+          if (message === 'OK') {
+            document.getElementById('contactForm').style.display = 'none'
+            document.getElementById('submitMessage').style.display = 'block'
+          }
+        }
       }
     )
-    document.getElementById('contactForm').style.display = 'none'
-    document.getElementById('submitMessage').style.display = 'block'
   }
 
   render () {
@@ -101,6 +103,9 @@ class ContactMe extends React.Component {
           </div>
         </form>
         <div id="submitMessage" className={style.submittedForm}>
+          <p
+            className={style.closeSubmitButton}
+            onClick={() => { this.props.hideUnhideApplyForm(true) }}>x</p>
           <div>
             <img src={require('../img/approve.svg')} className={style.submittedImg}/>
             <h4>Successful</h4>

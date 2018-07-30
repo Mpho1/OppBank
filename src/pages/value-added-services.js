@@ -9,7 +9,7 @@ import ContentsSection from '../components/ContentsSection'
 const ValueAddedServices = ({data}) => (
   <div>
     <PageHeader
-      title="Value Added Service">
+      title="Value Added Services">
     </PageHeader>
     <ContentsSection>
       <ItemSwiper>
