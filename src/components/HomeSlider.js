@@ -33,17 +33,24 @@ class HomeSlider extends React.Component {
   render () {
     const containerClass = `swiper-container ${styles.homeSlider}`
 
-    const pagination = {
-      el: '.swiper-pagination',
-      type: 'bullets',
-      clickable: true
+    const params = {
+      paginationClickable: true,
+      direction: 'horizontal',
+      speed: 1000,
+      spaceBetween: 10,
+      autoplay: true,
+      effect: 'fade',
+      pagination: {
+        el: '.swiper-pagination',
+        type: 'bullets',
+        clickable: true
+      }
     }
 
     return (
       <Swiper
         containerClass={containerClass}
-        pagination={pagination}
-      >
+        {...params}>
         <Slide
           className={styles.slide1}
           heading={'Empower yourself'}

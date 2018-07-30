@@ -48,7 +48,7 @@ class CareerPage extends React.Component {
       return (
         <div>
           <NoJob
-            title="0 Jobs available for this search"
+            title="0 Jobs available"
             message="We will email you once a position for this has been opened"
             text="Enter your email"
           />
