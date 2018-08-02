@@ -42,7 +42,8 @@ class NavBar extends React.Component {
     })
   }
 
-  handleClick = async (active) => {
+  // handleClick = async (active) => {
+  async handleClick (active) {
     await this.setState({
       activeTab: active
     })
