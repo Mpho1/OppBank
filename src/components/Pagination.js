@@ -74,12 +74,18 @@ class Pagination extends React.Component {
       </div>
     )
 
-    if (items.length === 0) {
+    // This is a temporary fix.  We are displaying no jobs section because of a graphQL and Gatsby issue.
+    // Please read this thread here `https://github.com/gatsbyjs/gatsby/issues/2392` and issue 3344.
+    // As soon as an fix is implimented, we will fix our code.
+    // But for the moment it is a manual process.
+
+    // if (items.length === 0) {
+    if (items.length <= 1) {
       return (
         <div>
           <NoJob
-            title="0 Jobs available for this search"
-            message="We will email you once a position for this has been opened"
+            title="0 Jobs available"
+            message="We will email you once a position has been posted"
             text="Enter your email"
           />
         </div>
