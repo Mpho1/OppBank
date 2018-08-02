@@ -71,6 +71,11 @@
     padding: 10px 28px;
     letter-spacing: 1px;
   }
+  
+  .closeButton {
+    color: $grey;
+    border: none;
+  }
 
   .error {
     border-radius: 5px;
