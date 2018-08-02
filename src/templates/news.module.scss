@@ -17,8 +17,22 @@
   padding-right: 10px;
 }
 
+.backButton {
+  margin-left: 5em;
+}
+
 @media (max-width: 636px) {
   .newsSection {
     display: none;
+  }
+
+  .backbutton {
+    margin-left: 8em;
+  }
+}
+
+@media (max-width: 566px) {
+  .backbutton {
+    margin-left: 9em;
   }
 }

@@ -1,4 +1,5 @@
 import React from 'react'
+import SmtpService from './SmtpService'
 import style from './ContactUsInfo.module.scss'
 
 class ContactUsInfo extends React.Component {
@@ -22,11 +23,33 @@ class ContactUsInfo extends React.Component {
 
   onChange (event) {
     event.preventDefault()
-    console.log(this.state)
   }
 
   handleSubmit (event) {
     event.preventDefault()
+
+    let sender = new SmtpService()
+
+    let fromEmail = this.state.email
+    let emailBody = `
+      name: ${this.state.name}
+      contact number: ${this.state.contactNumber}
+      email: ${this.state.email}
+      query: ${this.state.query}
+    `
+    sender.send(
+      fromEmail, // From
+      'customerservice@opportunitybank.co.ug', // To
+      'Contact Us Message From Opportunity Bank', // Subject
+      emailBody, // Body
+      {
+        // SMTP Credentials
+        token: '434963d2-7d6c-42cc-b1ad-0cbc1465abf9'
+        // This token was generated at SMTPJS.COM with mailgun SMTP Credentials
+      },
+      function done (message) {
+      }
+    )
   }
 
   render () {
@@ -53,7 +76,7 @@ class ContactUsInfo extends React.Component {
           <img src={require('../img/email_green2.svg')} className={style.icon}/>
           Email
         </h4>
-        <p className={style.description}>info@opportunitybank.co.ug </p>
+        <p className={style.description}>customerservice@opportunitybank.co.ug</p>
         <p className={style.findUs}>Find us on social media </p>
         <div>
           <p>

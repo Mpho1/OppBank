@@ -4,11 +4,11 @@ import graphql from 'graphql'
 import PageHeader from '../components/PageHeader'
 import DoubleSearchField from '../components/DoubleSearchField'
 import ThirdsColumns from '../components/ThirdsColumns'
-import CategoryBlock from '../components/CategoryBlock'
 import CareerApply from '../components/CareerApply'
 import NoJob from '../components/NoJob'
 import Pagination from '../components/Pagination'
 import BackButton from '../components/BackButton'
+import style from './careers.module.scss'
 
 class CareerPage extends React.Component {
   constructor () {
@@ -48,7 +48,7 @@ class CareerPage extends React.Component {
       return (
         <div>
           <NoJob
-            title="0 Jobs available for this search"
+            title="0 Jobs available"
             message="We will email you once a position for this has been opened"
             text="Enter your email"
           />
@@ -81,9 +81,11 @@ class CareerPage extends React.Component {
           />
         </PageHeader>
         <ThirdsColumns>
-          <CategoryBlock>
+          {/* <CategoryBlock> */}
+          <div className={style.backButton}>
             <BackButton/>
-          </CategoryBlock>
+          </div>
+          {/* </CategoryBlock> */}
           <div>
             <Pagination
               todos={todos}
