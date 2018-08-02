@@ -1,6 +1,7 @@
 import React from 'react'
 import CareerList from './CareerList'
 import style from './Pagination.module.scss'
+import NoJob from '../components/NoJob'
 
 class Pagination extends React.Component {
   constructor () {
@@ -73,16 +74,28 @@ class Pagination extends React.Component {
       </div>
     )
 
-    return (
-      <div>
-        <ul>
-          {showItems}
-        </ul>
-        <ul className={style.pageNumbers}>
-          {renderPageNumbers}
-        </ul>
-      </div>
-    )
+    if (items.length === 0) {
+      return (
+        <div>
+          <NoJob
+            title="0 Jobs available for this search"
+            message="We will email you once a position for this has been opened"
+            text="Enter your email"
+          />
+        </div>
+      )
+    } else {
+      return (
+        <div>
+          <ul>
+            {showItems}
+          </ul>
+          <ul className={style.pageNumbers}>
+            {renderPageNumbers}
+          </ul>
+        </div>
+      )
+    }
   }
 }
 

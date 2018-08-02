@@ -6,7 +6,6 @@ import DoubleSearchField from '../components/DoubleSearchField'
 import ThirdsColumns from '../components/ThirdsColumns'
 import CategoryBlock from '../components/CategoryBlock'
 import CareerApply from '../components/CareerApply'
-import NoJob from '../components/NoJob'
 import Pagination from '../components/Pagination'
 import BackButton from '../components/BackButton'
 
@@ -43,18 +42,6 @@ class CareerPage extends React.Component {
       return node.title.indexOf(jobTitle) !== -1 || node.location.indexOf(location) !== -1
     })
     this.state.filteredItems = filteredCareers
-
-    if (this.state.filteredItems.length < 0) {
-      return (
-        <div>
-          <NoJob
-            title="0 Jobs available for this search"
-            message="We will email you once a position for this has been opened"
-            text="Enter your email"
-          />
-        </div>
-      )
-    }
   }
 
   render () {
