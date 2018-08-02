@@ -6,9 +6,9 @@ import DoubleSearchField from '../components/DoubleSearchField'
 import ThirdsColumns from '../components/ThirdsColumns'
 import CategoryBlock from '../components/CategoryBlock'
 import CareerApply from '../components/CareerApply'
-import NoJob from '../components/NoJob'
 import Pagination from '../components/Pagination'
 import BackButton from '../components/BackButton'
+import NoJob from '../components/NoJob'
 
 class CareerPage extends React.Component {
   constructor () {

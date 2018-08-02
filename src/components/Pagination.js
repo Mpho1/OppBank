@@ -1,6 +1,7 @@
 import React from 'react'
 import CareerList from './CareerList'
 import style from './Pagination.module.scss'
+import NoJob from '../components/NoJob'
 
 class Pagination extends React.Component {
   constructor () {
@@ -73,16 +74,34 @@ class Pagination extends React.Component {
       </div>
     )
 
-    return (
-      <div>
-        <ul>
-          {showItems}
-        </ul>
-        <ul className={style.pageNumbers}>
-          {renderPageNumbers}
-        </ul>
-      </div>
-    )
+    // This is a temporary fix.  We are displaying no jobs section because of a graphQL and Gatsby issue.
+    // Please read this thread here `https://github.com/gatsbyjs/gatsby/issues/2392` and issue 3344.
+    // As soon as an fix is implimented, we will fix our code.
+    // But for the moment it is a manual process.
+
+    // if (items.length === 0) {
+    if (items.length <= 1) {
+      return (
+        <div>
+          <NoJob
+            title="0 Jobs available"
+            message="We will email you once a position has been posted"
+            text="Enter your email"
+          />
+        </div>
+      )
+    } else {
+      return (
+        <div>
+          <ul>
+            {showItems}
+          </ul>
+          <ul className={style.pageNumbers}>
+            {renderPageNumbers}
+          </ul>
+        </div>
+      )
+    }
   }
 }
 
