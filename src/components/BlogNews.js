@@ -16,7 +16,7 @@ const BlogNews = ({ image, text, date, name, information, link }) => (
       <div className={style.blogSocial}>
         <img src={require('../img/facebook.svg')}/>
         <img src={require('../img/twitter.svg')}/>
-        <img src={require('../img/whatsapp.svg')}/>
+        <img src={require('../img/LinkedIn.svg')}/>
       </div>
       <p className={style.blogInformation}>
         {information}

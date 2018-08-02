@@ -1,13 +1,12 @@
 import React from 'react'
 import ThirdsColumns from '../components/ThirdsColumns'
-import CategoryBlock from '../components/CategoryBlock'
 import FinancialResultsBlock from '../components/FinancialResultsBlock'
 import BlogMainContent from '../components/BlogMainContent'
 import graphql from 'graphql'
 import PageHeader from '../components/PageHeader'
 import BackButton from '../components/BackButton'
 
-// import style from './news.module.scss'
+import style from './news.module.scss'
 
 // const newsList = ['General Management', 'Media, Advertising, Marketing', 'Admin, Office Support', 'Banking, Finance, Insurance', 'Textile/Clothing', 'Legal', 'Mining', 'Human Resources', 'Accounting']
 
@@ -46,10 +45,12 @@ const News = ({data}) => (
   <div>
     <PageHeader title="Get The Latest News" subtitle="Read all about the latest Opportunity news"/>
     <ThirdsColumns breakOrder="213">
-      <CategoryBlock>
-        {/* <SideNews/> */}
+      {/* <CategoryBlock> */}
+      {/* <SideNews/> */}
+      {/* </CategoryBlock> */}
+      <div className={style.backButton}>
         <BackButton/>
-      </CategoryBlock>
+      </div>
 
       <BlogMainContent
         header={data.contentfulNews.title}

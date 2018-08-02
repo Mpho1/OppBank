@@ -213,6 +213,14 @@
     margin-left: 1em;
   }
 
+  .columnSpacing {
+    margin-bottom: 1em;
+  }
+
+  .resSideSpacing {
+    margin-bottom: 3em;
+  }
+
   .sideNews {
     display: none;
   }
@@ -222,8 +230,23 @@
     width: 29.2em;
 
     .financialText {
-      font-size: 9px;
+      font-size: 6px;
+      margin-left: -5.6em;
+      margin-right: 4em;
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .financialBlock {
+    margin-left: -1em;
+    width: 20em;
+    height: 4em;
+
+    .financialText {
+      font-size: 10px;
       margin-left: -2em;
+      margin-right: 4em;
     }
   }
 }

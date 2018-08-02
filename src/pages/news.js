@@ -4,6 +4,7 @@ import NewsPage from '../components/NewsPage'
 import NewsLayout from '../components/NewsLayout'
 import DownloadLink from '../components/DownloadLink'
 import graphql from 'graphql'
+import style from './news.module.scss'
 
 class News extends React.Component {
   render () {
@@ -15,9 +16,8 @@ class News extends React.Component {
         <NewsPage>
           {this.props.data.allContentfulNews.edges.map(({node: news}) => {
             return (
-              <div>
+              <div key={news.slug}>
                 <NewsLayout
-                  key={news.slug}
                   image={news.image.file.url}
                   content={news.title}
                   link={`/news/${news.slug}`}
@@ -26,20 +26,13 @@ class News extends React.Component {
             )
           })}
         </NewsPage>
-        <div style={style}>
+        <div className={style.download}>
           <DownloadLink
             href= {this.props.data.allContentfulFinancialResult.edges[0].node.file.file.url}/>
         </div>
       </div>
     )
   }
-}
-
-const style = {
-  marginTop: '-4em',
-  marginLeft: '3em',
-  marginBottom: '4em',
-  marginRight: '6em'
 }
 
 export default News

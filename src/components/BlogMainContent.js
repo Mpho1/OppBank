@@ -1,6 +1,16 @@
 import React from 'react'
+import {
+  FacebookShareButton,
+  TwitterShareButton,
+  FacebookIcon,
+  TwitterIcon,
+  LinkedinIcon,
+  LinkedinShareButton
+} from 'react-share'
 
 import style from './BlogMainContent.module.scss'
+
+const shareUrl = location.href
 
 const BlogMainContent = ({ header, date, name, blockTextHeader, blockText, bodyContent, img }) => (
   <div className={style.blogContent}>
@@ -11,9 +21,29 @@ const BlogMainContent = ({ header, date, name, blockTextHeader, blockText, bodyC
         <span className={style.blogContentName}>{name}</span>
       </p>
       <div className={style.blogContentSocial}>
-        <img src={require('../img/facebook.svg')}/>
-        <img src={require('../img/twitter.svg')}/>
-        <img src={require('../img/whatsapp.svg')}/>
+        <FacebookShareButton
+          url={shareUrl}
+          quote={header}>
+          <FacebookIcon
+            size={32}
+            round={true}/>
+        </FacebookShareButton>
+        <TwitterShareButton
+          url={shareUrl}
+          title={header}>
+          <TwitterIcon
+            size={32}
+            round={true}/>
+        </TwitterShareButton>
+        <LinkedinShareButton
+          url={shareUrl}
+          title={header}
+          windowWidth={350}
+          windowHeight={400}>
+          <LinkedinIcon
+            size={32}
+            round={true} />
+        </LinkedinShareButton>
       </div>
       <img className={style.blogImg} src={img}/>
       <div className={style.blogBlockText}>

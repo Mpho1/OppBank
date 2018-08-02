@@ -18,13 +18,13 @@ class NewsPage extends React.Component {
             <div>
             </div>
             <div className={`${style.columnSpacing} ${bootstrapGrid['col-md-3']}`}>
-              <div>
+              <div className={style.resSideSpacing}>
                 <NewsLayout
                   image={this.props.children[0].props.children.props.image}
                   content={this.props.children[0].props.children.props.content}
                   link={this.props.children[0].props.children.props.link}/>
               </div>
-              <div>
+              <div className={style.resSideSpacing}>
                 <NewsLayout
                   image={this.props.children[1].props.children.props.image}
                   content={this.props.children[1].props.children.props.content}
@@ -32,13 +32,13 @@ class NewsPage extends React.Component {
               </div>
             </div>
             <div className={`${style.columnSpacing} ${bootstrapGrid['col-md-3']}`}>
-              <div>
+              <div className={style.resSideSpacing}>
                 <NewsLayout
                   image={this.props.children[2].props.children.props.image}
                   content={this.props.children[2].props.children.props.content}
                   link={this.props.children[2].props.children.props.link}/>
               </div>
-              <div>
+              <div className={style.resSideSpacing}>
                 <NewsLayout
                   image={this.props.children[3].props.children.props.image}
                   content={this.props.children[3].props.children.props.content}
@@ -46,13 +46,13 @@ class NewsPage extends React.Component {
               </div>
             </div>
             <div className={`${style.columnSpacing} ${bootstrapGrid['col-md-3']}`}>
-              <div>
+              <div className={style.resSideSpacing}>
                 <NewsLayout
                   image={this.props.children[4].props.children.props.image}
                   content={this.props.children[4].props.children.props.content}
                   link={this.props.children[4].props.children.props.link}/>
               </div>
-              <div>
+              <div className={style.resSideSpacing}>
                 <NewsLayout
                   image={this.props.children[5].props.children.props.image}
                   content={this.props.children[5].props.children.props.content}
@@ -62,7 +62,7 @@ class NewsPage extends React.Component {
           </div>
           <div className={style.financialBlock}>
             <div className={style.financialContent}>
-              <p className={style.financialText}>Download the latest results of opportunity bank</p>
+              <p className={style.financialText}>Download the Latest Financial results of opportunity bank</p>
               <p>
                 {this.props.href}
               </p>

@@ -69,7 +69,7 @@ const MapContainer = compose(
       this.setState({
         bounds: null,
         places: [],
-        defaultZoom: 11,
+        defaultZoom: 9,
         center: {
           lat: 0.3416113, // 29 Kanjokya St, Kampala, Uganda Head Office
           lng: 32.59085099999993

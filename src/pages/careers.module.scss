@@ -1,1 +1,13 @@
 @import '../constants/colors.module.scss';
+
+.backButton {
+  margin-left: 6em;
+}
+
+@media (max-width: 566px) {
+  .backButton {
+    margin-top: -2.4em;
+    margin-left: 1em;
+    position: absolute;
+  }
+}
