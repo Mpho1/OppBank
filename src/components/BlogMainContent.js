@@ -10,7 +10,10 @@ import {
 
 import style from './BlogMainContent.module.scss'
 
-const shareUrl = location.href
+let shareUrl
+if (typeof window !== 'undefined') {
+  shareUrl = location.href
+}
 
 const BlogMainContent = ({ header, date, name, blockTextHeader, blockText, bodyContent, img }) => (
   <div className={style.blogContent}>
