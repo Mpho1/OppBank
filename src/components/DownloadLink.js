@@ -5,12 +5,12 @@ const DownloadLink = ({href}) => (
   <div style={{
     textAlign: 'right'
   }}>
-    <a style={{
+    <span style={{
       textDecoration: 'none',
       fontSize: '13px',
       fontWeight: 'bold',
       color: '#2CABE2'
-    }} href={href}>DOWNLOAD</a>&nbsp;
+    }} href={href}>DOWNLOAD</span>&nbsp;
     <img style={{
       marginBottom: '0em',
       width: '25px',
