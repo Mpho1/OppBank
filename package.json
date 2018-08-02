@@ -20,7 +20,6 @@
     "gatsby-source-filesystem": "^1.5.39",
     "gatsby-transformer-remark": "^1.7.44",
     "moment": "^2.22.2",
-    "prop-types": "^15.6.2",
     "react-geolocated": "^2.4.0",
     "react-google-maps": "^9.4.5",
     "react-helmet": "^5.2.0",
