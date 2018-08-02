@@ -26,9 +26,10 @@ class News extends React.Component {
             )
           })}
         </NewsPage>
-        <div className={style.download}>
-          <DownloadLink
-            href= {this.props.data.allContentfulFinancialResult.edges[0].node.file.file.url}/>
+        <div style={style}>
+          <a href= {this.props.data.allContentfulFinancialResult.edges[0].node.file.file.url} target="_blank">
+            <DownloadLink/>
+          </a>
         </div>
       </div>
     )

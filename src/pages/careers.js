@@ -5,10 +5,10 @@ import PageHeader from '../components/PageHeader'
 import DoubleSearchField from '../components/DoubleSearchField'
 import ThirdsColumns from '../components/ThirdsColumns'
 import CareerApply from '../components/CareerApply'
-import NoJob from '../components/NoJob'
 import Pagination from '../components/Pagination'
 import BackButton from '../components/BackButton'
-import style from './careers.module.scss'
+import NoJob from '../components/NoJob'
+import style from '../templates/news.module.scss'
 
 class CareerPage extends React.Component {
   constructor () {
