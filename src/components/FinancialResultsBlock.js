@@ -25,7 +25,9 @@ const FinancialResultsBlock = ({data}) => (
             marginTop: '15px',
             color: '#696969'
           }}>{el.title}</p>
-          <DownloadLink href={el.href}/>
+          <a href={el.href} target="_blank">
+            <DownloadLink/>
+          </a>
         </div>
       )
     }) : 'Sorry, no financial results!'}
