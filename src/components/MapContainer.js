@@ -164,7 +164,7 @@ const MapContainer = compose(
         onZoomChanged: ({ onZoomChange }) => () => {
           onZoomChange(refs.map.getZoom())
         },
-        // changes onBoundsChanged to onIdle for easy dragging of map
+        // changed onBoundsChanged to onIdle for easy dragging of map
         onIdle: () => {
           this.setState({
             bounds: refs.map.getBounds(),
