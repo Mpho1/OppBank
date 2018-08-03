@@ -16,9 +16,9 @@ const Savings = ({data}) => (
       <ItemSwiper>
         {data.allContentfulProduct.edges.map(({node}) => {
           return (
-            <div style={style}>
+            <div style={style}
+              key={node.title}>
               <ProductLayout
-                key={node.title}
                 image={node.image.file.url}
                 header={node.title}
                 type={node.type}

@@ -164,7 +164,8 @@ const MapContainer = compose(
         onZoomChanged: ({ onZoomChange }) => () => {
           onZoomChange(refs.map.getZoom())
         },
-        onBoundsChanged: () => {
+        // changes onBoundsChanged to onIdle for easy dragging of map
+        onIdle: () => {
           this.setState({
             bounds: refs.map.getBounds(),
             center: refs.map.getCenter()
@@ -297,7 +298,7 @@ const MapContainer = compose(
       ref={props.onMapMounted}
       defaultZoom={props.defaultZoom}
       center={props.center}
-      onBoundsChanged={props.onBoundsChanged}
+      onIdle={props.onIdle}
       defaultOptions={{ styles: mapContainerStyles }}
     >
       {props.markers.map((marker, index) => {

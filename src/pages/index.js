@@ -70,9 +70,9 @@ const IndexPage = ({data}) => (
       <ItemSwiper>
         {data.allContentfulNews.edges.map(({node: news}) => {
           return (
-            <div style={style}>
+            <div style={style}
+              key={news.slug}>
               <BlogNews
-                key={news.slug}
                 image={news.image.file.url}
                 text={news.title}
                 date={news.createdAt}
