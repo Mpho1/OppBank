@@ -76,7 +76,7 @@ class HomeSlider extends React.Component {
         />
         <Slide
           className={styles.slide5}
-          link={'/loans/business-loans'}
+          link={'/savings/extra-save-account'}
         />
       </Swiper>
     )
