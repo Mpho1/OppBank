@@ -8,6 +8,7 @@ $blue: #275482;
 $white: #FFFFFF;
 $offWhite: #F1F5F8;
 $lightGrey: #C7D2DC;
+$offGrey:#91a0ad;
 $darkGrey: #696969;
 $pastelGreen: #84E2D0;
 $lightWhite: #fcfcfc;
@@ -25,6 +26,7 @@ $transparentBlack: rgba(0,0,0,0.7);
 :export { white: $white; }
 :export { offWhite: $offWhite; }
 :export { lightGrey: $lightGrey; }
+:export { offGrey: $offGrey; }
 :export { darkGrey: $darkGrey; }
 :export { pastelGreen: $pastelGreen; }
 :export { lightWhite: $lightWhite; }
