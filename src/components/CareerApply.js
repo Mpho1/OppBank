@@ -85,7 +85,7 @@ class CareerApply extends React.Component {
       <div className={ `${(this.props.hide ? style.blockHidden : style.blockShow)} ${style.block}` }>
         <form id="contactForm" className={style.applyForm} onSubmit={this.handleSubmit}>
           <button
-            className={style.closeButton} onClick={() => { this.props.hideUnhideApplyForm(true) }}>x
+            type="button" className={style.closeButton} onClick={() => { this.props.hideUnhideApplyForm(true) }}>x
           </button>
           <h4 className={style.formText}>Contact me</h4>
           <div className={style.fields}>
