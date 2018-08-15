@@ -79,8 +79,9 @@ class Pagination extends React.Component {
     // As soon as an fix is implimented, we will fix our code.
     // But for the moment it is a manual process.
 
-    // if (items.length === 0) {
-    if (items.length <= 1) {
+    // if (items.length === 0): shows the jobs available
+    // if (items.length <= 1): shows no jobs available
+    if (items.length === 0) {
       return (
         <div>
           <NoJob

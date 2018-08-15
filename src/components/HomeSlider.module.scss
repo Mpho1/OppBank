@@ -52,6 +52,10 @@
     background-image: url(../img/slide4.png);
 }
 
+.slide5 {
+    background-image: url(../img/slide5.png);
+}
+
 @media (max-width: 768px) {
     .homeSlider {
         height: calc(100vh - 112px);

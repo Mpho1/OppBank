@@ -71,9 +71,12 @@ class HomeSlider extends React.Component {
         />
         <Slide
           className={styles.slide4}
-          heading={'Empower your business'}
           blurb={'Find out more about our business savings accounts and loan facilities for expansion and growth'}
           link={'/loans/business-loans'}
+        />
+        <Slide
+          className={styles.slide5}
+          link={'/savings/extra-save-account'}
         />
       </Swiper>
     )
