@@ -43,23 +43,23 @@ class ContactMe extends React.Component {
       email: ${this.state.email}
       message: ${this.state.message}
     `
-    sender.send(
-      fromEmail, // From
-      'customerservice@opportunitybank.co.ug', // To
-      'Products Enquiry From Opportunity Bank', // Subject
-      emailBody, // Body
-      {
-        // SMTP Credentials
-        token: '434963d2-7d6c-42cc-b1ad-0cbc1465abf9',
-        // This token was generated at SMTPJS.COM with mailgun SMTP Credentials
-        callback: function done (message) {
-          if (message === 'OK') {
-            document.getElementById('contactForm').style.display = 'none'
-            document.getElementById('submitMessage').style.display = 'block'
-          }
+    try {
+      sender.send(
+        fromEmail, // From
+        'customerservice@opportunitybank.co.ug', // To
+        'Products Enquiry From Opportunity Bank', // Subject
+        emailBody, // Body
+        {
+          // SMTP Credentials
+          token: '434963d2-7d6c-42cc-b1ad-0cbc1465abf9'
+          // This token was generated at SMTPJS.COM with mailgun SMTP Credentials
         }
-      }
-    )
+      )
+      document.getElementById('contactForm').style.display = 'none'
+      document.getElementById('submitMessage').style.display = 'block'
+    } catch (err) {
+      alert(err)
+    }
   }
 
   render () {
@@ -78,7 +78,7 @@ class ContactMe extends React.Component {
       <div className={ `${(this.props.hide ? style.blockHidden : style.blockShow)} ${style.block}` }>
         <form id="contactForm" className={style.applyForm} onSubmit={this.handleSubmit}>
           <button
-            className={style.closeButton} onClick={() => { this.props.hideUnhideApplyForm(true) }}>x
+            type="button" className={style.closeButton} onClick={() => { this.props.hideUnhideApplyForm(true) }}>x
           </button>
           <h4 className={style.formText}>Contact me</h4>
           <div className={style.fields}>
