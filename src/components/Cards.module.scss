@@ -27,10 +27,6 @@
   }
 }
 
-.cardFindUs {
-  margin-top: 7.4em;
-}
-
 @media (max-width: 650px) {
   .cardInfo {
     display: none;
@@ -41,5 +37,12 @@
 @media (max-width: 1200px) {
   .cardContainer {
     display: none;
+  }
+}
+
+@media (max-width: 1201px) {
+  .cardContainer {
+    margin: -30em 0em 0em 51em;
+    margin-bottom: 23em;
   }
 }

@@ -80,9 +80,15 @@ class ContactUsInfo extends React.Component {
         <p className={style.findUs}>Find us on social media </p>
         <div>
           <p>
-            <img src={require('../img/facebook.svg')} className={style.socialIcon} />
-            <img src={require('../img/twitter.svg')} className={style.socialIcon} />
-            <img src={require('../img/whatsapp.svg')} className={style.socialIcon} />
+            <a href="https://www.facebook.com/OpportunityBankUganda/" target="_blank">
+              <img src={require('../img/facebook.svg')} className={style.socialIcon} />
+            </a>
+            <a href="https://twitter.com/opportunitybkug?lang=en" target="_blank">
+              <img src={require('../img/twitter.svg')} className={style.socialIcon} />
+            </a>
+            <a href="whatsapp://tel:0754680049" title="075 468 0049">
+              <img src={require('../img/whatsapp.svg')} className={style.socialIcon} />
+            </a>
           </p>
         </div>
         <div className={style.placeholders}>

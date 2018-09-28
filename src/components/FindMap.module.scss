@@ -40,6 +40,14 @@
 //   }
 // }
 
+
+@media(max-width: 950px) {
+  .block {
+    margin-left: 4em;
+    width: 30em;
+  }
+}
+
 @media(max-width: 850px) {
   .block {
     margin-left: 4em;

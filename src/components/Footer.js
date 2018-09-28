@@ -45,10 +45,10 @@ const Footer = () => (
         <div>
           <h4>Find us on social media</h4>
           <p>
-            <a href="https://www.facebook.com/OpportunityBankUganda/">
-              <img src={require('../img/facebook.svg')} className={styles.socialIcon} />
+            <a href="https://www.facebook.com/OpportunityBankUganda/" target="_blank">
+              <img src={require('../img/facebook.svg')} className={styles.socialIcon}/>
             </a>
-            <a href="https://twitter.com/opportunitybkug?lang=en">
+            <a href="https://twitter.com/opportunitybkug?lang=en" target="_blank">
               <img src={require('../img/twitter.svg')} className={styles.socialIcon} />
             </a>
             <a href="whatsapp://tel:0754680049" title="075 468 0049">
